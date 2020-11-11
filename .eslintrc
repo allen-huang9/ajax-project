@@ -50,7 +50,7 @@
         "js/main.js"
       ],
       "globals": {
-        "data": "readonly"
+        "data": "writeable"
       }
     }
   ]
