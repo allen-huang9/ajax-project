@@ -28,8 +28,15 @@
     background-color: rgba(13, 226, 255, 0.15);
   }
 
-  .homepage-background {
-    background: url(../images/homepage-bg1.jpg);
+  .homepage-bg {
+    background: url(../images/homepage-bg.jpg);
+  }
+
+  .list-bg {
+    background: url(../images/list-bg.png);
+  }
+
+  .background-config {
     background-repeat: no-repeat;
     background-size: cover;
     height: 667px;
