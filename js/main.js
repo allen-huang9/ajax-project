@@ -2,6 +2,8 @@
 var $dataView = document.querySelectorAll('div[data-view]');
 var $homePageServantRoster = document.querySelector('.servant-roster-button');
 var $homePageDmgCalculator = document.querySelector('.np-dmg-button');
+var $openNewRosterModalButton = document.querySelector('.new-roster-button');
+var $newRosterModalForm = document.querySelector('.new-roster-modal');
 
 $homePageServantRoster.addEventListener('click', function (e) {
   viewSwap('servant-lists');
@@ -9,6 +11,10 @@ $homePageServantRoster.addEventListener('click', function (e) {
 
 $homePageDmgCalculator.addEventListener('click', function (e) {
   viewSwap('calculator');
+});
+
+$openNewRosterModalButton.addEventListener('click', function (e) {
+  $newRosterModalForm.className = 'new-roster-modal';
 });
 
 function viewSwap(view) {

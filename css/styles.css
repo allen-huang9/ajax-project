@@ -11,6 +11,37 @@
     font-size: 25px;
   }
 
+  .new-roster-modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+
+  .modal-form {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+    font-size: 20px;
+  }
+
+  .submit-roster-button-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .roster-button {
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+    font-size: 20px;
+  }
+
   .screen-phone {
     display: flex;
     height: 50px;
@@ -50,6 +81,10 @@
     bottom: 20%;
   }
 
+  .new-roster-button {
+    margin: 25px 0;
+  }
+
   .homepage-button {
     width: 200px;
     height: 50px;
@@ -62,5 +97,9 @@
     position: absolute;
     left: 50%;
     margin-left: -100px;
+  }
+
+  .hide {
+    display: none;
   }
 }
