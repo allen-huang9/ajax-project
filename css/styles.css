@@ -43,7 +43,7 @@
   }
 
   .roster-list-row {
-    color: white;
+    color: red;
     display: flex;
     width: 100%;
   }
@@ -74,6 +74,11 @@
     position: absolute;
     left: 50%;
     margin-left: -100px;
+    bottom: 0;
+  }
+
+  .position-relative {
+    position: relative;
   }
 
   .see-through {
@@ -92,6 +97,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 667px;
+    width: 100%;
+    position: fixed;
   }
 
   .servant-roster-button {
@@ -104,6 +111,7 @@
 
   .new-roster-button {
     margin: 25px auto;
+    position: relative;
   }
 
   .view-list-content-button {

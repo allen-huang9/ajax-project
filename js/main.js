@@ -1,4 +1,5 @@
 
+var $background = document.querySelector('.background-config');
 var $dataView = document.querySelectorAll('div[data-view]');
 var $homePageServantRoster = document.querySelector('.servant-roster-button');
 var $homePageDmgCalculator = document.querySelector('.np-dmg-button');
@@ -12,6 +13,8 @@ var $listDisplay = document.querySelector('.list-display-container');
 $homePageServantRoster.addEventListener('click', function (e) {
   viewSwap('servant-lists');
   appendRosterList();
+
+  $background.className = 'list-bg background-config';
 });
 
 $homePageDmgCalculator.addEventListener('click', function (e) {
@@ -36,16 +39,19 @@ window.addEventListener('beforeunload', function (e) {
 $createNewRosterForm.addEventListener('submit', function (e) {
 
   e.preventDefault();
-  data.roster.name = $rosterModalInput.value;
-  data.rosterLists.push(data.roster);
+  var roster = new Roster($rosterModalInput.value);
+  data.rosterLists.push(roster);
   $newRosterModalForm.className += ' hide';
 
   $createNewRosterForm.reset();
+
+  appendRosterList();
 });
 
 function appendRosterList() {
+  $listDisplay = document.querySelector('.list-display-container');
   if ($listDisplay.hasChildNodes()) {
-    var $childNode = document.querySelector('.roster-list-row');
+    var $childNode = document.querySelector('.list-container');
     $listDisplay.removeChild($childNode);
   }
 
@@ -55,11 +61,15 @@ function appendRosterList() {
   for (var i = 0; i < $deleteListButtons.length; i++) {
     $deleteListButtons[i].addEventListener('click', function (e) {
       data.rosterLists.splice(e.target.getAttribute('id'), 1);
+      appendRosterList();
     });
   }
 }
 
 function buildRosterListView(array) {
+
+  var $containerDiv = document.createElement('div');
+  $containerDiv.setAttribute('class', 'list-container');
 
   for (var i = 0; i < array.length; i++) {
 
@@ -93,9 +103,11 @@ function buildRosterListView(array) {
     $rosterListRow.appendChild($rowColumn1);
     $rosterListRow.appendChild($rowColumn2);
 
-    $listDisplay.appendChild($rosterListRow);
+    $containerDiv.appendChild($rosterListRow);
+
   }
 
+  $listDisplay.appendChild($containerDiv);
 }
 
 function viewSwap(view) {
@@ -106,4 +118,9 @@ function viewSwap(view) {
       $dataView[i].className = 'show';
     }
   }
+}
+
+function Roster(name) {
+  this.name = name;
+  this.list = [];
 }
