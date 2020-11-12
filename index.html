@@ -10,27 +10,63 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="homepage-background">
-    <header class="screen-phone see-through flex-jc-center flex-ai-center">
-      <p>FGOverseer</p>
-    </header>
-    <main>
-      <div class="show" data-view="homepage">
-        <div class="servant-roster-button homepage-button">
-          <p>Servant Roster</p>
-        </div>
-        <div class="np-dmg-button homepage-button">
-          <p>Damage Calculator</p>
-        </div>
+  <div class="homepage-bg background-config"></div>
+  <header class="screen-phone see-through flex-jc-center flex-ai-center position-relative">
+    <p>FGOverseer</p>
+  </header>
+  <main>
+    <div class="show" data-view="homepage">
+      <div class="servant-roster-button homepage-button hp-position-config">
+        <p>Servant Roster</p>
       </div>
-      <div class="hide" data-view="servant-lists">
+      <div class="np-dmg-button homepage-button hp-position-config">
+        <p>Damage Calculator</p>
+      </div>
+    </div>
 
+    <div class="hide" data-view="servant-lists">
+      <div class="new-roster-button homepage-button">
+        <p>Create List</p>
       </div>
-      <div class="hide" data-view="calculator">
+      <div class="list-display-container position-relative"></div>
+      <div class="menu-bar">
+        <img src="images/menubar.png" class="menu-bar-asset position-relative">
+      </div>
+      <div class="back-button-icon position-fixed">
+        <img src="images/back-button.png" class="back-button-icon roster-lists-back-button">
+      </div>
+      <div class="menu-button-icon position-fixed">
+        <img src="images/menu-button.png" class="menu-button-icon">
+      </div>
+    </div>
+    <div class="new-roster-modal hide">
+      <div class="modal-form">
+          <form>
+            <label for="roster-name">Roster Name<br></label>
+            <input required type="text" name="roster-name" class="roster-name">
+            <div class="submit-roster-button-container">
+              <input type="submit" class="roster-button" value="Create">
+            </div>
+          </form>
+      </div>
+    </div>
 
+    <div class="hide" data-view="servant-list-content">
+
+      <div class="menu-bar">
+        <img src="images/menubar.png" class="menu-bar-asset position-relative">
       </div>
-    </main>
-  </div>
+      <div class="back-button-icon position-fixed">
+        <img src="images/back-button.png" class="back-button-icon servant-list-back-button">
+      </div>
+      <div class="menu-button-icon position-fixed">
+        <img src="images/menu-button.png" class="menu-button-icon">
+      </div>
+    </div>
+
+    <div class="hide" data-view="calculator"></div>
+
+  </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -11,9 +11,58 @@
     font-size: 25px;
   }
 
+  .new-roster-modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+
+  .modal-form {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+    font-size: 20px;
+  }
+
+  .submit-roster-button-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .roster-button {
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+    font-size: 20px;
+  }
+
+  .roster-list-row {
+    display: flex;
+    width: 100%;
+  }
+
+  .column-half {
+    width: 50%;
+    text-align: center;
+  }
+
   .screen-phone {
     display: flex;
     height: 50px;
+  }
+
+  .color-white {
+    color: white;
+  }
+
+  .display-flex {
+    display: flex;
   }
 
   .flex-jc-center {
@@ -24,15 +73,65 @@
     align-items: center;
   }
 
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 0;
+  }
+
+  .position-relative {
+    position: relative;
+  }
+
+  .position-fixed {
+    position: fixed;
+  }
+
   .see-through {
     background-color: rgba(13, 226, 255, 0.15);
   }
 
-  .homepage-background {
-    background: url(../images/homepage-bg1.jpg);
+  .homepage-bg {
+    background: url(../images/homepage-bg.jpg);
+  }
+
+  .list-bg {
+    background: url(../images/list-bg.png);
+  }
+
+  .background-config {
     background-repeat: no-repeat;
     background-size: cover;
     height: 667px;
+    width: 100%;
+    position: fixed;
+  }
+
+  div[data-view='servant-lists'] {
+    height: 667px;
+  }
+
+  .menu-bar {
+    position: fixed;
+    bottom: 5%;
+  }
+
+  .menu-bar-asset {
+    width: 75%;
+    left: 12.5%;
+  }
+
+  .menu-button-icon {
+    left: 37.5%;
+    bottom: 5%;
+    width: 50%;
+  }
+
+  .back-button-icon {
+    left: 15%;
+    bottom: 5%;
+    width: 40%;
   }
 
   .servant-roster-button {
@@ -41,6 +140,22 @@
 
   .np-dmg-button {
     bottom: 20%;
+  }
+
+  .new-roster-button {
+    margin: 25px auto;
+    position: relative;
+  }
+
+  .view-list-content-button {
+    margin-right: 10px;
+  }
+
+  .view-list-content-button,
+  .delete-list-button {
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    width: 60px;
   }
 
   .homepage-button {
@@ -52,8 +167,9 @@
     justify-content: center;
     border-radius: 15px;
     background-color: rgba(13, 226, 255, 0.6);
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
+  }
+
+  .hide {
+    display: none;
   }
 }
