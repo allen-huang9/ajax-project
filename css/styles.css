@@ -42,9 +42,24 @@
     font-size: 20px;
   }
 
+  .roster-list-row {
+    color: white;
+    display: flex;
+    width: 100%;
+  }
+
+  .column-half {
+    width: 50%;
+    text-align: center;
+  }
+
   .screen-phone {
     display: flex;
     height: 50px;
+  }
+
+  .display-flex {
+    display: flex;
   }
 
   .flex-jc-center {
@@ -53,6 +68,12 @@
 
   .flex-ai-center {
     align-items: center;
+  }
+
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
   }
 
   .see-through {
@@ -82,7 +103,18 @@
   }
 
   .new-roster-button {
-    margin: 25px 0;
+    margin: 25px auto;
+  }
+
+  .view-list-content-button {
+    margin-right: 10px;
+  }
+
+  .view-list-content-button,
+  .delete-list-button {
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    width: 60px;
   }
 
   .homepage-button {
@@ -94,9 +126,6 @@
     justify-content: center;
     border-radius: 15px;
     background-color: rgba(13, 226, 255, 0.6);
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
   }
 
   .hide {
