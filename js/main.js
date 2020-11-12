@@ -50,6 +50,13 @@ function appendRosterList() {
   }
 
   buildRosterListView(data.rosterLists);
+
+  var $deleteListButtons = document.querySelectorAll('.delete-list-button');
+  for (var i = 0; i < $deleteListButtons.length; i++) {
+    $deleteListButtons[i].addEventListener('click', function (e) {
+      data.rosterLists.splice(e.target.getAttribute('id'), 1);
+    });
+  }
 }
 
 function buildRosterListView(array) {
@@ -75,6 +82,7 @@ function buildRosterListView(array) {
 
     var $rowCol2DeleteButton = document.createElement('div');
     $rowCol2DeleteButton.setAttribute('class', 'delete-list-button');
+    $rowCol2DeleteButton.setAttribute('id', '' + i);
     $rowCol2DeleteButton.textContent = 'Delete';
 
     $rowColumn1.appendChild($rCol1P);
