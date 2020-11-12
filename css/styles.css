@@ -43,7 +43,6 @@
   }
 
   .roster-list-row {
-    color: red;
     display: flex;
     width: 100%;
   }
@@ -56,6 +55,10 @@
   .screen-phone {
     display: flex;
     height: 50px;
+  }
+
+  .color-white {
+    color: white;
   }
 
   .display-flex {

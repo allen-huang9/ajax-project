@@ -93,7 +93,7 @@ function buildRosterListView(array) {
     $rosterListRow.setAttribute('class', 'roster-list-row');
 
     var $rowColumn1 = document.createElement('div');
-    $rowColumn1.setAttribute('class', 'column-half');
+    $rowColumn1.setAttribute('class', 'column-half color-white');
 
     var $rCol1P = document.createElement('p');
     $rCol1P.setAttribute('class', 'character-list');
