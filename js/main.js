@@ -10,7 +10,7 @@ var $createNewRosterForm = document.querySelector('.modal-form > form');
 var $rosterModalInput = document.querySelector('.roster-name');
 var $listDisplay = document.querySelector('.list-display-container');
 
-var $menuButton = document.querySelector('.menu-button-icon');
+var $menuButton = document.querySelectorAll('.menu-button-icon');
 var $rosterListsBackButton = document.querySelector('.roster-lists-back-button');
 
 $homePageServantRoster.addEventListener('click', function (e) {
@@ -50,7 +50,9 @@ $createNewRosterForm.addEventListener('submit', function (e) {
   appendRosterList();
 });
 
-$menuButton.addEventListener('click', returnToHomepage);
+for (var j = 0; j < $menuButton.length; j++) {
+  $menuButton[j].addEventListener('click', returnToHomepage);
+}
 
 $rosterListsBackButton.addEventListener('click', returnToHomepage);
 
