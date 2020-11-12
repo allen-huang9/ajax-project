@@ -81,6 +81,10 @@
     position: relative;
   }
 
+  .position-fixed {
+    position: fixed;
+  }
+
   .see-through {
     background-color: rgba(13, 226, 255, 0.15);
   }
@@ -99,6 +103,32 @@
     height: 667px;
     width: 100%;
     position: fixed;
+  }
+
+  div[data-view='servant-lists'] {
+    height: 667px;
+  }
+
+  .menu-bar {
+    position: fixed;
+    bottom: 5%;
+  }
+
+  .menu-bar-asset {
+    width: 75%;
+    left: 12.5%;
+  }
+
+  .menu-button-icon {
+    left: 37.5%;
+    bottom: 5%;
+    width: 50%;
+  }
+
+  .back-button-icon {
+    left: 15%;
+    bottom: 5%;
+    width: 40%;
   }
 
   .servant-roster-button {

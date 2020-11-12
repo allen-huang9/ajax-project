@@ -10,10 +10,12 @@ var $createNewRosterForm = document.querySelector('.modal-form > form');
 var $rosterModalInput = document.querySelector('.roster-name');
 var $listDisplay = document.querySelector('.list-display-container');
 
+var $menuButton = document.querySelector('.menu-button-icon');
+var $rosterListsBackButton = document.querySelector('.roster-lists-back-button');
+
 $homePageServantRoster.addEventListener('click', function (e) {
   viewSwap('servant-lists');
   appendRosterList();
-
   $background.className = 'list-bg background-config';
 });
 
@@ -48,6 +50,10 @@ $createNewRosterForm.addEventListener('submit', function (e) {
   appendRosterList();
 });
 
+$menuButton.addEventListener('click', returnToHomepage);
+
+$rosterListsBackButton.addEventListener('click', returnToHomepage);
+
 function appendRosterList() {
   $listDisplay = document.querySelector('.list-display-container');
   if ($listDisplay.hasChildNodes()) {
@@ -64,6 +70,11 @@ function appendRosterList() {
       appendRosterList();
     });
   }
+}
+
+function Roster(name) {
+  this.name = name;
+  this.list = [];
 }
 
 function buildRosterListView(array) {
@@ -104,7 +115,6 @@ function buildRosterListView(array) {
     $rosterListRow.appendChild($rowColumn2);
 
     $containerDiv.appendChild($rosterListRow);
-
   }
 
   $listDisplay.appendChild($containerDiv);
@@ -120,7 +130,7 @@ function viewSwap(view) {
   }
 }
 
-function Roster(name) {
-  this.name = name;
-  this.list = [];
+function returnToHomepage() {
+  viewSwap('homepage');
+  $background.className = 'homepage-bg background-config';
 }
