@@ -1,6 +1,7 @@
 
 var $background = document.querySelector('.background-config');
 var $dataView = document.querySelectorAll('div[data-view]');
+
 var $homePageServantRoster = document.querySelector('.servant-roster-button');
 var $homePageDmgCalculator = document.querySelector('.np-dmg-button');
 
@@ -9,6 +10,9 @@ var $newRosterModalForm = document.querySelector('.new-roster-modal');
 var $createNewRosterForm = document.querySelector('.modal-form > form');
 var $rosterModalInput = document.querySelector('.roster-name');
 var $listDisplay = document.querySelector('.list-display-container');
+
+var $openServantInsertModalButton = document.querySelector('.open-servant-insert-modal-button');
+var $servantInsertModalForm = document.querySelector('.insert-servant-modal');
 
 var $menuButton = document.querySelectorAll('.menu-button-icon');
 var $rosterListsBackButton = document.querySelector('.roster-lists-back-button');
@@ -78,6 +82,10 @@ function appendRosterList() {
     });
   }
 }
+
+$openServantInsertModalButton.addEventListener('click', function (e) {
+  $servantInsertModalForm.className = 'insert-servant-modal';
+});
 
 function Roster(name) {
   this.name = name;

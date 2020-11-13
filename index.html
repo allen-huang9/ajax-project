@@ -52,7 +52,9 @@
     </div>
 
     <div class="hide" data-view="servant-list-content">
-
+      <div class="open-servant-insert-modal-button homepage-button position-fixed">
+        <p>Add</p>
+      </div>
       <div class="menu-bar">
         <img src="images/menubar.png" class="menu-bar-asset position-relative">
       </div>
@@ -63,7 +65,24 @@
         <img src="images/menu-button.png" class="menu-button-icon">
       </div>
     </div>
-
+    <div class="insert-servant-modal hide">
+      <div class="servant-form-modal">
+        <form>
+          <label for="servant-name">Servant Name<br></label>
+          <input required type="text" name="servant-name">
+          <div class="display-flex flex-ai-center">
+            <p>Region:</p>
+            <label for="na" class="input-margin">NA</label>
+            <input required type="radio" name="region" id="na" value="NA">
+            <label for="jp" class="input-margin">JP</label>
+            <input required type="radio" name="region" id="jp" value="JP">
+          </div>
+          <div class="insert-servant-button">
+            <input type="submit" class="roster-button" value="Add">
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="hide" data-view="calculator"></div>
 
   </main>

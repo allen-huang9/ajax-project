@@ -134,6 +134,36 @@
     width: 40%;
   }
 
+  .open-servant-insert-modal-button {
+    bottom: 10%;
+    left: 50%;
+    margin-left: -100px;
+  }
+
+  .servant-form-modal {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+  }
+
+  .insert-servant-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+
+  .input-margin {
+    margin-left: 10px;
+  }
+
+  .insert-servant-button {
+    text-align: center;
+  }
+
   .servant-roster-button {
     bottom: 30%;
   }
