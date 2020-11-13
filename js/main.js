@@ -131,6 +131,14 @@ $insertServantForm.addEventListener('submit', function (e) {
 $returnedServantOptions.addEventListener('submit', function (e) {
   e.preventDefault();
   currentRoster.list.push(tempServantsArray[$returnedServantOptions.elements['correct-servant'].value]);
+
+  $listContentDisplayContainer = document.querySelector('.list-content-display-container');
+  if ($listContentDisplayContainer.hasChildNodes()) {
+    var $listContentView = document.querySelector('.display');
+    $listContentDisplayContainer.removeChild($listContentView);
+  }
+  buildListContentView(currentRoster);
+
   $returnedServantListModal.className = 'servant-list-modal hide';
 
 });
