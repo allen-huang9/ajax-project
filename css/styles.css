@@ -91,6 +91,10 @@
     position: fixed;
   }
 
+  .pad-left {
+    padding-left: 15px;
+  }
+
   .see-through {
     background-color: rgba(13, 226, 255, 0.15);
   }

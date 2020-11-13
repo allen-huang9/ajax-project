@@ -16,6 +16,7 @@ var $servantInsertModal = document.querySelector('.insert-servant-modal');
 var $insertServantForm = document.querySelector('.servant-form-modal > form');
 var $returnedServantListModal = document.querySelector('.servant-list-modal');
 
+var $listContentDisplayContainer = document.querySelector('.list-content-display-container');
 var $returnedServantOptions = document.querySelector('.player-choices > form');
 
 var $menuButton = document.querySelectorAll('.menu-button-icon');
@@ -84,8 +85,16 @@ function appendRosterList() {
     });
 
     $viewListContentButton[i].addEventListener('click', function (e) {
+
       viewSwap('servant-list-content');
       currentRoster = data.rosterLists[e.target.parentNode.getAttribute('id')];
+
+      $listContentDisplayContainer = document.querySelector('.list-content-display-container');
+      if ($listContentDisplayContainer.hasChildNodes()) {
+        var $listContentView = document.querySelector('.display');
+        $listContentDisplayContainer.removeChild($listContentView);
+      }
+      buildListContentView(currentRoster);
     });
   }
 }
@@ -219,6 +228,64 @@ function buildServantChoice(array) {
 
   $returnedServants.appendChild($servantSubmitButtonContainer);
   $returnedServantOptions.appendChild($returnedServants);
+}
+
+function buildListContentView(rosterObject) {
+  var $display = document.createElement('div');
+  $display.setAttribute('class', 'display');
+
+  var $listNameStyling = document.createElement('div');
+  $listNameStyling.setAttribute('class', 'list-content-row color-white flex-jc-center');
+
+  var $listName = document.createElement('h2');
+  $listName.textContent = rosterObject.name;
+
+  $listNameStyling.appendChild($listName);
+
+  $display.appendChild($listNameStyling);
+
+  for (var i = 0; i < rosterObject.list.length; i++) {
+    var $servantRow = document.createElement('div');
+    $servantRow.setAttribute('class', 'list-content-row');
+
+    var $servantName = document.createElement('div');
+    $servantName.setAttribute('class', 'column-half');
+
+    var $imageContainer = document.createElement('div');
+    $imageContainer.setAttribute('class', 'color-white display-flex flex-ai-center pad-left');
+
+    var $servantImage = document.createElement('img');
+    $servantImage.setAttribute('src', rosterObject.list[i].extraAssets.faces.ascension['4']);
+    $servantImage.setAttribute('class', 'servant-image');
+
+    var $servantNameText = document.createTextNode(rosterObject.list[i].name);
+
+    var $servantViewDeleteButtons = document.createElement('div');
+    $servantViewDeleteButtons.setAttribute('class', 'column-half display-flex flex-ai-center');
+
+    var $servantViewButton = document.createElement('div');
+    $servantViewButton.setAttribute('class', 'servant-info-button');
+    $servantViewButton.textContent = 'View';
+
+    var $servantDeleteButton = document.createElement('div');
+    $servantDeleteButton.setAttribute('class', 'delete-servant-button');
+    $servantDeleteButton.textContent = 'Delete';
+
+    $servantViewDeleteButtons.appendChild($servantViewButton);
+    $servantViewDeleteButtons.appendChild($servantDeleteButton);
+
+    $imageContainer.appendChild($servantImage);
+    $imageContainer.appendChild($servantNameText);
+
+    $servantName.appendChild($imageContainer);
+
+    $servantRow.appendChild($servantName);
+    $servantRow.appendChild($servantViewDeleteButtons);
+
+    $display.appendChild($servantRow);
+  }
+
+  $listContentDisplayContainer.appendChild($display);
 }
 
 function viewSwap(view) {
