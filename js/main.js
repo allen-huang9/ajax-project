@@ -12,10 +12,16 @@ var $rosterModalInput = document.querySelector('.roster-name');
 var $listDisplay = document.querySelector('.list-display-container');
 
 var $openServantInsertModalButton = document.querySelector('.open-servant-insert-modal-button');
-var $servantInsertModalForm = document.querySelector('.insert-servant-modal');
+var $servantInsertModal = document.querySelector('.insert-servant-modal');
+var $insertServantForm = document.querySelector('.servant-form-modal > form');
+var $returnedServantListModal = document.querySelector('.servant-list-modal');
+
+var $returnedServantOptions = document.querySelector('.player-choices > form');
 
 var $menuButton = document.querySelectorAll('.menu-button-icon');
 var $rosterListsBackButton = document.querySelector('.roster-lists-back-button');
+
+var currentRoster = null;
 
 $homePageServantRoster.addEventListener('click', function (e) {
   viewSwap('servant-lists');
@@ -79,12 +85,45 @@ function appendRosterList() {
 
     $viewListContentButton[i].addEventListener('click', function (e) {
       viewSwap('servant-list-content');
+      currentRoster = data.rosterLists[e.target.parentNode.getAttribute('id')];
     });
   }
 }
 
 $openServantInsertModalButton.addEventListener('click', function (e) {
-  $servantInsertModalForm.className = 'insert-servant-modal';
+  $servantInsertModal.className = 'insert-servant-modal';
+});
+
+var tempServantsArray = null;
+$insertServantForm.addEventListener('submit', function (e) {
+
+  e.preventDefault();
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://api.atlasacademy.io/nice/' + $insertServantForm.elements.region.value + '/servant/search/?name=' + $insertServantForm.elements['servant-name'].value);
+  xhr.responseType = 'json';
+  xhr.addEventListener('load', function () {
+
+    tempServantsArray = xhr.response;
+
+    $returnedServantOptions = document.querySelector('.player-choices > form');
+    if ($returnedServantOptions.hasChildNodes()) {
+      var $formChildNode = document.querySelector('returned-servants');
+      $returnedServantOptions.removeChild($formChildNode);
+    }
+    buildServantChoice(xhr.response);
+
+  });
+  xhr.send();
+
+  $returnedServantListModal.className = 'servant-list-modal';
+  $servantInsertModal.className = 'insert-servant-modal hide';
+});
+
+$returnedServantOptions.addEventListener('submit', function (e) {
+  e.preventDefault();
+  currentRoster.list.push(tempServantsArray[$returnedServantOptions.elements['correct-servant'].value]);
+  $returnedServantListModal.className = 'servant-list-modal hide';
+
 });
 
 function Roster(name) {
@@ -133,6 +172,53 @@ function buildRosterListView(array) {
   }
 
   $listDisplay.appendChild($containerDiv);
+}
+
+function buildServantChoice(array) {
+
+  var $returnedServants = document.createElement('div');
+  $returnedServants.setAttribute('class', 'returned-servants');
+  for (var i = 0; i < array.length; i++) {
+
+    var $optionStyling = document.createElement('div');
+    $optionStyling.setAttribute('class', 'display-flex flex-ai-center');
+
+    var $servantImage = document.createElement('img');
+    $servantImage.setAttribute('src', array[i].extraAssets.faces.ascension['4']);
+    $servantImage.setAttribute('class', 'servant-image');
+
+    var $servantLabel = document.createElement('label');
+    var $servantLabelTextNode = document.createTextNode(array[i].name);
+
+    var $servantRadioButton = document.createElement('input');
+    $servantRadioButton.setAttribute('type', 'radio');
+    $servantRadioButton.setAttribute('required', 'required');
+    $servantRadioButton.setAttribute('name', 'correct-servant');
+    $servantRadioButton.setAttribute('value', i);
+
+    $servantLabel.appendChild($servantRadioButton);
+    $servantLabel.appendChild($servantLabelTextNode);
+
+    $optionStyling.appendChild($servantImage);
+    $optionStyling.appendChild($servantLabel);
+
+    $returnedServants.appendChild($optionStyling);
+    $returnedServantOptions.appendChild($returnedServants);
+
+  }
+
+  var $servantSubmitButtonContainer = document.createElement('div');
+  $servantSubmitButtonContainer.setAttribute('class', 'insert-servant-button-container');
+
+  var $servantSubmitButton = document.createElement('input');
+  $servantSubmitButton.setAttribute('type', 'submit');
+  $servantSubmitButton.setAttribute('class', 'roster-button');
+  $servantSubmitButton.setAttribute('value', 'Add');
+
+  $servantSubmitButtonContainer.appendChild($servantSubmitButton);
+
+  $returnedServants.appendChild($servantSubmitButtonContainer);
+  $returnedServantOptions.appendChild($returnedServants);
 }
 
 function viewSwap(view) {

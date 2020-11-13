@@ -11,7 +11,9 @@
     font-size: 25px;
   }
 
-  .new-roster-modal {
+  .new-roster-modal,
+  .insert-servant-modal,
+  .servant-list-modal {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -42,7 +44,8 @@
     font-size: 20px;
   }
 
-  .roster-list-row {
+  .roster-list-row,
+  .list-content-row {
     display: flex;
     width: 100%;
   }
@@ -140,32 +143,37 @@
     margin-left: -100px;
   }
 
-  .servant-form-modal {
+  .servant-form-modal,
+  .player-choices {
     padding: 1rem;
     margin: auto;
     background-color: white;
-  }
-
-  .insert-servant-modal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
   }
 
   .input-margin {
     margin-left: 10px;
   }
 
-  .insert-servant-button {
+  .search-for-servant-button,
+  .insert-servant-button-container {
     text-align: center;
   }
 
   .servant-roster-button {
     bottom: 30%;
+  }
+
+  .player-choices > form {
+    height: 150px;
+    overflow-y: auto;
+  }
+
+  .insert-servant-button-container {
+    margin-top: 20px;
+  }
+
+  .servant-image {
+    width: 50px;
   }
 
   .np-dmg-button {
@@ -177,12 +185,28 @@
     position: relative;
   }
 
-  .view-list-content-button {
+  .view-list-content-button,
+  .servant-info-button {
     margin-right: 10px;
   }
 
+  .material-table-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    height: 50px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
+  }
+
   .view-list-content-button,
-  .delete-list-button {
+  .delete-list-button,
+  .servant-info-button,
+  .delete-servant-button {
     background-color: rgba(13, 226, 255, 0.6);
     border-radius: 10px;
     width: 60px;

@@ -52,6 +52,32 @@
     </div>
 
     <div class="hide" data-view="servant-list-content">
+
+      <div class="list-content-display-container position-relative">
+<!--
+        List content view Template
+
+          <div class="grid">
+            <div class="list-content-row color-white flex-jc-center">
+              <h3>List Name</h3>
+            </div>
+            <div class="list-content-row">
+              <div class="column-half color-white">
+                <p>Servant Name</p>
+              </div>
+              <div class="column-half display-flex flex-ai-center">
+                <div class="servant-info-button">View</div>
+                <div class="delete-servant-button">Delete</div>
+              </div>
+            </div>
+          </div>
+-->
+
+      </div>
+
+      <div class="material-table-button position-fixed">
+        <p>Mat Table</p>
+      </div>
       <div class="open-servant-insert-modal-button homepage-button position-fixed">
         <p>Add</p>
       </div>
@@ -65,6 +91,7 @@
         <img src="images/menu-button.png" class="menu-button-icon">
       </div>
     </div>
+
     <div class="insert-servant-modal hide">
       <div class="servant-form-modal">
         <form>
@@ -77,12 +104,19 @@
             <label for="jp" class="input-margin">JP</label>
             <input required type="radio" name="region" id="jp" value="JP">
           </div>
-          <div class="insert-servant-button">
-            <input type="submit" class="roster-button" value="Add">
+          <div class="search-for-servant-button">
+            <input type="submit" class="roster-button" value="Search">
           </div>
         </form>
       </div>
     </div>
+
+    <div class="servant-list-modal hide">
+      <div class="player-choices">
+        <form></form>
+      </div>
+    </div>
+
     <div class="hide" data-view="calculator"></div>
 
   </main>
