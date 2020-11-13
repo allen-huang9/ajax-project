@@ -18,6 +18,7 @@ var $returnedServantListModal = document.querySelector('.servant-list-modal');
 
 var $listContentDisplayContainer = document.querySelector('.list-content-display-container');
 var $returnedServantOptions = document.querySelector('.player-choices > form');
+var $toMaterialTableButton = document.querySelector('.material-table-button');
 
 var $menuButton = document.querySelectorAll('.menu-button-icon');
 var $rosterListsBackButton = document.querySelector('.roster-lists-back-button');
@@ -36,6 +37,10 @@ $homePageDmgCalculator.addEventListener('click', function (e) {
 
 $openNewRosterModalButton.addEventListener('click', function (e) {
   $newRosterModalForm.className = 'new-roster-modal';
+});
+
+$toMaterialTableButton.addEventListener('click', function (e) {
+  viewSwap('materials-table');
 });
 
 var existingRosterList = localStorage.getItem('fgo-rosters');
@@ -88,7 +93,6 @@ function appendRosterList() {
 
       viewSwap('servant-list-content');
       currentRoster = data.rosterLists[e.target.parentNode.getAttribute('id')];
-
       $listContentDisplayContainer = document.querySelector('.list-content-display-container');
       if ($listContentDisplayContainer.hasChildNodes()) {
         var $listContentView = document.querySelector('.display');
