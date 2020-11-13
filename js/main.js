@@ -199,10 +199,11 @@ function buildServantChoice(array) {
 
   var $returnedServants = document.createElement('div');
   $returnedServants.setAttribute('class', 'returned-servants');
+
   for (var i = 0; i < array.length; i++) {
 
     var $optionStyling = document.createElement('div');
-    $optionStyling.setAttribute('class', 'display-flex flex-ai-center');
+    $optionStyling.setAttribute('class', 'display-flex flex-ai-center image-margin');
 
     var $servantImage = document.createElement('img');
     $servantImage.setAttribute('src', array[i].extraAssets.faces.ascension['4']);
@@ -244,7 +245,7 @@ function buildServantChoice(array) {
 
 function buildListContentView(rosterObject) {
   var $display = document.createElement('div');
-  $display.setAttribute('class', 'display');
+  $display.setAttribute('class', 'display list-content-view-config');
 
   var $listNameStyling = document.createElement('div');
   $listNameStyling.setAttribute('class', 'list-content-row color-white flex-jc-center');
@@ -258,7 +259,7 @@ function buildListContentView(rosterObject) {
 
   for (var i = 0; i < rosterObject.list.length; i++) {
     var $servantRow = document.createElement('div');
-    $servantRow.setAttribute('class', 'list-content-row');
+    $servantRow.setAttribute('class', 'list-content-row image-margin');
 
     var $servantName = document.createElement('div');
     $servantName.setAttribute('class', 'column-half');
@@ -270,6 +271,8 @@ function buildListContentView(rosterObject) {
     $servantImage.setAttribute('src', rosterObject.list[i].extraAssets.faces.ascension['4']);
     $servantImage.setAttribute('class', 'servant-image');
 
+    var $servantNameTextContainer = document.createElement('div');
+    $servantNameTextContainer.setAttribute('class', 'servant-name-width');
     var $servantNameText = document.createTextNode(rosterObject.list[i].name);
 
     var $servantViewDeleteButtons = document.createElement('div');
@@ -287,7 +290,9 @@ function buildListContentView(rosterObject) {
     $servantViewDeleteButtons.appendChild($servantDeleteButton);
 
     $imageContainer.appendChild($servantImage);
-    $imageContainer.appendChild($servantNameText);
+    $servantNameTextContainer.appendChild($servantNameText);
+
+    $imageContainer.appendChild($servantNameTextContainer);
 
     $servantName.appendChild($imageContainer);
 
