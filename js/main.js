@@ -92,13 +92,18 @@ function appendRosterList() {
     $viewListContentButton[i].addEventListener('click', function (e) {
 
       viewSwap('servant-list-content');
+
+      $listDisplay = document.querySelector('.list-display-container');
+      var $listDisplayChild = document.querySelector('.list-container');
+      $listDisplay.removeChild($listDisplayChild);
+
       currentRoster = data.rosterLists[e.target.parentNode.getAttribute('id')];
       $listContentDisplayContainer = document.querySelector('.list-content-display-container');
       if ($listContentDisplayContainer.hasChildNodes()) {
         var $listContentView = document.querySelector('.display');
         $listContentDisplayContainer.removeChild($listContentView);
       }
-      buildListContentView(currentRoster);
+      appendServantListContent();
     });
   }
 }
@@ -112,7 +117,7 @@ $insertServantForm.addEventListener('submit', function (e) {
 
   e.preventDefault();
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://api.atlasacademy.io/nice/' + $insertServantForm.elements.region.value + '/servant/search/?name=' + $insertServantForm.elements['servant-name'].value);
+  xhr.open('GET', 'https://api.atlasacademy.io/nice/' + $insertServantForm.elements.region.value + '/servant/search/?name=' + $insertServantForm.elements['servant-name'].value + '&lang=en');
   xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
 
@@ -120,13 +125,15 @@ $insertServantForm.addEventListener('submit', function (e) {
 
     $returnedServantOptions = document.querySelector('.player-choices > form');
     if ($returnedServantOptions.hasChildNodes()) {
-      var $formChildNode = document.querySelector('returned-servants');
+      var $formChildNode = document.querySelector('.returned-servants');
       $returnedServantOptions.removeChild($formChildNode);
     }
     buildServantChoice(xhr.response);
 
   });
   xhr.send();
+
+  $insertServantForm.reset();
 
   $returnedServantListModal.className = 'servant-list-modal';
   $servantInsertModal.className = 'insert-servant-modal hide';
@@ -136,16 +143,30 @@ $returnedServantOptions.addEventListener('submit', function (e) {
   e.preventDefault();
   currentRoster.list.push(tempServantsArray[$returnedServantOptions.elements['correct-servant'].value]);
 
+  appendServantListContent();
+  $returnedServantListModal.className = 'servant-list-modal hide';
+
+});
+
+function appendServantListContent() {
   $listContentDisplayContainer = document.querySelector('.list-content-display-container');
   if ($listContentDisplayContainer.hasChildNodes()) {
     var $listContentView = document.querySelector('.display');
     $listContentDisplayContainer.removeChild($listContentView);
   }
+
   buildListContentView(currentRoster);
 
-  $returnedServantListModal.className = 'servant-list-modal hide';
+  // var $allServantViewInfoButtons = document.querySelectorAll('.servant-info-button');
+  var $allDeleteServantButtons = document.querySelectorAll('.delete-servant-button');
+  for (var i = 0; i < $allDeleteServantButtons.length; i++) {
 
-});
+    $allDeleteServantButtons[i].addEventListener('click', function (e) {
+      currentRoster.list.splice(e.target.parentNode.getAttribute('id'), 1);
+      appendServantListContent();
+    });
+  }
+}
 
 function Roster(name) {
   this.name = name;
@@ -277,6 +298,7 @@ function buildListContentView(rosterObject) {
 
     var $servantViewDeleteButtons = document.createElement('div');
     $servantViewDeleteButtons.setAttribute('class', 'column-half display-flex flex-ai-center');
+    $servantViewDeleteButtons.setAttribute('id', i);
 
     var $servantViewButton = document.createElement('div');
     $servantViewButton.setAttribute('class', 'servant-info-button');
