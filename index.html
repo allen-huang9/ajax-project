@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="homepage-bg background-config"></div>
+  <div class="list-bg background-config"></div>
   <header class="screen-phone see-through flex-jc-center flex-ai-center position-relative">
     <p>FGOverseer</p>
   </header>
   <main>
-    <div class="show" data-view="homepage">
+    <div class="hide" data-view="homepage">
       <div class="servant-roster-button homepage-button hp-position-config">
         <p>Servant Roster</p>
       </div>
@@ -94,6 +94,70 @@
     <div class="servant-list-modal hide">
       <div class="player-choices">
         <form></form>
+      </div>
+    </div>
+
+    <div class="show" data-view="servant-information">
+      <div class="data-grid-container position-relative">
+        <div class="servant-information-row">
+          <img src="images/stat-name-container.png" class="servant-prfile-image-container">
+          <p class="servant-profile-name">Name of Servant Placeholder</p>
+        </div>
+        <div class="servant-information-row display-flex">
+          <div class="servant-information-column-half">
+            <img src="images/stat-name-container.png" class="servant-information-stat-display-container blue">
+            <p class="atk-stat-name-display">ATK</p>
+            <img src="images/stat-values-container.png" class="servant-information-stat-display-container green">
+            <p class="atk-stat-value-display">atk value</p>
+          </div>
+          <div class="servant-information-column-half">
+            <img src="images/stat-name-container.png" class="servant-information-stat-display-container blue">
+            <p class="hp-stat-name-display">HP</p>
+            <img src="images/stat-values-container.png" class="servant-information-stat-display-container green">
+            <p class="hp-stat-value-display">HP value</p>
+          </div>
+        </div>
+        <div class="servant-information-row display-flex">
+          <div class="servant-information-column-half">
+            <img src="images/stat-name-container.png" class="servant-information-stat-display-container blue">
+            <p class="fou-atk-stat-name-display">FOU ATK</p>
+            <img src="images/stat-values-container.png" class="servant-information-stat-display-container green">
+            <p class="fou-atk-stat-value-display">atk value</p>
+          </div>
+          <div class="servant-information-column-half">
+            <img src="images/stat-name-container.png" class="servant-information-stat-display-container blue">
+            <p class="fou-hp-stat-name-display">FOU HP</p>
+            <img src="images/stat-values-container.png" class="servant-information-stat-display-container green">
+            <p class="fou-hp-stat-value-display">HP value</p>
+          </div>
+        </div>
+        <div class="skill-container display-flex">
+          <img src="images/skill-text-box.png" class="skill-text-container">
+          <p class="skill-1 skill-name">SKill name placeholder <span class="skill-1-lvl">LV. x</span></p>
+          <p class="skill-1-decription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus posuere tempus. Nulla mollis ex quis nulla molestie
+          accumsan. Sed at ex quam. Etiam eu felis non lacus sodales finibus nec at magna. Quisque id neque mauris. Mauris dui
+          magna, venenatis eu ullamcorper blandit, ullamcorper at ante. Suspendisse venenatis mi dolor, ac pharetra libero
+          hendrerit sit amet. Nullam laoreet, dolor ut porta viverra, lacus felis viverra ex, in cursus ante lorem nec urna.</p>
+        </div>
+        <div class="skill-container display-flex">
+          <img src="images/skill-text-box.png" class="skill-text-container">
+          <p class="skill-2 skill-name">SKill name placeholder <span class="skill-2-lvl">LV. x</span></p>
+          <p class="skill-2-decription">akjasdhkjasdkasdkasdkashdkjasdkj</p>
+        </div>
+        <div class="skill-container display-flex">
+          <img src="images/skill-text-box.png" class="skill-text-container">
+          <p class="skill-3 skill-name">SKill name placeholder <span class="skill-3-lvl">LV. x</span></p>
+          <p class="skill-3-decription">akjasdhkjasdkasdkasdkashdkjasdkj</p>
+        </div>
+      </div>
+      <div class="menu-bar">
+        <img src="images/menubar.png" class="menu-bar-asset position-relative">
+      </div>
+      <div class="back-button-icon position-fixed">
+        <img src="images/back-button.png" class="back-button-icon servant-list-back-button">
+      </div>
+      <div class="menu-button-icon position-fixed">
+        <img src="images/menu-button.png" class="menu-button-icon">
       </div>
     </div>
 

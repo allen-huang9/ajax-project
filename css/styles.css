@@ -199,6 +199,124 @@
     overflow-y: auto;
   }
 
+  .servant-information-row {
+    text-align: center;
+  }
+
+  .servant-information-column-half {
+    width: 50%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .servant-prfile-image-container {
+    width: 100px;
+  }
+
+  .servant-profile-name {
+    color: yellow;
+    font-size: 25px;
+  }
+
+  .servant-information-stat-display-container {
+    width: 100px;
+    height: 40px;
+  }
+
+  .servant-information-stat-display-container.blue {
+    width: 70px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 20px;
+  }
+
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 15px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-name-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-name-display,
+  .fou-hp-stat-value-display {
+    width: 80px;
+    text-align: center;
+    margin: auto;
+    color: yellow;
+    position: absolute;
+  }
+
+  .atk-stat-name-display,
+  .fou-atk-stat-name-display {
+    left: 1%;
+  }
+
+  .atk-stat-value-display,
+  .fou-atk-stat-value-display {
+    left: 24%;
+  }
+
+  .hp-stat-name-display,
+  .fou-hp-stat-name-display {
+    right: 28%;
+  }
+
+  .hp-stat-value-display,
+  .fou-hp-stat-value-display {
+    right: 5%;
+  }
+
+  .data-grid-container {
+    overflow-y: auto;
+    height: 480px;
+  }
+
+  .skill-name,
+  .skill-1-decription,
+  .skill-2-decription,
+  .skill-3-decription {
+    color: yellow;
+    position: absolute;
+    width: 340px;
+    height: 50px;
+    left: 5%;
+    overflow-y: auto;
+  }
+
+  .skill-name {
+    text-align: center;
+  }
+
+  .skill-1-decription {
+    top: 52%;
+  }
+
+  .skill-2-decription {
+    bottom: 10%;
+  }
+
+  .skill-3-decription {
+    bottom: -11%;
+  }
+
+  .skill-text-container {
+    margin: 0 auto;
+    width: 360px;
+    height: 100px;
+  }
+
   .np-dmg-button {
     bottom: 20%;
   }
