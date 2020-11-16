@@ -141,7 +141,17 @@ $insertServantForm.addEventListener('submit', function (e) {
 
 $returnedServantOptions.addEventListener('submit', function (e) {
   e.preventDefault();
-  currentRoster.list.push(tempServantsArray[$returnedServantOptions.elements['correct-servant'].value]);
+
+  var servantIndexFromList = $returnedServantOptions.elements['correct-servant'].value;
+  tempServantsArray[servantIndexFromList].playerEditInfo = {};
+  tempServantsArray[servantIndexFromList].playerEditInfo.level = 1;
+  tempServantsArray[servantIndexFromList].playerEditInfo.atkFou = 0;
+  tempServantsArray[servantIndexFromList].playerEditInfo.hpFou = 0;
+  tempServantsArray[servantIndexFromList].playerEditInfo.skillOne = 1;
+  tempServantsArray[servantIndexFromList].playerEditInfo.skillTwo = 1;
+  tempServantsArray[servantIndexFromList].playerEditInfo.skillThree = 1;
+
+  currentRoster.list.push(tempServantsArray[servantIndexFromList]);
 
   appendServantListContent();
   $returnedServantListModal.className = 'servant-list-modal hide';
@@ -157,9 +167,16 @@ function appendServantListContent() {
 
   buildListContentView(currentRoster);
 
-  // var $allServantViewInfoButtons = document.querySelectorAll('.servant-info-button');
+  var $allServantViewInfoButtons = document.querySelectorAll('.servant-info-button');
   var $allDeleteServantButtons = document.querySelectorAll('.delete-servant-button');
   for (var i = 0; i < $allDeleteServantButtons.length; i++) {
+    $allServantViewInfoButtons[i].addEventListener('click', function (e) {
+
+      displayServantInfo(currentRoster.list[e.target.parentNode.getAttribute('id')]);
+      viewSwap('servant-information');
+
+      // currentRoster.list[e.target.parentNode.getAttribute('id')];
+    });
 
     $allDeleteServantButtons[i].addEventListener('click', function (e) {
       currentRoster.list.splice(e.target.parentNode.getAttribute('id'), 1);
@@ -340,4 +357,57 @@ function viewSwap(view) {
 function returnToHomepage() {
   viewSwap('homepage');
   $background.className = 'homepage-bg background-config';
+}
+
+function displayServantInfo(servantObject) {
+
+  var skillOneArray = [];
+  var skillTwoArray = [];
+  var skillThreeArray = [];
+
+  for (var s = 0; s < servantObject.skills.length; s++) {
+    if (servantObject.skills[s].num === 1) {
+      skillOneArray.push(servantObject.skills[s]);
+    } else if (servantObject.skills[s].num === 2) {
+      skillTwoArray.push(servantObject.skills[s]);
+    } else if (servantObject.skills[s].num === 3) {
+      skillThreeArray.push(servantObject.skills[s]);
+    }
+  }
+
+  var $displayServantImage = document.querySelector('.servant-profile-image-container');
+  $displayServantImage.setAttribute('src', servantObject.extraAssets.faces.ascension['4']);
+  var $displayServantName = document.querySelector('.servant-profile-name');
+  $displayServantName.textContent = servantObject.name;
+
+  var $displayServantATK = document.querySelector('.atk-stat-value-display');
+  $displayServantATK.textContent = servantObject.atkGrowth[servantObject.playerEditInfo.level - 1] + servantObject.playerEditInfo.atkFou;
+
+  var $displayServantHP = document.querySelector('.hp-stat-value-display');
+  $displayServantHP.textContent = servantObject.hpGrowth[servantObject.playerEditInfo.level - 1] + servantObject.playerEditInfo.hpFou;
+
+  var $displayServantFouATK = document.querySelector('.fou-atk-stat-value-display');
+  $displayServantFouATK.textContent = servantObject.playerEditInfo.atkFou;
+
+  var $displayServantFouHP = document.querySelector('.fou-hp-stat-value-display');
+  $displayServantFouHP.textContent = servantObject.playerEditInfo.hpFou;
+
+  var $displaySkillOneDescription = document.querySelector('.skill-1-description');
+  $displaySkillOneDescription.textContent = createSkillDescriptions(skillOneArray, servantObject.playerEditInfo.skillOne);
+
+  var $displaySkillTwoDescription = document.querySelector('.skill-2-description');
+  $displaySkillTwoDescription.textContent = createSkillDescriptions(skillTwoArray, servantObject.playerEditInfo.skillOne);
+
+  var $displaySkillThreeDescription = document.querySelector('.skill-3-description');
+  $displaySkillThreeDescription.textContent = createSkillDescriptions(skillThreeArray, servantObject.playerEditInfo.skillThree);
+
+}
+
+function createSkillDescriptions(descriptionArray, skillLvl) {
+  var skillDescriptions = '';
+  for (var i = 0; i < descriptionArray.length; i++) {
+    skillDescriptions = skillDescriptions + descriptionArray[i].name + ' Lv. ' + skillLvl + '\n\n' + descriptionArray[i].detail + '\n\n';
+  }
+
+  return skillDescriptions;
 }

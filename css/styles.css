@@ -211,13 +211,15 @@
     justify-content: center;
   }
 
-  .servant-prfile-image-container {
+  .servant-profile-image-container {
+    margin-top: 5px;
     width: 100px;
   }
 
   .servant-profile-name {
     color: yellow;
     font-size: 25px;
+    line-height: 1px;
   }
 
   .servant-information-stat-display-container {
@@ -283,32 +285,16 @@
     height: 480px;
   }
 
-  .skill-name,
-  .skill-1-decription,
-  .skill-2-decription,
-  .skill-3-decription {
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
     color: yellow;
+    white-space: pre-wrap;
     position: absolute;
     width: 340px;
     height: 50px;
     left: 5%;
     overflow-y: auto;
-  }
-
-  .skill-name {
-    text-align: center;
-  }
-
-  .skill-1-decription {
-    top: 52%;
-  }
-
-  .skill-2-decription {
-    bottom: 10%;
-  }
-
-  .skill-3-decription {
-    bottom: -11%;
   }
 
   .skill-text-container {
