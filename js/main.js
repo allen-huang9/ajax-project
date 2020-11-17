@@ -22,8 +22,15 @@ var $toMaterialTableButton = document.querySelector('.material-table-button');
 
 var $menuButton = document.querySelectorAll('.menu-button-icon');
 var $rosterListsBackButton = document.querySelector('.roster-lists-back-button');
+var $servantListBackButotn = document.querySelector('.servant-list-back-button');
+var $servantInfoBackButton = document.querySelector('.servant-information-back-button');
+
+var $openEditServantInfoModalButton = document.querySelector('.open-servant-edit-info-modal-button');
+var $openEditServantInfoModal = document.querySelector('.edit-servant-information-modal');
+var $editServantInfoForm = document.querySelector('.edit-servant-form-container-modal > form');
 
 var currentRoster = null;
+var currentServantInfo = null;
 
 $homePageServantRoster.addEventListener('click', function (e) {
   viewSwap('servant-lists');
@@ -71,6 +78,16 @@ for (var j = 0; j < $menuButton.length; j++) {
 }
 
 $rosterListsBackButton.addEventListener('click', returnToHomepage);
+
+$servantListBackButotn.addEventListener('click', function (e) {
+  viewSwap('servant-lists');
+  appendRosterList();
+});
+
+$servantInfoBackButton.addEventListener('click', function (e) {
+  viewSwap('servant-list-content');
+  appendServantListContent();
+});
 
 function appendRosterList() {
   $listDisplay = document.querySelector('.list-display-container');
@@ -155,7 +172,30 @@ $returnedServantOptions.addEventListener('submit', function (e) {
 
   appendServantListContent();
   $returnedServantListModal.className = 'servant-list-modal hide';
+});
 
+$openEditServantInfoModalButton.addEventListener('click', function (e) {
+  $openEditServantInfoModal.className = 'edit-servant-information-modal';
+
+  $editServantInfoForm.elements['servant-level'].value = currentServantInfo.playerEditInfo.level;
+  $editServantInfoForm.elements['servant-s1-level'].value = currentServantInfo.playerEditInfo.skillOne;
+  $editServantInfoForm.elements['servant-s2-level'].value = currentServantInfo.playerEditInfo.skillTwo;
+  $editServantInfoForm.elements['servant-s3-level'].value = currentServantInfo.playerEditInfo.skillThree;
+  $editServantInfoForm.elements['servant-atk-fou'].value = currentServantInfo.playerEditInfo.atkFou;
+  $editServantInfoForm.elements['servant-hp-fou'].value = currentServantInfo.playerEditInfo.hpFou;
+});
+
+$editServantInfoForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  currentServantInfo.playerEditInfo.level = $editServantInfoForm.elements['servant-level'].value;
+  currentServantInfo.playerEditInfo.skillOne = $editServantInfoForm.elements['servant-s1-level'].value;
+  currentServantInfo.playerEditInfo.skillTwo = $editServantInfoForm.elements['servant-s2-level'].value;
+  currentServantInfo.playerEditInfo.skillThree = $editServantInfoForm.elements['servant-s3-level'].value;
+  currentServantInfo.playerEditInfo.atkFou = $editServantInfoForm.elements['servant-atk-fou'].value;
+  currentServantInfo.playerEditInfo.hpFou = $editServantInfoForm.elements['servant-hp-fou'].value;
+
+  $openEditServantInfoModal.className = 'edit-servant-information-modal hide';
+  displayServantInfo(currentServantInfo);
 });
 
 function appendServantListContent() {
@@ -172,7 +212,8 @@ function appendServantListContent() {
   for (var i = 0; i < $allDeleteServantButtons.length; i++) {
     $allServantViewInfoButtons[i].addEventListener('click', function (e) {
 
-      displayServantInfo(currentRoster.list[e.target.parentNode.getAttribute('id')]);
+      currentServantInfo = currentRoster.list[e.target.parentNode.getAttribute('id')];
+      displayServantInfo(currentServantInfo);
       viewSwap('servant-information');
 
       // currentRoster.list[e.target.parentNode.getAttribute('id')];
@@ -378,13 +419,13 @@ function displayServantInfo(servantObject) {
   var $displayServantImage = document.querySelector('.servant-profile-image-container');
   $displayServantImage.setAttribute('src', servantObject.extraAssets.faces.ascension['4']);
   var $displayServantName = document.querySelector('.servant-profile-name');
-  $displayServantName.textContent = servantObject.name;
+  $displayServantName.textContent = servantObject.name + '\n(Lv. ' + servantObject.playerEditInfo.level + ')';
 
   var $displayServantATK = document.querySelector('.atk-stat-value-display');
-  $displayServantATK.textContent = servantObject.atkGrowth[servantObject.playerEditInfo.level - 1] + servantObject.playerEditInfo.atkFou;
+  $displayServantATK.textContent = parseInt(servantObject.atkGrowth[servantObject.playerEditInfo.level - 1]) + parseInt(servantObject.playerEditInfo.atkFou);
 
   var $displayServantHP = document.querySelector('.hp-stat-value-display');
-  $displayServantHP.textContent = servantObject.hpGrowth[servantObject.playerEditInfo.level - 1] + servantObject.playerEditInfo.hpFou;
+  $displayServantHP.textContent = parseInt(servantObject.hpGrowth[servantObject.playerEditInfo.level - 1]) + parseInt(servantObject.playerEditInfo.hpFou);
 
   var $displayServantFouATK = document.querySelector('.fou-atk-stat-value-display');
   $displayServantFouATK.textContent = servantObject.playerEditInfo.atkFou;
@@ -393,20 +434,24 @@ function displayServantInfo(servantObject) {
   $displayServantFouHP.textContent = servantObject.playerEditInfo.hpFou;
 
   var $displaySkillOneDescription = document.querySelector('.skill-1-description');
-  $displaySkillOneDescription.textContent = createSkillDescriptions(skillOneArray, servantObject.playerEditInfo.skillOne);
+  $displaySkillOneDescription.textContent = createSkillDescriptions(skillOneArray, servantObject.playerEditInfo.skillOne, 1);
 
   var $displaySkillTwoDescription = document.querySelector('.skill-2-description');
-  $displaySkillTwoDescription.textContent = createSkillDescriptions(skillTwoArray, servantObject.playerEditInfo.skillOne);
+  $displaySkillTwoDescription.textContent = createSkillDescriptions(skillTwoArray, servantObject.playerEditInfo.skillTwo, 2);
 
   var $displaySkillThreeDescription = document.querySelector('.skill-3-description');
-  $displaySkillThreeDescription.textContent = createSkillDescriptions(skillThreeArray, servantObject.playerEditInfo.skillThree);
+  $displaySkillThreeDescription.textContent = createSkillDescriptions(skillThreeArray, servantObject.playerEditInfo.skillThree, 3);
 
 }
 
-function createSkillDescriptions(descriptionArray, skillLvl) {
-  var skillDescriptions = '';
+function createSkillDescriptions(descriptionArray, skillLvl, skillOrder) {
+  var skillDescriptions = 'Skill ' + skillOrder + ': ';
   for (var i = 0; i < descriptionArray.length; i++) {
+    if (i > 0) {
+      skillDescriptions += '(After interlude/rank up)\n';
+    }
     skillDescriptions = skillDescriptions + descriptionArray[i].name + ' Lv. ' + skillLvl + '\n\n' + descriptionArray[i].detail + '\n\n';
+
   }
 
   return skillDescriptions;

@@ -144,14 +144,45 @@
           <p class="skill-3-description"></p>
         </div>
       </div>
+      <div class="open-servant-edit-info-modal-button homepage-button position-fixed">
+        <p>Edit</p>
+      </div>
       <div class="menu-bar">
         <img src="images/menubar.png" class="menu-bar-asset position-relative">
       </div>
       <div class="back-button-icon position-fixed">
-        <img src="images/back-button.png" class="back-button-icon servant-list-back-button">
+        <img src="images/back-button.png" class="back-button-icon servant-information-back-button">
       </div>
       <div class="menu-button-icon position-fixed">
         <img src="images/menu-button.png" class="menu-button-icon">
+      </div>
+    </div>
+    <div class="edit-servant-information-modal hide">
+      <div class="edit-servant-form-container-modal">
+        <form>
+          <div class="edit-servant-form-inputs">
+            <label for="servant-level">Servant level: </label>
+            <input type="number" min="1" max="100" name="servant-level" class="edit-input-field-margin">
+            <br>
+            <label for="skill-s1-level">Skill 1 level: </label>
+            <input type="number" min="1" max="10" name="servant-s1-level" class="edit-input-field-margin">
+            <br>
+            <label for="skill-s2-level">Skill 2 level: </label>
+            <input type="number" min="1" max="10" name="servant-s2-level" class="edit-input-field-margin">
+            <br>
+            <label for="skill-s3-level">Skill 3 level: </label>
+            <input type="number" min="1" max="10" name="servant-s3-level" class="edit-input-field-margin">
+            <br>
+            <label for="servent-atk-fou">Atk Fou: </label>
+            <input type="number" min="0" max="2000" name="servant-atk-fou" class="edit-input-field-margin">
+            <br>
+            <label for="servent-hp-fou">Hp Fou: </label>
+            <input type="number" min="0" max="2000" name="servant-hp-fou" class="edit-input-field-margin">
+          </div>
+          <div class="edit-servant-info-button">
+            <input type="submit" class="roster-button" value="Submit">
+          </div>
+        </form>
       </div>
     </div>
 
