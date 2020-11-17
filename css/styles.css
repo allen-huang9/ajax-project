@@ -13,7 +13,8 @@
 
   .new-roster-modal,
   .insert-servant-modal,
-  .servant-list-modal {
+  .servant-list-modal,
+  .edit-servant-information-modal {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -150,14 +151,16 @@
     width: 40%;
   }
 
-  .open-servant-insert-modal-button {
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
     bottom: 10%;
     left: 50%;
     margin-left: -100px;
   }
 
   .servant-form-modal,
-  .player-choices {
+  .player-choices,
+  .edit-servant-form-container-modal {
     padding: 1rem;
     margin: auto;
     background-color: white;
@@ -197,6 +200,123 @@
   .list-content-view-config {
     height: 500px;
     overflow-y: auto;
+  }
+
+  .servant-information-row {
+    text-align: center;
+  }
+
+  .servant-information-column-half {
+    width: 50%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .servant-profile-image-container {
+    margin-top: 5px;
+    width: 100px;
+  }
+
+  .servant-profile-name {
+    color: yellow;
+    font-size: 25px;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+
+  .servant-information-stat-display-container {
+    width: 100px;
+    height: 40px;
+  }
+
+  .servant-information-stat-display-container.blue {
+    width: 70px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 20px;
+  }
+
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 15px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-name-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-name-display,
+  .fou-hp-stat-value-display {
+    width: 80px;
+    text-align: center;
+    margin: auto;
+    color: yellow;
+    position: absolute;
+  }
+
+  .atk-stat-name-display,
+  .fou-atk-stat-name-display {
+    left: 1%;
+  }
+
+  .atk-stat-value-display,
+  .fou-atk-stat-value-display {
+    left: 24%;
+  }
+
+  .hp-stat-name-display,
+  .fou-hp-stat-name-display {
+    right: 28%;
+  }
+
+  .hp-stat-value-display,
+  .fou-hp-stat-value-display {
+    right: 5%;
+  }
+
+  .data-grid-container {
+    overflow-y: auto;
+    height: 495px;
+  }
+
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
+    color: yellow;
+    white-space: pre-wrap;
+    position: absolute;
+    width: 340px;
+    height: 80px;
+    left: 5%;
+    overflow-y: auto;
+  }
+
+  .skill-text-container {
+    margin: 0 auto;
+    width: 360px;
+    height: 100px;
+  }
+
+  .edit-servant-form-container-modal {
+    text-align: center;
+  }
+
+  .edit-servant-form-inputs {
+    text-align: right;
+  }
+
+  .edit-input-field-margin {
+    margin-bottom: 10px;
   }
 
   .np-dmg-button {
