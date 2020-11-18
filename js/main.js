@@ -353,32 +353,7 @@ function getItemsInfo() {
 
     }
 
-    for (var key of itemsMap) {
-
-      var $tableRow = document.createElement('tr');
-      var $tableTdImage = document.createElement('td');
-      var $materialImage = document.createElement('img');
-      $materialImage.setAttribute('class', 'material-size');
-      $materialImage.setAttribute('src', key[1]);
-
-      var $tableTdName = document.createElement('td');
-      var $materialName = document.createElement('p');
-      $materialName.setAttribute('class', 'material-name');
-
-      var $tableTdAmount = document.createElement('td');
-      var $materialAmount = document.createElement('p');
-      $materialAmount.setAttribute('class', 'amount-needed');
-
-      $tableTdImage.appendChild($materialImage);
-      $tableTdName.appendChild($materialName);
-      $tableTdImage.appendChild($materialAmount);
-
-      $tableRow.appendChild($tableTdImage);
-      $tableRow.appendChild($tableTdName);
-      $tableRow.appendChild($tableTdAmount);
-
-      $tableBody.appendChild($tableRow);
-    }
+    // buildTableBody(itemsMap);
 
   });
 
@@ -390,6 +365,35 @@ function Roster(name) {
   this.name = name;
   this.list = [];
 }
+
+// function buildTableBody(map) {
+//   for (var key of map) {
+
+//     var $tableRow = document.createElement('tr');
+//     var $tableTdImage = document.createElement('td');
+//     var $materialImage = document.createElement('img');
+//     $materialImage.setAttribute('class', 'material-size');
+//     $materialImage.setAttribute('src', key[1]);
+
+//     var $tableTdName = document.createElement('td');
+//     var $materialName = document.createElement('p');
+//     $materialName.setAttribute('class', 'material-name');
+
+//     var $tableTdAmount = document.createElement('td');
+//     var $materialAmount = document.createElement('p');
+//     $materialAmount.setAttribute('class', 'amount-needed');
+
+//     $tableTdImage.appendChild($materialImage);
+//     $tableTdName.appendChild($materialName);
+//     $tableTdImage.appendChild($materialAmount);
+
+//     $tableRow.appendChild($tableTdImage);
+//     $tableRow.appendChild($tableTdName);
+//     $tableRow.appendChild($tableTdAmount);
+
+//     $tableBody.appendChild($tableRow);
+//   }
+// }
 
 function buildRosterListView(array) {
 
@@ -504,7 +508,7 @@ function buildListContentView(rosterObject) {
     $servantName.setAttribute('class', 'column-half');
 
     var $imageContainer = document.createElement('div');
-    $imageContainer.setAttribute('class', 'color-white display-flex flex-ai-center pad-left');
+    $imageContainer.setAttribute('class', 'color-white display-flex flex-jc-center flex-ai-center pad-left');
 
     var $servantImage = document.createElement('img');
     $servantImage.setAttribute('src', rosterObject.list[i].extraAssets.faces.ascension['4']);
@@ -515,7 +519,7 @@ function buildListContentView(rosterObject) {
     var $servantNameText = document.createTextNode(rosterObject.list[i].name);
 
     var $servantViewDeleteButtons = document.createElement('div');
-    $servantViewDeleteButtons.setAttribute('class', 'column-half display-flex flex-ai-center');
+    $servantViewDeleteButtons.setAttribute('class', 'column-half display-flex flex-jc-center flex-ai-center');
     $servantViewDeleteButtons.setAttribute('id', i);
 
     var $servantViewButton = document.createElement('div');
