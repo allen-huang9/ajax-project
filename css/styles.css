@@ -319,6 +319,23 @@
     margin-bottom: 10px;
   }
 
+  .table {
+    text-align: center;
+    color: white;
+    height: 550px;
+    overflow-y: auto;
+  }
+
+  th,
+  td {
+    border-style: solid;
+    border-color: yellow;
+  }
+
+  .material-size {
+    width: 100px;
+  }
+
   .np-dmg-button {
     bottom: 20%;
   }
