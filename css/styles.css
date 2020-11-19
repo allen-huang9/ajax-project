@@ -525,9 +525,11 @@ body {
     position: fixed;
   }
 
-  div[data-view='servant-lists'] {
+  /* test it again  */
+
+  /* div[data-view='servant-lists'] {
     height: 667px;
-  }
+  } */
 
   .menu-bar {
     position: fixed;
@@ -1305,9 +1307,11 @@ body {
     position: fixed;
   }
 
-  div[data-view='servant-lists'] {
+  /* test it later to see if scrolling does not work  */
+
+  /* div[data-view='servant-lists'] {
     height: 667px;
-  }
+  } */
 
   .menu-bar {
     position: fixed;
@@ -1972,6 +1976,429 @@ body {
     justify-content: center;
     border-radius: 15px;
     background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+
+/* Iphone SE portrait */
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  header {
+    font-size: 25px;
+  }
+
+  .modal-form {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+    font-size: 20px;
+    height: 125px;
+  }
+
+  .submit-roster-button-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .roster-button {
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+    font-size: 20px;
+  }
+
+  .roster-list-row,
+  .list-content-row {
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .column-half {
+    width: 50%;
+    text-align: center;
+  }
+
+  .column-half-servant-name {
+    margin-left: 5px;
+  }
+
+  .screen-phone {
+    display: flex;
+    height: 50px;
+  }
+
+  .color-white {
+    color: white;
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .flex-jc-center {
+    justify-content: center;
+  }
+
+  .flex-ai-center {
+    align-items: center;
+  }
+
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 0;
+  }
+
+  .position-relative {
+    position: relative;
+  }
+
+  .position-fixed {
+    position: fixed;
+  }
+
+  .pad-left {
+    padding-left: 15px;
+  }
+
+  .servant-name-width {
+    text-align: center;
+    width: 150px;
+  }
+
+  .see-through {
+    background-color: rgba(13, 226, 255, 0.15);
+  }
+
+  /* changed here */
+  .background-config {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 40%;
+    height: 568px;
+    width: 320px;
+    position: fixed;
+  }
+
+  /* remove??????  */
+
+  /* div[data-view='servant-lists']
+    height: 667px;
+  } */
+
+  .menu-bar {
+    position: fixed;
+    bottom: 5%;
+  }
+
+  .menu-bar-asset {
+    width: 75%;
+    left: 12.5%;
+    margin-left: 0;
+  }
+
+  .menu-button-icon {
+    left: 37.5%;
+    bottom: 5%;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  .back-button-icon {
+    left: 15%;
+    bottom: 5%;
+    width: 40%;
+  }
+
+  /* changed here */
+  .list-display-container {
+    height: 360px;
+    overflow-y: auto;
+  }
+
+  /* changed here  */
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    bottom: 10%;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 38.5px;
+  }
+
+  .servant-form-modal,
+  .player-choices,
+  .edit-servant-form-container-modal {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+  }
+
+  .input-margin {
+    margin-left: 10px;
+  }
+
+  .search-for-servant-button,
+  .insert-servant-button-container {
+    text-align: center;
+  }
+
+  /* changed here */
+  .servant-roster-button {
+    bottom: 25%;
+  }
+
+  .player-choices > form {
+    height: 150px;
+    overflow-y: auto;
+  }
+
+  .insert-servant-button-container {
+    margin-top: 20px;
+  }
+
+  .servant-image {
+    width: 50px;
+  }
+
+  .image-margin {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  /* changed here  */
+  .list-content-view-config {
+    height: 420px;
+    overflow-y: auto;
+  }
+
+  .servant-information-row {
+    text-align: center;
+  }
+
+  .servant-information-column-half {
+    width: 50%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .servant-profile-image-container {
+    margin-top: 5px;
+    width: 100px;
+  }
+
+  /* changed here */
+  .servant-profile-name {
+    color: yellow;
+    font-size: 20px;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+
+  /* changed here  */
+  .servant-information-stat-display-container {
+    width: 90px;
+    height: 40px;
+  }
+
+  /* changed here  */
+  .servant-information-stat-display-container.blue {
+    width: 60px;
+  }
+
+  /* changed her e  */
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 16px;
+  }
+
+  /* changed here  */
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 14px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-name-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-name-display,
+  .fou-hp-stat-value-display {
+    width: 80px;
+    text-align: center;
+    margin: auto;
+    color: yellow;
+    position: absolute;
+  }
+
+  /* changed here  */
+  .atk-stat-name-display,
+  .fou-atk-stat-name-display {
+    left: -1.5%;
+  }
+
+  /* changed here  */
+  .atk-stat-value-display,
+  .fou-atk-stat-value-display {
+    left: 22%;
+  }
+
+  /* changed here  */
+  .hp-stat-name-display,
+  .fou-hp-stat-name-display {
+    right: 26.5%;
+  }
+
+  /* changed here  */
+  .hp-stat-value-display,
+  .fou-hp-stat-value-display {
+    right: 3%;
+  }
+
+  /* changed here  */
+  .data-grid-container {
+    overflow-y: auto;
+    height: 420px;
+  }
+
+  /* changed here  */
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
+    color: yellow;
+    white-space: pre-wrap;
+    position: absolute;
+    width: 290px;
+    height: 70px;
+    left: 5.5%;
+    overflow-y: auto;
+    font-size: 16px;
+  }
+
+  /* changed here  */
+  .skill-1-description {
+    bottom: 13%;
+  }
+
+  /* changed here  */
+  .skill-2-description {
+    bottom: -11%;
+  }
+
+  /* changed here  */
+  .skill-3-description {
+    bottom: -35%;
+  }
+
+  /* changed here  */
+  .skill-text-container {
+    margin: 0 auto;
+    width: 300px;
+    height: 100px;
+  }
+
+  .edit-servant-form-container-modal {
+    text-align: center;
+
+    /* width: 195px; */
+    height: 260px;
+  }
+
+  .edit-servant-form-inputs {
+    text-align: right;
+  }
+
+  .edit-input-field-margin {
+    margin-bottom: 10px;
+  }
+
+  .table {
+    text-align: center;
+    color: white;
+    height: 550px;
+    overflow-y: auto;
+  }
+
+  th,
+  td {
+    border-style: solid;
+    border-color: yellow;
+  }
+
+  .material-size {
+    width: 100px;
+  }
+
+  /* changed here */
+  .np-dmg-button {
+    bottom: 15%;
+  }
+
+  .new-roster-button {
+    margin: 25px auto;
+    position: relative;
+  }
+
+  .view-list-content-button,
+  .servant-info-button {
+    margin-right: 10px;
+  }
+
+  /* changed here  */
+  .material-table-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    height: 38.5px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .view-list-content-button,
+  .delete-list-button,
+  .servant-info-button,
+  .delete-servant-button {
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    width: 60px;
+  }
+
+  /* changed here  */
+  .homepage-button,
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  /* changed here  */
+  .homepage-button {
+    width: 200px;
+    height: 50px;
   }
 
   .hide {
