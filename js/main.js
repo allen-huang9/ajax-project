@@ -413,7 +413,7 @@ function buildRosterListView(array) {
     $rCol1P.textContent = array[i].name;
 
     var $rowColumn2 = document.createElement('div');
-    $rowColumn2.setAttribute('class', 'column-half display-flex flex-jf-center flex-ai-center');
+    $rowColumn2.setAttribute('class', 'column-half display-flex flex-jc-center flex-ai-center');
     $rowColumn2.setAttribute('id', '' + i);
 
     var $rowCol2ViewButton = document.createElement('div');

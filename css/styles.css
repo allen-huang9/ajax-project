@@ -30,8 +30,401 @@ body {
 
 
 
+
+/* Ipad portrait */
+@media screen and (max-height: 1024px) and (orientation: portrait) {
+  header {
+    font-size: 50px;
+  }
+
+  .modal-form {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+    font-size: 20px;
+    height: 125px;
+  }
+
+  .submit-roster-button-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .roster-button {
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+    font-size: 20px;
+  }
+
+  .roster-list-row,
+  .list-content-row {
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .column-half {
+    width: 50%;
+    text-align: center;
+  }
+
+  .column-half-servant-name {
+    margin-left: 5px;
+  }
+
+  .screen-phone {
+    display: flex;
+    height: 50px;
+  }
+
+  .color-white {
+    color: white;
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .flex-jc-center {
+    justify-content: center;
+  }
+
+  .flex-ai-center {
+    align-items: center;
+  }
+
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+  }
+
+  .position-relative {
+    position: relative;
+  }
+
+  .position-fixed {
+    position: fixed;
+  }
+
+  .pad-left {
+    padding-left: 15px;
+  }
+
+  .servant-name-width {
+    text-align: center;
+    width: 150px;
+  }
+
+  .see-through {
+    background-color: rgba(13, 226, 255, 0.15);
+  }
+
+  .background-config {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1024px;
+    width: 768px;
+    position: fixed;
+  }
+
+  /* div[data-view='servant-lists'] {
+    height: 667px;
+  } */
+
+  .list-display-container {
+    height: 750px;
+    overflow-y: auto;
+  }
+
+  .menu-bar {
+    position: fixed;
+    bottom: 5%;
+  }
+
+  .menu-bar-asset {
+    width: 600px;
+    left: 50%;
+    margin-left: -150px;
+  }
+
+  .menu-button-icon {
+    left: 50%;
+    margin-left: -37.5px;
+    bottom: 6%;
+    width: 150px;
+  }
+
+  .back-button-icon {
+    left: 15%;
+    bottom: 6%;
+    width: 90px;
+  }
+
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+    bottom: 6%;
+    right: 18%;
+  }
+
+  .servant-form-modal,
+  .player-choices,
+  .edit-servant-form-container-modal {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+  }
+
+  .input-margin {
+    margin-left: 10px;
+  }
+
+  .search-for-servant-button,
+  .insert-servant-button-container {
+    text-align: center;
+  }
+
+  .servant-roster-button {
+    bottom: 30%;
+  }
+
+  .player-choices > form {
+    height: 150px;
+    overflow-y: auto;
+  }
+
+  .insert-servant-button-container {
+    margin-top: 20px;
+  }
+
+  .servant-image {
+    width: 50px;
+  }
+
+  .image-margin {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .list-content-view-config {
+    height: 850px;
+    overflow-y: auto;
+  }
+
+  .servant-information-row {
+    text-align: center;
+  }
+
+  .servant-information-column-half {
+    width: 50%;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .servant-profile-image-container {
+    margin-top: 5px;
+    width: 200px;
+  }
+
+  .servant-profile-name {
+    color: yellow;
+    font-size: 37px;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+
+  .servant-information-stat-display-container {
+    width: 200px;
+    height: 80px;
+  }
+
+  .servant-information-stat-display-container.blue {
+    width: 140px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 35px;
+  }
+
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 30px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-name-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-name-display,
+  .fou-hp-stat-value-display {
+    width: 140px;
+    text-align: center;
+    margin: auto;
+    color: yellow;
+    position: absolute;
+  }
+
+  .atk-stat-name-display,
+  .fou-atk-stat-name-display {
+    left: 3%;
+  }
+
+  .atk-stat-value-display,
+  .fou-atk-stat-value-display {
+    left: 25%;
+  }
+
+  .hp-stat-name-display,
+  .fou-hp-stat-name-display {
+    right: 29%;
+  }
+
+  .hp-stat-value-display,
+  .fou-hp-stat-value-display {
+    right: 7%;
+  }
+
+  .data-grid-container {
+    overflow-y: auto;
+    height: 850px;
+  }
+
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
+    color: yellow;
+    font-size: 28px;
+    white-space: pre-wrap;
+    position: absolute;
+    width: 680px;
+    height: 120px;
+    left: 5%;
+    overflow-y: auto;
+  }
+
+  .skill-1-description {
+    bottom: 18%;
+  }
+
+  .skill-2-description {
+    bottom: -7%;
+  }
+
+  .skill-3-description {
+    bottom: -31.5%;
+  }
+
+  .skill-text-container {
+    margin: 5px auto;
+    width: 720px;
+    height: 200px;
+  }
+
+  .edit-servant-form-container-modal {
+    text-align: center;
+    height: 260px;
+  }
+
+  .edit-servant-form-inputs {
+    text-align: right;
+  }
+
+  .edit-input-field-margin {
+    margin-bottom: 10px;
+  }
+
+  .table {
+    text-align: center;
+    color: white;
+    height: 550px;
+    overflow-y: auto;
+  }
+
+  th,
+  td {
+    border-style: solid;
+    border-color: yellow;
+  }
+
+  .material-size {
+    width: 100px;
+  }
+
+  .np-dmg-button {
+    bottom: 20%;
+  }
+
+  .new-roster-button {
+    margin: 25px auto;
+    position: relative;
+  }
+
+  .view-list-content-button,
+  .servant-info-button {
+    margin-right: 10px;
+  }
+
+  .material-table-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    height: 50px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .view-list-content-button,
+  .delete-list-button,
+  .servant-info-button,
+  .delete-servant-button {
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    width: 80px;
+  }
+
+  .homepage-button {
+    width: 300px;
+    height: 75px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
 /* Iphone X portrait */
-@media screen and (max-width: 375px) and (max-height: 812px) {
+@media screen and (max-height: 812px) and (orientation: portrait) {
   header {
     font-size: 25px;
   }
@@ -62,6 +455,7 @@ body {
   .list-content-row {
     display: flex;
     width: 100%;
+    font-size: 16px;
   }
 
   .column-half {
@@ -143,18 +537,25 @@ body {
   .menu-bar-asset {
     width: 75%;
     left: 12.5%;
+    margin-left: 0;
   }
 
   .menu-button-icon {
     left: 37.5%;
     bottom: 5%;
     width: 50%;
+    margin-left: 0;
   }
 
   .back-button-icon {
     left: 15%;
     bottom: 5%;
     width: 40%;
+  }
+
+  .list-display-container {
+    height: 590px;
+    overflow-y: auto;
   }
 
   .open-servant-insert-modal-button,
@@ -302,9 +703,22 @@ body {
     white-space: pre-wrap;
     position: absolute;
     width: 340px;
-    height: 80px;
+    height: 70px;
     left: 5%;
     overflow-y: auto;
+    font-size: 16px;
+  }
+
+  .skill-1-description {
+    bottom: 40%;
+  }
+
+  .skill-2-description {
+    bottom: 24%;
+  }
+
+  .skill-3-description {
+    bottom: 8%;
   }
 
   .skill-text-container {
@@ -399,10 +813,10 @@ body {
   }
 }
 
-/* Iphone X landscape */
-@media screen and (max-width: 812px) and (orientation: landscape) {
+/* Ipad landscape */
+@media screen and (max-height: 768px) and (orientation: landscape) {
   header {
-    font-size: 25px;
+    font-size: 50px;
   }
 
   .modal-form {
@@ -431,6 +845,7 @@ body {
   .list-content-row {
     display: flex;
     width: 100%;
+    font-size: 18px;
   }
 
   .column-half {
@@ -466,8 +881,7 @@ body {
   .hp-position-config {
     position: absolute;
     left: 50%;
-    margin-left: -100px;
-    bottom: 0;
+    margin-left: -150px;
   }
 
   .position-relative {
@@ -494,59 +908,58 @@ body {
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -420px;
     background-position-x: center;
-    height: 375px;
-    width: 812px;
+    background-position-y: 40%;
+    height: 768px;
+    width: 1024px;
     position: fixed;
   }
 
-  div[data-view='servant-lists'] {
+  /* div[data-view='servant-lists'] {
     height: 667px;
+  } */
+
+  .list-display-container {
+    height: 485px;
+    overflow-y: auto;
   }
 
   .menu-bar {
     position: fixed;
     bottom: 5%;
-    left: 50%;
-    margin-left: -230px;
-    width: 612px;
   }
 
   .menu-bar-asset {
-    width: 75%;
+    width: 600px;
+    left: 50%;
+    margin-left: -60px;
   }
 
   .menu-button-icon {
-    margin-left: -29px;
     left: 50%;
-    bottom: 8%;
-    height: 35px;
+    margin-left: -37.5px;
+    bottom: 6%;
+    width: 150px;
   }
 
   .back-button-icon {
-    left: 25%;
-    bottom: 8%;
-    height: 35px;
-  }
-
-  .list-display-container {
-    height: 160px;
-    overflow-y: auto;
+    left: 24%;
+    bottom: 6%;
+    width: 100px;
   }
 
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
-    bottom: 8%;
-    right: 200px;
-    width: 100px;
-    height: 35px;
-    font-size: 20px;
+    width: 125px;
+    height: 45px;
+    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 15px;
     background-color: rgba(13, 226, 255, 0.6);
+    bottom: 6.7%;
+    right: 25%;
   }
 
   .servant-form-modal,
@@ -567,7 +980,7 @@ body {
   }
 
   .servant-roster-button {
-    bottom: 40%;
+    bottom: 35%;
   }
 
   .player-choices > form {
@@ -589,9 +1002,8 @@ body {
   }
 
   .list-content-view-config {
-    height: 250px;
+    height: 615px;
     overflow-y: auto;
-    text-align: center;
   }
 
   .servant-information-row {
@@ -601,40 +1013,30 @@ body {
   .servant-information-column-half {
     width: 50%;
     display: flex;
-    height: 50px;
+    height: 100px;
     align-items: center;
     justify-content: center;
   }
 
-  .part-left {
-    justify-content: flex-end;
-    margin-right: 10px;
-  }
-
-  .part-right {
-    justify-content: flex-start;
-    margin-left: 10px;
-  }
-
   .servant-profile-image-container {
     margin-top: 5px;
-    width: 100px;
+    width: 200px;
   }
 
   .servant-profile-name {
     color: yellow;
-    font-size: 25px;
+    font-size: 37px;
     white-space: pre-wrap;
     margin: 0;
   }
 
   .servant-information-stat-display-container {
-    width: 100px;
-    height: 40px;
+    width: 200px;
+    height: 80px;
   }
 
   .servant-information-stat-display-container.blue {
-    width: 70px;
+    width: 140px;
   }
 
   .atk-stat-name-display,
@@ -643,12 +1045,12 @@ body {
   .hp-stat-value-display,
   .fou-atk-stat-value-display,
   .fou-hp-stat-value-display {
-    font-size: 20px;
+    font-size: 35px;
   }
 
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
-    font-size: 15px;
+    font-size: 30px;
   }
 
   .atk-stat-name-display,
@@ -659,7 +1061,7 @@ body {
   .fou-atk-stat-value-display,
   .fou-hp-stat-name-display,
   .fou-hp-stat-value-display {
-    width: 80px;
+    width: 140px;
     text-align: center;
     margin: auto;
     color: yellow;
@@ -668,45 +1070,58 @@ body {
 
   .atk-stat-name-display,
   .fou-atk-stat-name-display {
-    left: 27.3%;
+    left: 8.5%;
   }
 
   .atk-stat-value-display,
   .fou-atk-stat-value-display {
-    left: 37.5%;
+    left: 25%;
   }
 
   .hp-stat-name-display,
   .fou-hp-stat-name-display {
-    right: 39.4%;
+    right: 28%;
   }
 
   .hp-stat-value-display,
   .fou-hp-stat-value-display {
-    right: 29.5%;
+    right: 11.5%;
   }
 
   .data-grid-container {
     overflow-y: auto;
-    height: 260px;
+    height: 615px;
   }
 
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
     color: yellow;
+    font-size: 28px;
     white-space: pre-wrap;
     position: absolute;
-    width: 340px;
-    height: 80px;
-    left: 29%;
+    width: 680px;
+    height: 135px;
+    left: 16.5%;
     overflow-y: auto;
   }
 
+  .skill-1-description {
+    bottom: -15.5%;
+  }
+
+  .skill-2-description {
+    bottom: -49%;
+  }
+
+  .skill-3-description {
+    bottom: -83.5%;
+  }
+
   .skill-text-container {
-    margin: 0 auto;
-    width: 360px;
-    height: 100px;
+    margin: 5px auto;
+    width: 720px;
+    height: 200px;
   }
 
   .edit-servant-form-container-modal {
@@ -772,13 +1187,13 @@ body {
   .delete-servant-button {
     background-color: rgba(13, 226, 255, 0.6);
     border-radius: 10px;
-    width: 60px;
+    width: 80px;
   }
 
   .homepage-button {
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
+    width: 300px;
+    height: 75px;
+    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -791,8 +1206,8 @@ body {
   }
 }
 
-/* view for Iphone 6/7/8 portrait */
-@media screen and (max-width: 375px) and (max-height: 667px) {
+/* Iphone 6/7/8 portrait */
+@media screen and (max-height: 667px) and (orientation: portrait) {
   header {
     font-size: 25px;
   }
@@ -1139,6 +1554,416 @@ body {
 
   .homepage-button,
   .open-servant-insert-modal-button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+/* Iphone X landscape */
+@media screen and (max-width: 812px) and (orientation: landscape) {
+  header {
+    font-size: 25px;
+  }
+
+  .modal-form {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+    font-size: 20px;
+    height: 125px;
+  }
+
+  .submit-roster-button-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .roster-button {
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+    font-size: 20px;
+  }
+
+  .roster-list-row,
+  .list-content-row {
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .column-half {
+    width: 50%;
+    text-align: center;
+  }
+
+  .column-half-servant-name {
+    margin-left: 5px;
+  }
+
+  .screen-phone {
+    display: flex;
+    height: 50px;
+  }
+
+  .color-white {
+    color: white;
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .flex-jc-center {
+    justify-content: center;
+  }
+
+  .flex-ai-center {
+    align-items: center;
+  }
+
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 0;
+  }
+
+  .position-relative {
+    position: relative;
+  }
+
+  .position-fixed {
+    position: fixed;
+  }
+
+  .pad-left {
+    padding-left: 15px;
+  }
+
+  .servant-name-width {
+    text-align: center;
+    width: 150px;
+  }
+
+  .see-through {
+    background-color: rgba(13, 226, 255, 0.15);
+  }
+
+  .background-config {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -420px;
+    background-position-x: center;
+    height: 375px;
+    width: 812px;
+    position: fixed;
+  }
+
+  /* div[data-view='servant-lists'] {
+    height: 667px;
+  } */
+
+  .menu-bar {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -230px;
+    width: 612px;
+  }
+
+  .menu-bar-asset {
+    width: 75%;
+    margin-left: 0;
+    left: 0;
+  }
+
+  .menu-button-icon {
+    margin-left: -29px;
+    left: 50%;
+    bottom: 8%;
+    height: 35px;
+    width: auto;
+  }
+
+  .back-button-icon {
+    left: 25%;
+    bottom: 8%;
+    height: 35px;
+    width: auto;
+  }
+
+  .list-display-container {
+    height: 160px;
+    overflow-y: auto;
+  }
+
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    bottom: 8%;
+    right: 200px;
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  .servant-form-modal,
+  .player-choices,
+  .edit-servant-form-container-modal {
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+  }
+
+  .input-margin {
+    margin-left: 10px;
+  }
+
+  .search-for-servant-button,
+  .insert-servant-button-container {
+    text-align: center;
+  }
+
+  .servant-roster-button {
+    bottom: 40%;
+  }
+
+  .player-choices > form {
+    height: 150px;
+    overflow-y: auto;
+  }
+
+  .insert-servant-button-container {
+    margin-top: 20px;
+  }
+
+  .servant-image {
+    width: 50px;
+  }
+
+  .image-margin {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .list-content-view-config {
+    height: 250px;
+    overflow-y: auto;
+    text-align: center;
+  }
+
+  .servant-information-row {
+    text-align: center;
+  }
+
+  .servant-information-column-half {
+    width: 50%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .part-left {
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+
+  .part-right {
+    justify-content: flex-start;
+    margin-left: 10px;
+  }
+
+  .servant-profile-image-container {
+    margin-top: 5px;
+    width: 100px;
+  }
+
+  .servant-profile-name {
+    color: yellow;
+    font-size: 25px;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+
+  .servant-information-stat-display-container {
+    width: 100px;
+    height: 40px;
+  }
+
+  .servant-information-stat-display-container.blue {
+    width: 70px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 20px;
+  }
+
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 15px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-name-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-name-display,
+  .fou-hp-stat-value-display {
+    width: 80px;
+    text-align: center;
+    margin: auto;
+    color: yellow;
+    position: absolute;
+  }
+
+  .atk-stat-name-display,
+  .fou-atk-stat-name-display {
+    left: 27.3%;
+  }
+
+  .atk-stat-value-display,
+  .fou-atk-stat-value-display {
+    left: 37.5%;
+  }
+
+  .hp-stat-name-display,
+  .fou-hp-stat-name-display {
+    right: 39.4%;
+  }
+
+  .hp-stat-value-display,
+  .fou-hp-stat-value-display {
+    right: 29.5%;
+  }
+
+  .data-grid-container {
+    overflow-y: auto;
+    height: 260px;
+  }
+
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
+    color: yellow;
+    white-space: pre-wrap;
+    position: absolute;
+    width: 340px;
+    height: 70px;
+    left: 29%;
+    overflow-y: auto;
+    font-size: 16px;
+  }
+
+  .skill-1-description {
+    bottom: -46%;
+  }
+
+  .skill-2-description {
+    bottom: -85%;
+  }
+
+  .skill-3-description {
+    bottom: -123%;
+  }
+
+  .skill-text-container {
+    margin: 0 auto;
+    width: 360px;
+    height: 100px;
+  }
+
+  .edit-servant-form-container-modal {
+    text-align: center;
+    height: 260px;
+  }
+
+  .edit-servant-form-inputs {
+    text-align: right;
+  }
+
+  .edit-input-field-margin {
+    margin-bottom: 10px;
+  }
+
+  .table {
+    text-align: center;
+    color: white;
+    height: 550px;
+    overflow-y: auto;
+  }
+
+  th,
+  td {
+    border-style: solid;
+    border-color: yellow;
+  }
+
+  .material-size {
+    width: 100px;
+  }
+
+  .np-dmg-button {
+    bottom: 20%;
+  }
+
+  .new-roster-button {
+    margin: 25px auto;
+    position: relative;
+  }
+
+  .view-list-content-button,
+  .servant-info-button {
+    margin-right: 10px;
+  }
+
+  .material-table-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    height: 50px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .view-list-content-button,
+  .delete-list-button,
+  .servant-info-button,
+  .delete-servant-button {
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    width: 60px;
+  }
+
+  .homepage-button {
     width: 200px;
     height: 50px;
     font-size: 20px;
