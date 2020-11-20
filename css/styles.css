@@ -1,11 +1,6 @@
 
 /* Desktop view  */
 
-/* main {
-  width: 1000px;
-  margin: auto;
-} */
-
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -149,13 +144,11 @@ header {
   display: flex;
 }
 
-/* changed here  */
 .menu-button-icon {
   width: 150px;
   margin-left: 65px;
 }
 
-/* changed here  */
 .back-button-icon {
   width: 90px;
   margin-top: 1.5px;
@@ -215,7 +208,6 @@ header {
   margin-bottom: 5px;
 }
 
-/* changed here  */
 .list-content-view-config {
   height: 700px;
   overflow-y: auto;
@@ -331,10 +323,6 @@ header {
   margin-bottom: 10px;
 }
 
-.np-dmg-button {
-  bottom: 20%;
-}
-
 .new-roster-button {
   margin: 25px auto;
   position: relative;
@@ -382,8 +370,6 @@ header {
   display: none;
 }
 
-/* -------------------------------------------------------------------------- */
-
 /* Ipad portrait fifth */
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   header {
@@ -408,8 +394,6 @@ header {
     bottom: 0;
   }
 
-
-  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
@@ -445,13 +429,11 @@ header {
     margin-left: 10px;
   }
 
-  /* changed here */
   .list-display-container {
     height: 555px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
     width: 85px;
@@ -461,18 +443,15 @@ header {
     margin-left: 0;
   }
 
-  /* changed here */
   .servant-roster-button {
     bottom: 25%;
   }
 
-  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .list-content-view-config {
     height: 655px;
     overflow-y: auto;
@@ -499,7 +478,6 @@ header {
     width: 200px;
   }
 
-  /* changed here */
   .servant-profile-name {
     color: yellow;
     font-size: 25px;
@@ -507,19 +485,16 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container {
     width: 150px;
     height: 70px;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container.blue,
   .servant-information-stat-display-container.green {
     background-size: 150px 70px;
   }
 
-  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
@@ -529,19 +504,16 @@ header {
     font-size: 24px;
   }
 
-  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
     font-size: 22px;
   }
 
-  /* changed here  */
   .data-grid-container {
     overflow-y: auto;
     height: 655px;
   }
 
-  /* changed here  */
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
@@ -554,7 +526,6 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
     width: 600px;
@@ -562,12 +533,6 @@ header {
     background-size: 600px 260px;
   }
 
-  /* changed here */
-  .np-dmg-button {
-    bottom: 15%;
-  }
-
-  /* changed here  */
   .material-table-button {
     display: flex;
     text-align: center;
@@ -588,7 +553,6 @@ header {
     width: 70px;
   }
 
-  /* changed here  */
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
@@ -600,7 +564,6 @@ header {
     background-color: rgba(13, 226, 255, 0.6);
   }
 
-  /* changed here  */
   .homepage-button {
     width: 200px;
     height: 50px;
@@ -635,8 +598,6 @@ header {
     bottom: 0;
   }
 
-
-  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
@@ -671,13 +632,11 @@ header {
     margin-left: 10px;
   }
 
-  /* changed here */
   .list-display-container {
     height: 815px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
     width: 85px;
@@ -687,18 +646,15 @@ header {
     margin-left: 0;
   }
 
-  /* changed here */
   .servant-roster-button {
     bottom: 25%;
   }
 
-  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .list-content-view-config {
     height: 915px;
     overflow-y: auto;
@@ -725,7 +681,6 @@ header {
     width: 200px;
   }
 
-  /* changed here */
   .servant-profile-name {
     color: yellow;
     font-size: 25px;
@@ -733,19 +688,16 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container {
     width: 150px;
     height: 70px;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container.blue,
   .servant-information-stat-display-container.green {
     background-size: 150px 70px;
   }
 
-  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
@@ -755,19 +707,16 @@ header {
     font-size: 24px;
   }
 
-  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
     font-size: 22px;
   }
 
-  /* changed here  */
   .data-grid-container {
     overflow-y: auto;
     height: 900px;
   }
 
-  /* changed here  */
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
@@ -780,7 +729,6 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
     width: 600px;
@@ -788,12 +736,6 @@ header {
     background-size: 600px 260px;
   }
 
-  /* changed here */
-  .np-dmg-button {
-    bottom: 15%;
-  }
-
-  /* changed here  */
   .material-table-button {
     display: flex;
     text-align: center;
@@ -814,7 +756,6 @@ header {
     width: 70px;
   }
 
-  /* changed here  */
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
@@ -826,7 +767,6 @@ header {
     background-color: rgba(13, 226, 255, 0.6);
   }
 
-  /* changed here  */
   .homepage-button {
     width: 200px;
     height: 50px;
@@ -836,8 +776,6 @@ header {
     display: none;
   }
 }
-
-/* -------------------------------------------------------------------------- */
 
 /* Iphone X landscape fourth */
 @media screen and (max-width: 812px) and (orientation: landscape) {
@@ -863,8 +801,6 @@ header {
     bottom: 0;
   }
 
-
-  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
@@ -900,13 +836,11 @@ header {
     margin-left: 10px;
   }
 
-  /* changed here */
   .list-display-container {
     height: 165px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
     width: 75px;
@@ -916,18 +850,15 @@ header {
     margin-left: 0;
   }
 
-  /* changed here */
   .servant-roster-button {
     bottom: 30%;
   }
 
-  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .list-content-view-config {
     height: 260px;
     overflow-y: auto;
@@ -954,7 +885,6 @@ header {
     width: 100px;
   }
 
-  /* changed here */
   .servant-profile-name {
     color: yellow;
     font-size: 20px;
@@ -962,19 +892,16 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container {
     width: 85px;
     height: 45px;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container.blue,
   .servant-information-stat-display-container.green {
     background-size: 85px 45px;
   }
 
-  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
@@ -984,19 +911,16 @@ header {
     font-size: 18px;
   }
 
-  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
     font-size: 16px;
   }
 
-  /* changed here  */
   .data-grid-container {
     overflow-y: auto;
     height: 260px;
   }
 
-  /* changed here  */
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
@@ -1009,7 +933,6 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
     width: 300px;
@@ -1017,12 +940,6 @@ header {
     background-size: 300px 100px;
   }
 
-  /* changed here */
-  .np-dmg-button {
-    bottom: 15%;
-  }
-
-  /* changed here  */
   .material-table-button {
     display: flex;
     text-align: center;
@@ -1043,7 +960,6 @@ header {
     width: 60px;
   }
 
-  /* changed here  */
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
@@ -1055,7 +971,6 @@ header {
     background-color: rgba(13, 226, 255, 0.6);
   }
 
-  /* changed here  */
   .homepage-button {
     width: 200px;
     height: 50px;
@@ -1090,8 +1005,6 @@ header {
     bottom: 0;
   }
 
-
-  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
@@ -1126,13 +1039,11 @@ header {
     margin-left: 10px;
   }
 
-  /* changed here */
   .list-display-container {
     height: 575px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
     width: 150px;
@@ -1142,18 +1053,15 @@ header {
     margin-left: 0;
   }
 
-  /* changed here */
   .servant-roster-button {
     bottom: 25%;
   }
 
-  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .list-content-view-config {
     height: 635px;
     overflow-y: auto;
@@ -1172,7 +1080,6 @@ header {
     width: 100px;
   }
 
-  /* changed here */
   .servant-profile-name {
     color: yellow;
     font-size: 20px;
@@ -1180,19 +1087,16 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container {
     width: 85px;
     height: 45px;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container.blue,
   .servant-information-stat-display-container.green {
     background-size: 85px 45px;
   }
 
-  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
@@ -1202,19 +1106,16 @@ header {
     font-size: 18px;
   }
 
-  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
     font-size: 16px;
   }
 
-  /* changed here  */
   .data-grid-container {
     overflow-y: auto;
     height: 575px;
   }
 
-  /* changed here  */
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
@@ -1227,7 +1128,6 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
     width: 300px;
@@ -1235,12 +1135,6 @@ header {
     background-size: 300px 100px;
   }
 
-  /* changed here */
-  .np-dmg-button {
-    bottom: 15%;
-  }
-
-  /* changed here  */
   .material-table-button {
     display: flex;
     text-align: center;
@@ -1261,7 +1155,6 @@ header {
     width: 60px;
   }
 
-  /* changed here  */
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
@@ -1273,7 +1166,6 @@ header {
     background-color: rgba(13, 226, 255, 0.6);
   }
 
-  /* changed here  */
   .homepage-button {
     width: 200px;
     height: 50px;
@@ -1283,8 +1175,6 @@ header {
     display: none;
   }
 }
-
-/* -------------------------------------------------------------------------- */
 
 /* Iphone SE portrait  first */
 @media screen and (max-width: 320px) and (orientation: portrait) {
@@ -1310,8 +1200,6 @@ header {
     bottom: 0;
   }
 
-
-  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
@@ -1347,13 +1235,11 @@ header {
     margin-left: 10px;
   }
 
-  /* changed here */
   .list-display-container {
     height: 360px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
     width: 150px;
@@ -1363,18 +1249,15 @@ header {
     margin-left: 0;
   }
 
-  /* changed here */
   .servant-roster-button {
     bottom: 25%;
   }
 
-  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .list-content-view-config {
     height: 420px;
     overflow-y: auto;
@@ -1393,7 +1276,6 @@ header {
     width: 100px;
   }
 
-  /* changed here */
   .servant-profile-name {
     color: yellow;
     font-size: 20px;
@@ -1401,19 +1283,16 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container {
     width: 90px;
     height: 40px;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container.blue,
   .servant-information-stat-display-container.green {
     background-size: 75px 35px;
   }
 
-  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
@@ -1423,19 +1302,16 @@ header {
     font-size: 16px;
   }
 
-  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
     font-size: 14px;
   }
 
-  /* changed here  */
   .data-grid-container {
     overflow-y: auto;
     height: 420px;
   }
 
-  /* changed here  */
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
@@ -1448,7 +1324,6 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
     width: 300px;
@@ -1456,12 +1331,6 @@ header {
     background-size: 300px 100px;
   }
 
-  /* changed here */
-  .np-dmg-button {
-    bottom: 15%;
-  }
-
-  /* changed here  */
   .material-table-button {
     display: flex;
     text-align: center;
@@ -1482,7 +1351,6 @@ header {
     width: 60px;
   }
 
-  /* changed here  */
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
@@ -1494,7 +1362,6 @@ header {
     background-color: rgba(13, 226, 255, 0.6);
   }
 
-  /* changed here  */
   .homepage-button {
     width: 200px;
     height: 50px;
@@ -1529,8 +1396,6 @@ header {
     bottom: 0;
   }
 
-
-  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
@@ -1566,35 +1431,28 @@ header {
     margin-left: 10px;
   }
 
-  /* changed here */
   .list-display-container {
     height: 140px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
     width: 75px;
     height: 22px;
     bottom: 1.5%;
     right: 25%;
-
-    /* margin-left: 0; */
   }
 
-  /* changed here */
   .servant-roster-button {
     bottom: 35%;
   }
 
-  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  /* changed here  */
   .list-content-view-config {
     height: 240px;
     overflow-y: auto;
@@ -1621,7 +1479,6 @@ header {
     width: 100px;
   }
 
-  /* changed here */
   .servant-profile-name {
     color: yellow;
     font-size: 20px;
@@ -1629,19 +1486,16 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container {
     width: 100px;
     height: 45px;
   }
 
-  /* changed here  */
   .servant-information-stat-display-container.blue,
   .servant-information-stat-display-container.green {
     background-size: 100px 45px;
   }
 
-  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
@@ -1651,19 +1505,16 @@ header {
     font-size: 18px;
   }
 
-  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
     font-size: 16px;
   }
 
-  /* changed here  */
   .data-grid-container {
     overflow-y: auto;
     height: 240px;
   }
 
-  /* changed here  */
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
@@ -1676,7 +1527,6 @@ header {
     margin: 0;
   }
 
-  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
     width: 300px;
@@ -1684,12 +1534,6 @@ header {
     background-size: 300px 100px;
   }
 
-  /* changed here */
-  .np-dmg-button {
-    bottom: 15%;
-  }
-
-  /* changed here  */
   .material-table-button {
     display: flex;
     text-align: center;
@@ -1710,7 +1554,6 @@ header {
     width: 60px;
   }
 
-  /* changed here  */
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
@@ -1722,7 +1565,6 @@ header {
     background-color: rgba(13, 226, 255, 0.6);
   }
 
-  /* changed here  */
   .homepage-button {
     width: 200px;
     height: 50px;

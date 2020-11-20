@@ -3,7 +3,6 @@ var $background = document.querySelector('.background-config');
 var $dataView = document.querySelectorAll('div[data-view]');
 
 var $homePageServantRoster = document.querySelector('.servant-roster-button');
-var $homePageDmgCalculator = document.querySelector('.np-dmg-button');
 
 var $openNewRosterModalButton = document.querySelector('.new-roster-button');
 var $newRosterModalForm = document.querySelector('.new-roster-modal');
@@ -18,7 +17,6 @@ var $returnedServantListModal = document.querySelector('.servant-list-modal');
 
 var $listContentDisplayContainer = document.querySelector('.list-content-display-container');
 var $returnedServantOptions = document.querySelector('.player-choices > form');
-var $toMaterialTableButton = document.querySelector('.material-table-button');
 
 var $menuButton = document.querySelectorAll('.menu-button-icon');
 var $rosterListsBackButton = document.querySelector('.roster-lists-back-button');
@@ -32,109 +30,14 @@ var $editServantInfoForm = document.querySelector('.edit-servant-form-container-
 var currentRoster = null;
 var currentServantInfo = null;
 
-var itemIdArray = [
-  6001, // Skill gems id
-  6002,
-  6003,
-  6004,
-  6005,
-  6006,
-  6007,
-  6101,
-  6102,
-  6103,
-  6104,
-  6105,
-  6106,
-  6107,
-  6201,
-  6202,
-  6203,
-  6204,
-  6205,
-  6206,
-  6207,
-
-  7001, // Statues
-  7002,
-  7003,
-  7004,
-  7005,
-  7007,
-  7007,
-  7101,
-  7102,
-  7103,
-  7104,
-  7105,
-  7107,
-  7107,
-
-  6503, // Proof
-  6516, // Bone
-  6512, // Fang
-  6505, // Dust
-  6522, // Chain
-  6527, // Stinger
-  6530, // Fluid
-  6533, // Stake
-  6534, // Bullet
-
-  6502, // Seed
-  6508, // Lantern
-  6515, // Crystal
-  6509, // Jewel
-  6501, // Feather
-  6510, // Gear
-  6511, // Page
-  6514, // Baby
-  6513, // Horseshoe
-  6524, // Medal
-  6526, // Shell
-  6532, // Magatama
-  6535, // Frost
-  6537, // Ring
-  6536, // Steel
-  6538, // Bell
-  6541, // Arrowhead
-  6543, // Crown
-  6545, // Vein
-
-  6507, // Claw
-  6517, // Heart
-  6506, // Scale
-  6518, // Root
-  6519, // Horn
-  6520, // Tearstone
-  6521, // Grease
-  6523, // Lamp
-  6525, // Scarab
-  6528, // Lanugo
-  6529, // Gallstone
-  6531, // Wine
-  6539, // Core
-  6540, // Mirror
-  6542, // Egg
-  6544, // Shard
-  6546 // Fruit
-];
-
 $homePageServantRoster.addEventListener('click', function (e) {
   viewSwap('servant-lists');
   appendRosterList();
   $background.className = 'list-bg background-config';
 });
 
-$homePageDmgCalculator.addEventListener('click', function (e) {
-  viewSwap('calculator');
-});
-
 $openNewRosterModalButton.addEventListener('click', function (e) {
   $newRosterModalForm.className = 'new-roster-modal';
-});
-
-$toMaterialTableButton.addEventListener('click', function (e) {
-  viewSwap('materials-table');
 });
 
 var existingRosterList = localStorage.getItem('fgo-rosters');
@@ -145,7 +48,6 @@ if (existingRosterList) {
 window.addEventListener('beforeunload', function (e) {
   var dataJson = JSON.stringify(data);
   localStorage.setItem('fgo-rosters', dataJson);
-  // localStorage.clear();
 });
 
 $createNewRosterForm.addEventListener('submit', function (e) {
@@ -303,7 +205,6 @@ function appendServantListContent() {
       displayServantInfo(currentServantInfo);
       viewSwap('servant-information');
 
-      // currentRoster.list[e.target.parentNode.getAttribute('id')];
     });
 
     $allDeleteServantButtons[i].addEventListener('click', function (e) {
@@ -313,87 +214,10 @@ function appendServantListContent() {
   }
 }
 
-$toMaterialTableButton.addEventListener('click', function (e) {
-
-  appendMaterialTable();
-  viewSwap('materials-table');
-
-});
-
-var $tableBody;
-var itemsMap = new Map();
-
-function appendMaterialTable() {
-  $tableBody = document.querySelector('tbody');
-
-  while ($tableBody.firstChild) {
-    $tableBody.removeChild($tableBody.firstChild);
-  }
-
-  getItemsInfo();
-
-  // itemsMap.clear();
-}
-
-function getItemsInfo() {
-  var xhr = new XMLHttpRequest();
-
-  xhr.open('GET', 'https://api.atlasacademy.io/export/NA/nice_item.json');
-  xhr.responseType = 'json';
-  xhr.addEventListener('load', function () {
-
-    var items = xhr.response;
-
-    for (var item of items) {
-      var materialId = item.id;
-      if (!itemIdArray.includes(materialId)) {
-        continue;
-      }
-      itemsMap.set(materialId, item);
-
-    }
-
-    // buildTableBody(itemsMap);
-
-  });
-
-  xhr.send();
-
-}
-
 function Roster(name) {
   this.name = name;
   this.list = [];
 }
-
-// function buildTableBody(map) {
-//   for (var key of map) {
-
-//     var $tableRow = document.createElement('tr');
-//     var $tableTdImage = document.createElement('td');
-//     var $materialImage = document.createElement('img');
-//     $materialImage.setAttribute('class', 'material-size');
-//     $materialImage.setAttribute('src', key[1]);
-
-//     var $tableTdName = document.createElement('td');
-//     var $materialName = document.createElement('p');
-//     $materialName.setAttribute('class', 'material-name');
-
-//     var $tableTdAmount = document.createElement('td');
-//     var $materialAmount = document.createElement('p');
-//     $materialAmount.setAttribute('class', 'amount-needed');
-
-//     $tableTdImage.appendChild($materialImage);
-//     $tableTdName.appendChild($materialName);
-//     $tableTdImage.appendChild($materialAmount);
-
-//     $tableRow.appendChild($tableTdImage);
-//     $tableRow.appendChild($tableTdName);
-//     $tableRow.appendChild($tableTdAmount);
-
-//     $tableBody.appendChild($tableRow);
-//   }
-// }
 
 function buildRosterListView(array) {
 
