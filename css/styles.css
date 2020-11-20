@@ -1,18 +1,13 @@
 
+/* Desktop view  */
+
+main {
+  width: 1000px;
+  margin: auto;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-}
-
-.homepage-bg {
-  background: url(../images/homepage-bg.jpg);
-}
-
-.list-bg {
-  background: url(../images/list-bg.png);
-}
-
-.hide {
-  display: none;
 }
 
 .new-roster-modal,
@@ -28,35 +23,375 @@ body {
   display: flex;
 }
 
+.homepage-bg {
+  background: url(../images/homepage-bg.jpg);
+}
 
+.list-bg {
+  background: url(../images/list-bg.png);
+}
 
+.hide {
+  display: none;
+}
 
-/* Ipad portrait */
-@media screen and (max-height: 1024px) and (orientation: portrait) {
+header {
+  font-size: 50px;
+}
+
+.modal-form {
+  padding: 1rem;
+  margin: auto;
+  background-color: white;
+  font-size: 20px;
+  height: 125px;
+}
+
+.submit-roster-button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.roster-button {
+  width: 100px;
+  height: 30px;
+  border-style: none;
+  border-radius: 15px;
+  background-color: rgba(13, 226, 255, 0.6);
+  font-size: 20px;
+}
+
+.roster-list-row,
+.list-content-row {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+}
+
+.column-half {
+  width: 50%;
+  text-align: center;
+}
+
+.column-half-servant-name {
+  margin-left: 5px;
+}
+
+.screen-phone {
+  display: flex;
+  height: 50px;
+}
+
+.color-white {
+  color: white;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-jc-center {
+  justify-content: center;
+}
+
+.flex-ai-center {
+  align-items: center;
+}
+
+.hp-position-config {
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.pad-left {
+  padding-left: 15px;
+}
+
+.servant-name-width {
+  text-align: center;
+  width: 150px;
+}
+
+.see-through {
+  background-color: rgba(13, 226, 255, 0.15);
+}
+
+.background-config {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 35%;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.list-display-container {
+  height: 580px;
+  overflow-y: auto;
+}
+
+/* changed here  */
+.menu-bar {
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  width: 50%;
+  height: 50px;
+  margin-left: -263.75px;
+  background-image: url('../images/menubar.png');
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+/* changed here  */
+.menu-button-icon {
+  width: 150px;
+  margin-left: 65px;
+}
+
+/* changed here  */
+.back-button-icon {
+  width: 90px;
+  margin-top: 1.5px;
+  margin-left: 20px;
+}
+
+.open-servant-insert-modal-button,
+.open-servant-edit-info-modal-button {
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: rgba(13, 226, 255, 0.6);
+  bottom: 0;
+  right: 18%;
+}
+
+.servant-form-modal,
+.player-choices,
+.edit-servant-form-container-modal {
+  padding: 1rem;
+  margin: auto;
+  background-color: white;
+}
+
+.input-margin {
+  margin-left: 10px;
+}
+
+.search-for-servant-button,
+.insert-servant-button-container {
+  text-align: center;
+}
+
+.servant-roster-button {
+  bottom: 30%;
+}
+
+.player-choices > form {
+  height: 150px;
+  overflow-y: auto;
+}
+
+.insert-servant-button-container {
+  margin-top: 20px;
+}
+
+.servant-image {
+  width: 50px;
+}
+
+.image-margin {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* changed here  */
+.list-content-view-config {
+  height: 700px;
+  overflow-y: auto;
+}
+
+.servant-information-row {
+  text-align: center;
+}
+
+.servant-information-column-half {
+  width: 50%;
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.part-left {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.part-right {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+.servant-profile-image-container {
+  margin-top: 5px;
+  width: 200px;
+}
+
+.servant-profile-name {
+  color: yellow;
+  font-size: 37px;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.servant-information-stat-display-container {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.servant-information-stat-display-container.blue {
+  background-image: url('../images/stat-name-container.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.servant-information-stat-display-container.green {
+  background-image: url('../images/stat-values-container.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.atk-stat-name-display,
+.atk-stat-value-display,
+.hp-stat-name-display,
+.hp-stat-value-display,
+.fou-atk-stat-value-display,
+.fou-hp-stat-value-display {
+  font-size: 35px;
+  color: yellow;
+}
+
+.fou-atk-stat-name-display,
+.fou-hp-stat-name-display {
+  font-size: 30px;
+  color: yellow;
+}
+
+.data-grid-container {
+  overflow-y: auto;
+  height: 850px;
+}
+
+.skill-1-description,
+.skill-2-description,
+.skill-3-description {
+  color: yellow;
+  font-size: 28px;
+  white-space: pre-wrap;
+  width: 680px;
+  height: 120px;
+  overflow-y: auto;
+}
+
+.skill-text-container {
+  margin: 5px auto;
+  width: 720px;
+  height: 200px;
+  background-image: url('../images/skill-text-box.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-servant-form-container-modal {
+  text-align: center;
+  height: 260px;
+}
+
+.edit-servant-form-inputs {
+  text-align: right;
+}
+
+.edit-input-field-margin {
+  margin-bottom: 10px;
+}
+
+.np-dmg-button {
+  bottom: 20%;
+}
+
+.new-roster-button {
+  margin: 25px auto;
+  position: relative;
+}
+
+.view-list-content-button,
+.servant-info-button {
+  margin-right: 10px;
+}
+
+.material-table-button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(13, 226, 255, 0.6);
+  border-radius: 10px;
+  height: 50px;
+  width: 70px;
+  right: 4%;
+  bottom: 10%;
+}
+
+.view-list-content-button,
+.delete-list-button,
+.servant-info-button,
+.delete-servant-button {
+  background-color: rgba(13, 226, 255, 0.6);
+  border-radius: 10px;
+  width: 80px;
+}
+
+.homepage-button {
+  width: 300px;
+  height: 75px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: rgba(13, 226, 255, 0.6);
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Ipad portrait fifth */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
   header {
-    font-size: 50px;
+    font-size: 25px;
   }
 
-  .modal-form {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-    font-size: 20px;
-    height: 125px;
-  }
-
-  .submit-roster-button-container {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .roster-button {
-    width: 100px;
-    height: 30px;
-    border-style: none;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    font-size: 20px;
+  main {
+    width: 100vw;
   }
 
   .roster-list-row,
@@ -66,63 +401,242 @@ body {
     font-size: 18px;
   }
 
-  .column-half {
-    width: 50%;
-    text-align: center;
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 0;
   }
 
-  .column-half-servant-name {
-    margin-left: 5px;
+
+  /* changed here */
+  .background-config {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 35%;
+    height: 768px;
+    width: 1024px;
+    position: fixed;
   }
 
-  .screen-phone {
+  .menu-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 500px;
+    height: 60px;
+    margin-left: -250px;
+    background-image: url('../images/menubar.png');
+    background-repeat: no-repeat;
+    background-size: 500px 60px;
     display: flex;
-    height: 50px;
   }
 
-  .color-white {
-    color: white;
+  .menu-button-icon {
+    width: 175px;
+    margin-top: 2px;
+    margin-left: 50px;
   }
 
-  .display-flex {
+  .back-button-icon {
+    width: 105px;
+    margin-top: 1px;
+    margin-left: 10px;
+  }
+
+  /* changed here */
+  .list-display-container {
+    height: 555px;
+    overflow-y: auto;
+  }
+
+  /* changed here  */
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    width: 85px;
+    height: 48px;
+    bottom: 1%;
+    right: 28.5%;
+    margin-left: 0;
+  }
+
+  /* changed here */
+  .servant-roster-button {
+    bottom: 25%;
+  }
+
+  /* keep maybe ????? */
+  .player-choices > form {
+    height: 150px;
+    overflow-y: auto;
+  }
+
+  /* changed here  */
+  .list-content-view-config {
+    height: 655px;
+    overflow-y: auto;
+  }
+
+  .servant-information-column-half {
+    width: 48%;
     display: flex;
-  }
-
-  .flex-jc-center {
+    height: 70px;
+    align-items: center;
     justify-content: center;
   }
 
-  .flex-ai-center {
+  .part-left {
+    justify-content: flex-end;
+  }
+
+  .part-right {
+    justify-content: flex-start;
+  }
+
+  .servant-profile-image-container {
+    margin-top: 10px;
+    width: 200px;
+  }
+
+  /* changed here */
+  .servant-profile-name {
+    color: yellow;
+    font-size: 25px;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+
+  /* changed here  */
+  .servant-information-stat-display-container {
+    width: 150px;
+    height: 70px;
+  }
+
+  /* changed here  */
+  .servant-information-stat-display-container.blue,
+  .servant-information-stat-display-container.green {
+    background-size: 150px 70px;
+  }
+
+  /* changed her e  */
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 24px;
+  }
+
+  /* changed here  */
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 22px;
+  }
+
+  /* changed here  */
+  .data-grid-container {
+    overflow-y: auto;
+    height: 655px;
+  }
+
+  /* changed here  */
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
+    color: yellow;
+    white-space: pre-wrap;
+    width: 550px;
+    height: 200px;
+    overflow-y: auto;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  /* changed here  */
+  .skill-text-container {
+    margin: 0 auto;
+    width: 600px;
+    height: 260px;
+    background-size: 600px 260px;
+  }
+
+  /* changed here */
+  .np-dmg-button {
+    bottom: 15%;
+  }
+
+  /* changed here  */
+  .material-table-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
     align-items: center;
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    height: 38.5px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .view-list-content-button,
+  .delete-list-button,
+  .servant-info-button,
+  .delete-servant-button {
+    width: 70px;
+  }
+
+  /* changed here  */
+  .homepage-button,
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  /* changed here  */
+  .homepage-button {
+    width: 200px;
+    height: 50px;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+/* Ipad portrait fifth */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  header {
+    font-size: 25px;
+  }
+
+  main {
+    width: 100vw;
+  }
+
+  .roster-list-row,
+  .list-content-row {
+    display: flex;
+    width: 100%;
+    font-size: 18px;
   }
 
   .hp-position-config {
     position: absolute;
     left: 50%;
-    margin-left: -150px;
+    margin-left: -100px;
+    bottom: 0;
   }
 
-  .position-relative {
-    position: relative;
-  }
 
-  .position-fixed {
-    position: fixed;
-  }
-
-  .pad-left {
-    padding-left: 15px;
-  }
-
-  .servant-name-width {
-    text-align: center;
-    width: 150px;
-  }
-
-  .see-through {
-    background-color: rgba(13, 226, 255, 0.15);
-  }
-
+  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,502 +646,86 @@ body {
     position: fixed;
   }
 
-  /* div[data-view='servant-lists'] {
-    height: 667px;
-  } */
-
-  .list-display-container {
-    height: 750px;
-    overflow-y: auto;
-  }
-
   .menu-bar {
     position: fixed;
-    bottom: 5%;
-  }
-
-  .menu-bar-asset {
-    width: 600px;
-    left: 50%;
-    margin-left: -150px;
-  }
-
-  .menu-button-icon {
-    left: 50%;
-    margin-left: -37.5px;
-    bottom: 6%;
-    width: 150px;
-  }
-
-  .back-button-icon {
-    left: 15%;
-    bottom: 6%;
-    width: 90px;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    width: 150px;
-    height: 50px;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    bottom: 6%;
-    right: 18%;
-  }
-
-  .servant-form-modal,
-  .player-choices,
-  .edit-servant-form-container-modal {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-  }
-
-  .input-margin {
-    margin-left: 10px;
-  }
-
-  .search-for-servant-button,
-  .insert-servant-button-container {
-    text-align: center;
-  }
-
-  .servant-roster-button {
-    bottom: 30%;
-  }
-
-  .player-choices > form {
-    height: 150px;
-    overflow-y: auto;
-  }
-
-  .insert-servant-button-container {
-    margin-top: 20px;
-  }
-
-  .servant-image {
-    width: 50px;
-  }
-
-  .image-margin {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-
-  .list-content-view-config {
-    height: 850px;
-    overflow-y: auto;
-  }
-
-  .servant-information-row {
-    text-align: center;
-  }
-
-  .servant-information-column-half {
-    width: 50%;
-    display: flex;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .servant-profile-image-container {
-    margin-top: 5px;
-    width: 200px;
-  }
-
-  .servant-profile-name {
-    color: yellow;
-    font-size: 37px;
-    white-space: pre-wrap;
-    margin: 0;
-  }
-
-  .servant-information-stat-display-container {
-    width: 200px;
-    height: 80px;
-  }
-
-  .servant-information-stat-display-container.blue {
-    width: 140px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-value-display {
-    font-size: 35px;
-  }
-
-  .fou-atk-stat-name-display,
-  .fou-hp-stat-name-display {
-    font-size: 30px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-name-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-name-display,
-  .fou-hp-stat-value-display {
-    width: 140px;
-    text-align: center;
-    margin: auto;
-    color: yellow;
-    position: absolute;
-  }
-
-  .atk-stat-name-display,
-  .fou-atk-stat-name-display {
-    left: 3%;
-  }
-
-  .atk-stat-value-display,
-  .fou-atk-stat-value-display {
-    left: 25%;
-  }
-
-  .hp-stat-name-display,
-  .fou-hp-stat-name-display {
-    right: 29%;
-  }
-
-  .hp-stat-value-display,
-  .fou-hp-stat-value-display {
-    right: 7%;
-  }
-
-  .data-grid-container {
-    overflow-y: auto;
-    height: 850px;
-  }
-
-  .skill-1-description,
-  .skill-2-description,
-  .skill-3-description {
-    color: yellow;
-    font-size: 28px;
-    white-space: pre-wrap;
-    position: absolute;
-    width: 680px;
-    height: 120px;
-    left: 5%;
-    overflow-y: auto;
-  }
-
-  .skill-1-description {
-    bottom: 18%;
-  }
-
-  .skill-2-description {
-    bottom: -7%;
-  }
-
-  .skill-3-description {
-    bottom: -31.5%;
-  }
-
-  .skill-text-container {
-    margin: 5px auto;
-    width: 720px;
-    height: 200px;
-  }
-
-  .edit-servant-form-container-modal {
-    text-align: center;
-    height: 260px;
-  }
-
-  .edit-servant-form-inputs {
-    text-align: right;
-  }
-
-  .edit-input-field-margin {
-    margin-bottom: 10px;
-  }
-
-  .table {
-    text-align: center;
-    color: white;
-    height: 550px;
-    overflow-y: auto;
-  }
-
-  th,
-  td {
-    border-style: solid;
-    border-color: yellow;
-  }
-
-  .material-size {
-    width: 100px;
-  }
-
-  .np-dmg-button {
-    bottom: 20%;
-  }
-
-  .new-roster-button {
-    margin: 25px auto;
-    position: relative;
-  }
-
-  .view-list-content-button,
-  .servant-info-button {
-    margin-right: 10px;
-  }
-
-  .material-table-button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    height: 50px;
-    width: 70px;
-    right: 4%;
-    bottom: 10%;
-  }
-
-  .view-list-content-button,
-  .delete-list-button,
-  .servant-info-button,
-  .delete-servant-button {
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    width: 80px;
-  }
-
-  .homepage-button {
-    width: 300px;
-    height: 75px;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-  }
-
-  .hide {
-    display: none;
-  }
-}
-
-/* Iphone X portrait */
-@media screen and (max-height: 812px) and (orientation: portrait) {
-  header {
-    font-size: 25px;
-  }
-
-  .modal-form {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-    font-size: 20px;
-    height: 125px;
-  }
-
-  .submit-roster-button-container {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .roster-button {
-    width: 100px;
-    height: 30px;
-    border-style: none;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    font-size: 20px;
-  }
-
-  .roster-list-row,
-  .list-content-row {
-    display: flex;
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .column-half {
-    width: 50%;
-    text-align: center;
-  }
-
-  .column-half-servant-name {
-    margin-left: 5px;
-  }
-
-  .screen-phone {
-    display: flex;
-    height: 50px;
-  }
-
-  .color-white {
-    color: white;
-  }
-
-  .display-flex {
-    display: flex;
-  }
-
-  .flex-jc-center {
-    justify-content: center;
-  }
-
-  .flex-ai-center {
-    align-items: center;
-  }
-
-  .hp-position-config {
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
     bottom: 0;
-  }
-
-  .position-relative {
-    position: relative;
-  }
-
-  .position-fixed {
-    position: fixed;
-  }
-
-  .pad-left {
-    padding-left: 15px;
-  }
-
-  .servant-name-width {
-    text-align: center;
-    width: 150px;
-  }
-
-  .see-through {
-    background-color: rgba(13, 226, 255, 0.15);
-  }
-
-  .background-config {
+    left: 50%;
+    width: 500px;
+    height: 60px;
+    margin-left: -250px;
+    background-image: url('../images/menubar.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 812px;
-    width: 375px;
-    position: fixed;
-  }
-
-  /* test it again  */
-
-  /* div[data-view='servant-lists'] {
-    height: 667px;
-  } */
-
-  .menu-bar {
-    position: fixed;
-    bottom: 5%;
-  }
-
-  .menu-bar-asset {
-    width: 75%;
-    left: 12.5%;
-    margin-left: 0;
+    background-size: 500px 60px;
+    display: flex;
   }
 
   .menu-button-icon {
-    left: 37.5%;
-    bottom: 5%;
-    width: 50%;
-    margin-left: 0;
+    width: 175px;
+    margin-top: 2px;
+    margin-left: 50px;
   }
 
   .back-button-icon {
-    left: 15%;
-    bottom: 5%;
-    width: 40%;
-  }
-
-  .list-display-container {
-    height: 590px;
-    overflow-y: auto;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    bottom: 10%;
-    left: 50%;
-    margin-left: -100px;
-  }
-
-  .servant-form-modal,
-  .player-choices,
-  .edit-servant-form-container-modal {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-  }
-
-  .input-margin {
+    width: 105px;
+    margin-top: 1px;
     margin-left: 10px;
   }
 
-  .search-for-servant-button,
-  .insert-servant-button-container {
-    text-align: center;
+  /* changed here */
+  .list-display-container {
+    height: 815px;
+    overflow-y: auto;
   }
 
+  /* changed here  */
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    width: 85px;
+    height: 48px;
+    bottom: 0.7%;
+    right: 21.5%;
+    margin-left: 0;
+  }
+
+  /* changed here */
   .servant-roster-button {
-    bottom: 30%;
+    bottom: 25%;
   }
 
+  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  .insert-servant-button-container {
-    margin-top: 20px;
-  }
-
-  .servant-image {
-    width: 50px;
-  }
-
-  .image-margin {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-
+  /* changed here  */
   .list-content-view-config {
-    height: 630px;
+    height: 915px;
     overflow-y: auto;
   }
 
-  .servant-information-row {
-    text-align: center;
-  }
-
   .servant-information-column-half {
-    width: 50%;
+    width: 48%;
     display: flex;
-    height: 50px;
+    height: 70px;
     align-items: center;
     justify-content: center;
   }
 
-  .servant-profile-image-container {
-    margin-top: 5px;
-    width: 100px;
+  .part-left {
+    justify-content: flex-end;
   }
 
+  .part-right {
+    justify-content: flex-start;
+  }
+
+  .servant-profile-image-container {
+    margin-top: 10px;
+    width: 200px;
+  }
+
+  /* changed here */
   .servant-profile-name {
     color: yellow;
     font-size: 25px;
@@ -635,146 +733,67 @@ body {
     margin: 0;
   }
 
+  /* changed here  */
   .servant-information-stat-display-container {
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 70px;
   }
 
-  .servant-information-stat-display-container.blue {
-    width: 70px;
+  /* changed here  */
+  .servant-information-stat-display-container.blue,
+  .servant-information-stat-display-container.green {
+    background-size: 150px 70px;
   }
 
+  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
   .hp-stat-value-display,
   .fou-atk-stat-value-display,
   .fou-hp-stat-value-display {
-    font-size: 20px;
+    font-size: 24px;
   }
 
+  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
-    font-size: 15px;
+    font-size: 22px;
   }
 
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-name-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-name-display,
-  .fou-hp-stat-value-display {
-    width: 80px;
-    text-align: center;
-    margin: auto;
-    color: yellow;
-    position: absolute;
-  }
-
-  .atk-stat-name-display,
-  .fou-atk-stat-name-display {
-    left: 1%;
-  }
-
-  .atk-stat-value-display,
-  .fou-atk-stat-value-display {
-    left: 24%;
-  }
-
-  .hp-stat-name-display,
-  .fou-hp-stat-name-display {
-    right: 28%;
-  }
-
-  .hp-stat-value-display,
-  .fou-hp-stat-value-display {
-    right: 5%;
-  }
-
+  /* changed here  */
   .data-grid-container {
     overflow-y: auto;
-    height: 630px;
+    height: 900px;
   }
 
+  /* changed here  */
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
     color: yellow;
     white-space: pre-wrap;
-    position: absolute;
-    width: 340px;
-    height: 70px;
-    left: 5%;
+    width: 550px;
+    height: 200px;
     overflow-y: auto;
-    font-size: 16px;
+    font-size: 25px;
+    margin: 0;
   }
 
-  .skill-1-description {
-    bottom: 40%;
-  }
-
-  .skill-2-description {
-    bottom: 24%;
-  }
-
-  .skill-3-description {
-    bottom: 8%;
-  }
-
+  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
-    width: 360px;
-    height: 100px;
-  }
-
-  .edit-servant-form-container-modal {
-    text-align: center;
-
-    /* width: 195px; */
+    width: 600px;
     height: 260px;
+    background-size: 600px 260px;
   }
 
-  .edit-servant-form-inputs {
-    text-align: right;
-  }
-
-  .edit-input-field-margin {
-    margin-bottom: 10px;
-  }
-
-  .table {
-    text-align: center;
-    color: white;
-    height: 550px;
-    overflow-y: auto;
-  }
-
-  th,
-  td {
-    border-style: solid;
-    border-color: yellow;
-  }
-
-  .material-size {
-    width: 100px;
-  }
-
+  /* changed here */
   .np-dmg-button {
-    bottom: 20%;
+    bottom: 15%;
   }
 
-  .new-roster-button {
-    margin: 25px auto;
-    position: relative;
-  }
-
-  .view-list-content-button,
-  .servant-info-button {
-    margin-right: 10px;
-  }
-
+  /* changed here  */
   .material-table-button {
     display: flex;
     text-align: center;
@@ -782,7 +801,7 @@ body {
     align-items: center;
     background-color: rgba(13, 226, 255, 0.6);
     border-radius: 10px;
-    height: 50px;
+    height: 38.5px;
     width: 70px;
     right: 4%;
     bottom: 10%;
@@ -792,16 +811,13 @@ body {
   .delete-list-button,
   .servant-info-button,
   .delete-servant-button {
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    width: 60px;
+    width: 70px;
   }
 
+  /* changed here  */
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
-    width: 200px;
-    height: 50px;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -810,37 +826,27 @@ body {
     background-color: rgba(13, 226, 255, 0.6);
   }
 
+  /* changed here  */
+  .homepage-button {
+    width: 200px;
+    height: 50px;
+  }
+
   .hide {
     display: none;
   }
 }
 
-/* Ipad landscape */
-@media screen and (max-height: 768px) and (orientation: landscape) {
+/* -------------------------------------------------------------------------- */
+
+/* Iphone X landscape fourth */
+@media screen and (max-width: 812px) and (orientation: landscape) {
   header {
-    font-size: 50px;
+    font-size: 25px;
   }
 
-  .modal-form {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-    font-size: 20px;
-    height: 125px;
-  }
-
-  .submit-roster-button-container {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .roster-button {
-    width: 100px;
-    height: 30px;
-    border-style: none;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    font-size: 20px;
+  main {
+    width: 100vw;
   }
 
   .roster-list-row,
@@ -850,427 +856,6 @@ body {
     font-size: 18px;
   }
 
-  .column-half {
-    width: 50%;
-    text-align: center;
-  }
-
-  .column-half-servant-name {
-    margin-left: 5px;
-  }
-
-  .screen-phone {
-    display: flex;
-    height: 50px;
-  }
-
-  .color-white {
-    color: white;
-  }
-
-  .display-flex {
-    display: flex;
-  }
-
-  .flex-jc-center {
-    justify-content: center;
-  }
-
-  .flex-ai-center {
-    align-items: center;
-  }
-
-  .hp-position-config {
-    position: absolute;
-    left: 50%;
-    margin-left: -150px;
-  }
-
-  .position-relative {
-    position: relative;
-  }
-
-  .position-fixed {
-    position: fixed;
-  }
-
-  .pad-left {
-    padding-left: 15px;
-  }
-
-  .servant-name-width {
-    text-align: center;
-    width: 150px;
-  }
-
-  .see-through {
-    background-color: rgba(13, 226, 255, 0.15);
-  }
-
-  .background-config {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 40%;
-    height: 768px;
-    width: 1024px;
-    position: fixed;
-  }
-
-  /* div[data-view='servant-lists'] {
-    height: 667px;
-  } */
-
-  .list-display-container {
-    height: 485px;
-    overflow-y: auto;
-  }
-
-  .menu-bar {
-    position: fixed;
-    bottom: 5%;
-  }
-
-  .menu-bar-asset {
-    width: 600px;
-    left: 50%;
-    margin-left: -60px;
-  }
-
-  .menu-button-icon {
-    left: 50%;
-    margin-left: -37.5px;
-    bottom: 6%;
-    width: 150px;
-  }
-
-  .back-button-icon {
-    left: 24%;
-    bottom: 6%;
-    width: 100px;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    width: 125px;
-    height: 45px;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    bottom: 6.7%;
-    right: 25%;
-  }
-
-  .servant-form-modal,
-  .player-choices,
-  .edit-servant-form-container-modal {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-  }
-
-  .input-margin {
-    margin-left: 10px;
-  }
-
-  .search-for-servant-button,
-  .insert-servant-button-container {
-    text-align: center;
-  }
-
-  .servant-roster-button {
-    bottom: 35%;
-  }
-
-  .player-choices > form {
-    height: 150px;
-    overflow-y: auto;
-  }
-
-  .insert-servant-button-container {
-    margin-top: 20px;
-  }
-
-  .servant-image {
-    width: 50px;
-  }
-
-  .image-margin {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-
-  .list-content-view-config {
-    height: 615px;
-    overflow-y: auto;
-  }
-
-  .servant-information-row {
-    text-align: center;
-  }
-
-  .servant-information-column-half {
-    width: 50%;
-    display: flex;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .servant-profile-image-container {
-    margin-top: 5px;
-    width: 200px;
-  }
-
-  .servant-profile-name {
-    color: yellow;
-    font-size: 37px;
-    white-space: pre-wrap;
-    margin: 0;
-  }
-
-  .servant-information-stat-display-container {
-    width: 200px;
-    height: 80px;
-  }
-
-  .servant-information-stat-display-container.blue {
-    width: 140px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-value-display {
-    font-size: 35px;
-  }
-
-  .fou-atk-stat-name-display,
-  .fou-hp-stat-name-display {
-    font-size: 30px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-name-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-name-display,
-  .fou-hp-stat-value-display {
-    width: 140px;
-    text-align: center;
-    margin: auto;
-    color: yellow;
-    position: absolute;
-  }
-
-  .atk-stat-name-display,
-  .fou-atk-stat-name-display {
-    left: 8.5%;
-  }
-
-  .atk-stat-value-display,
-  .fou-atk-stat-value-display {
-    left: 25%;
-  }
-
-  .hp-stat-name-display,
-  .fou-hp-stat-name-display {
-    right: 28%;
-  }
-
-  .hp-stat-value-display,
-  .fou-hp-stat-value-display {
-    right: 11.5%;
-  }
-
-  .data-grid-container {
-    overflow-y: auto;
-    height: 615px;
-  }
-
-  .skill-1-description,
-  .skill-2-description,
-  .skill-3-description {
-    color: yellow;
-    font-size: 28px;
-    white-space: pre-wrap;
-    position: absolute;
-    width: 680px;
-    height: 135px;
-    left: 16.5%;
-    overflow-y: auto;
-  }
-
-  .skill-1-description {
-    bottom: -15.5%;
-  }
-
-  .skill-2-description {
-    bottom: -49%;
-  }
-
-  .skill-3-description {
-    bottom: -83.5%;
-  }
-
-  .skill-text-container {
-    margin: 5px auto;
-    width: 720px;
-    height: 200px;
-  }
-
-  .edit-servant-form-container-modal {
-    text-align: center;
-    height: 260px;
-  }
-
-  .edit-servant-form-inputs {
-    text-align: right;
-  }
-
-  .edit-input-field-margin {
-    margin-bottom: 10px;
-  }
-
-  .table {
-    text-align: center;
-    color: white;
-    height: 550px;
-    overflow-y: auto;
-  }
-
-  th,
-  td {
-    border-style: solid;
-    border-color: yellow;
-  }
-
-  .material-size {
-    width: 100px;
-  }
-
-  .np-dmg-button {
-    bottom: 20%;
-  }
-
-  .new-roster-button {
-    margin: 25px auto;
-    position: relative;
-  }
-
-  .view-list-content-button,
-  .servant-info-button {
-    margin-right: 10px;
-  }
-
-  .material-table-button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    height: 50px;
-    width: 70px;
-    right: 4%;
-    bottom: 10%;
-  }
-
-  .view-list-content-button,
-  .delete-list-button,
-  .servant-info-button,
-  .delete-servant-button {
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    width: 80px;
-  }
-
-  .homepage-button {
-    width: 300px;
-    height: 75px;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-  }
-
-  .hide {
-    display: none;
-  }
-}
-
-/* Iphone 6/7/8 portrait */
-@media screen and (max-height: 667px) and (orientation: portrait) {
-  header {
-    font-size: 25px;
-  }
-
-  .modal-form {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-    font-size: 20px;
-  }
-
-  .submit-roster-button-container {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .roster-button {
-    width: 100px;
-    height: 30px;
-    border-style: none;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    font-size: 20px;
-  }
-
-  .roster-list-row,
-  .list-content-row {
-    display: flex;
-    width: 100%;
-  }
-
-  .column-half {
-    width: 50%;
-    text-align: center;
-  }
-
-  .column-half-servant-name {
-    margin-left: 5px;
-  }
-
-  .screen-phone {
-    display: flex;
-    height: 50px;
-  }
-
-  .color-white {
-    color: white;
-  }
-
-  .display-flex {
-    display: flex;
-  }
-
-  .flex-jc-center {
-    justify-content: center;
-  }
-
-  .flex-ai-center {
-    align-items: center;
-  }
-
   .hp-position-config {
     position: absolute;
     left: 50%;
@@ -1278,524 +863,78 @@ body {
     bottom: 0;
   }
 
-  .position-relative {
-    position: relative;
-  }
 
-  .position-fixed {
-    position: fixed;
-  }
-
-  .pad-left {
-    padding-left: 15px;
-  }
-
-  .servant-name-width {
-    text-align: center;
-    width: 150px;
-  }
-
-  .see-through {
-    background-color: rgba(13, 226, 255, 0.15);
-  }
-
+  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 667px;
-    width: 100%;
-    position: fixed;
-  }
-
-  /* test it later to see if scrolling does not work  */
-
-  /* div[data-view='servant-lists'] {
-    height: 667px;
-  } */
-
-  .menu-bar {
-    position: fixed;
-    bottom: 5%;
-  }
-
-  .menu-bar-asset {
-    width: 75%;
-    left: 12.5%;
-  }
-
-  .menu-button-icon {
-    left: 37.5%;
-    bottom: 5%;
-    width: 50%;
-  }
-
-  .back-button-icon {
-    left: 15%;
-    bottom: 5%;
-    width: 40%;
-  }
-
-  .list-display-container {
-    height: 450px;
-    overflow-y: auto;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    bottom: 10%;
-    left: 50%;
-    margin-left: -100px;
-  }
-
-  .servant-form-modal,
-  .player-choices,
-  .edit-servant-form-container-modal {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-  }
-
-  .input-margin {
-    margin-left: 10px;
-  }
-
-  .search-for-servant-button,
-  .insert-servant-button-container {
-    text-align: center;
-  }
-
-  .servant-roster-button {
-    bottom: 30%;
-  }
-
-  .player-choices > form {
-    height: 150px;
-    overflow-y: auto;
-  }
-
-  .insert-servant-button-container {
-    margin-top: 20px;
-  }
-
-  .servant-image {
-    width: 50px;
-  }
-
-  .image-margin {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-
-  .list-content-view-config {
-    height: 500px;
-    overflow-y: auto;
-  }
-
-  .servant-information-row {
-    text-align: center;
-  }
-
-  .servant-information-column-half {
-    width: 50%;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .servant-profile-image-container {
-    margin-top: 5px;
-    width: 100px;
-  }
-
-  .servant-profile-name {
-    color: yellow;
-    font-size: 25px;
-    white-space: pre-wrap;
-    margin: 0;
-  }
-
-  .servant-information-stat-display-container {
-    width: 100px;
-    height: 40px;
-  }
-
-  .servant-information-stat-display-container.blue {
-    width: 70px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-value-display {
-    font-size: 20px;
-  }
-
-  .fou-atk-stat-name-display,
-  .fou-hp-stat-name-display {
-    font-size: 15px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-name-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-name-display,
-  .fou-hp-stat-value-display {
-    width: 80px;
-    text-align: center;
-    margin: auto;
-    color: yellow;
-    position: absolute;
-  }
-
-  .atk-stat-name-display,
-  .fou-atk-stat-name-display {
-    left: 1%;
-  }
-
-  .atk-stat-value-display,
-  .fou-atk-stat-value-display {
-    left: 24%;
-  }
-
-  .hp-stat-name-display,
-  .fou-hp-stat-name-display {
-    right: 28%;
-  }
-
-  .hp-stat-value-display,
-  .fou-hp-stat-value-display {
-    right: 5%;
-  }
-
-  .data-grid-container {
-    overflow-y: auto;
-    height: 495px;
-  }
-
-  .skill-1-description,
-  .skill-2-description,
-  .skill-3-description {
-    color: yellow;
-    white-space: pre-wrap;
-    position: absolute;
-    width: 340px;
-    height: 80px;
-    left: 5%;
-    overflow-y: auto;
-  }
-
-  .skill-1-description {
-    bottom: 108px;
-  }
-
-  .skill-2-description {
-    bottom: 8px;
-  }
-
-  .skill-3-description {
-    bottom: -92.5px;
-  }
-
-  .skill-text-container {
-    margin: 0 auto;
-    width: 360px;
-    height: 100px;
-  }
-
-  .edit-servant-form-container-modal {
-    text-align: center;
-  }
-
-  .edit-servant-form-inputs {
-    text-align: right;
-  }
-
-  .edit-input-field-margin {
-    margin-bottom: 10px;
-  }
-
-  .table {
-    text-align: center;
-    color: white;
-    height: 550px;
-    overflow-y: auto;
-  }
-
-  th,
-  td {
-    border-style: solid;
-    border-color: yellow;
-  }
-
-  .material-size {
-    width: 100px;
-  }
-
-  .np-dmg-button {
-    bottom: 20%;
-  }
-
-  .new-roster-button {
-    margin: 25px auto;
-    position: relative;
-  }
-
-  .view-list-content-button,
-  .servant-info-button {
-    margin-right: 10px;
-  }
-
-  .material-table-button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    height: 50px;
-    width: 70px;
-    right: 4%;
-    bottom: 10%;
-  }
-
-  .view-list-content-button,
-  .delete-list-button,
-  .servant-info-button,
-  .delete-servant-button {
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    width: 60px;
-  }
-
-  .homepage-button,
-  .open-servant-insert-modal-button {
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-  }
-
-  .hide {
-    display: none;
-  }
-}
-
-/* Iphone X landscape */
-@media screen and (max-width: 812px) and (orientation: landscape) {
-  header {
-    font-size: 25px;
-  }
-
-  .modal-form {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-    font-size: 20px;
-    height: 125px;
-  }
-
-  .submit-roster-button-container {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .roster-button {
-    width: 100px;
-    height: 30px;
-    border-style: none;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    font-size: 20px;
-  }
-
-  .roster-list-row,
-  .list-content-row {
-    display: flex;
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .column-half {
-    width: 50%;
-    text-align: center;
-  }
-
-  .column-half-servant-name {
-    margin-left: 5px;
-  }
-
-  .screen-phone {
-    display: flex;
-    height: 50px;
-  }
-
-  .color-white {
-    color: white;
-  }
-
-  .display-flex {
-    display: flex;
-  }
-
-  .flex-jc-center {
-    justify-content: center;
-  }
-
-  .flex-ai-center {
-    align-items: center;
-  }
-
-  .hp-position-config {
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    bottom: 0;
-  }
-
-  .position-relative {
-    position: relative;
-  }
-
-  .position-fixed {
-    position: fixed;
-  }
-
-  .pad-left {
-    padding-left: 15px;
-  }
-
-  .servant-name-width {
-    text-align: center;
-    width: 150px;
-  }
-
-  .see-through {
-    background-color: rgba(13, 226, 255, 0.15);
-  }
-
-  .background-config {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -420px;
     background-position-x: center;
+    background-position-y: 35%;
     height: 375px;
     width: 812px;
     position: fixed;
   }
 
-  /* div[data-view='servant-lists'] {
-    height: 667px;
-  } */
-
   .menu-bar {
     position: fixed;
-    bottom: 5%;
+    bottom: 5.5%;
     left: 50%;
-    margin-left: -230px;
-    width: 612px;
-  }
-
-  .menu-bar-asset {
-    width: 75%;
-    margin-left: 0;
-    left: 0;
+    width: 380px;
+    height: 40px;
+    margin-left: -190px;
+    background-image: url('../images/menubar.png');
+    background-repeat: no-repeat;
+    background-size: 380px 40px;
+    display: flex;
   }
 
   .menu-button-icon {
-    margin-left: -29px;
-    left: 50%;
-    bottom: 8%;
-    height: 35px;
-    width: auto;
+    width: 100px;
+    margin-top: 2px;
+    margin-left: 55px;
   }
 
   .back-button-icon {
-    left: 25%;
-    bottom: 8%;
-    height: 35px;
-    width: auto;
-  }
-
-  .list-display-container {
-    height: 160px;
-    overflow-y: auto;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    bottom: 8%;
-    right: 200px;
-    width: 100px;
-    height: 35px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-  }
-
-  .servant-form-modal,
-  .player-choices,
-  .edit-servant-form-container-modal {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-  }
-
-  .input-margin {
+    width: 70px;
+    margin-top: 1px;
     margin-left: 10px;
   }
 
-  .search-for-servant-button,
-  .insert-servant-button-container {
-    text-align: center;
+  /* changed here */
+  .list-display-container {
+    height: 165px;
+    overflow-y: auto;
   }
 
+  /* changed here  */
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    width: 75px;
+    height: 28px;
+    bottom: 7.5%;
+    right: 30%;
+    margin-left: 0;
+  }
+
+  /* changed here */
   .servant-roster-button {
-    bottom: 40%;
+    bottom: 30%;
   }
 
+  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  .insert-servant-button-container {
-    margin-top: 20px;
-  }
-
-  .servant-image {
-    width: 50px;
-  }
-
-  .image-margin {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-
+  /* changed here  */
   .list-content-view-config {
-    height: 250px;
+    height: 260px;
     overflow-y: auto;
-    text-align: center;
-  }
-
-  .servant-information-row {
-    text-align: center;
   }
 
   .servant-information-column-half {
-    width: 50%;
+    width: 48%;
     display: flex;
     height: 50px;
     align-items: center;
@@ -1804,12 +943,10 @@ body {
 
   .part-left {
     justify-content: flex-end;
-    margin-right: 10px;
   }
 
   .part-right {
     justify-content: flex-start;
-    margin-left: 10px;
   }
 
   .servant-profile-image-container {
@@ -1817,151 +954,75 @@ body {
     width: 100px;
   }
 
+  /* changed here */
   .servant-profile-name {
     color: yellow;
-    font-size: 25px;
+    font-size: 20px;
     white-space: pre-wrap;
     margin: 0;
   }
 
+  /* changed here  */
   .servant-information-stat-display-container {
-    width: 100px;
-    height: 40px;
+    width: 85px;
+    height: 45px;
   }
 
-  .servant-information-stat-display-container.blue {
-    width: 70px;
+  /* changed here  */
+  .servant-information-stat-display-container.blue,
+  .servant-information-stat-display-container.green {
+    background-size: 85px 45px;
   }
 
+  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
   .hp-stat-value-display,
   .fou-atk-stat-value-display,
   .fou-hp-stat-value-display {
-    font-size: 20px;
+    font-size: 18px;
   }
 
+  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
-    font-size: 15px;
+    font-size: 16px;
   }
 
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-name-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-name-display,
-  .fou-hp-stat-value-display {
-    width: 80px;
-    text-align: center;
-    margin: auto;
-    color: yellow;
-    position: absolute;
-  }
-
-  .atk-stat-name-display,
-  .fou-atk-stat-name-display {
-    left: 27.3%;
-  }
-
-  .atk-stat-value-display,
-  .fou-atk-stat-value-display {
-    left: 37.5%;
-  }
-
-  .hp-stat-name-display,
-  .fou-hp-stat-name-display {
-    right: 39.4%;
-  }
-
-  .hp-stat-value-display,
-  .fou-hp-stat-value-display {
-    right: 29.5%;
-  }
-
+  /* changed here  */
   .data-grid-container {
     overflow-y: auto;
     height: 260px;
   }
 
+  /* changed here  */
   .skill-1-description,
   .skill-2-description,
   .skill-3-description {
     color: yellow;
     white-space: pre-wrap;
-    position: absolute;
-    width: 340px;
-    height: 70px;
-    left: 29%;
+    width: 270px;
+    height: 80px;
     overflow-y: auto;
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0;
   }
 
-  .skill-1-description {
-    bottom: -46%;
-  }
-
-  .skill-2-description {
-    bottom: -85%;
-  }
-
-  .skill-3-description {
-    bottom: -123%;
-  }
-
+  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
-    width: 360px;
+    width: 300px;
     height: 100px;
+    background-size: 300px 100px;
   }
 
-  .edit-servant-form-container-modal {
-    text-align: center;
-    height: 260px;
-  }
-
-  .edit-servant-form-inputs {
-    text-align: right;
-  }
-
-  .edit-input-field-margin {
-    margin-bottom: 10px;
-  }
-
-  .table {
-    text-align: center;
-    color: white;
-    height: 550px;
-    overflow-y: auto;
-  }
-
-  th,
-  td {
-    border-style: solid;
-    border-color: yellow;
-  }
-
-  .material-size {
-    width: 100px;
-  }
-
+  /* changed here */
   .np-dmg-button {
-    bottom: 20%;
+    bottom: 15%;
   }
 
-  .new-roster-button {
-    margin: 25px auto;
-    position: relative;
-  }
-
-  .view-list-content-button,
-  .servant-info-button {
-    margin-right: 10px;
-  }
-
+  /* changed here  */
   .material-table-button {
     display: flex;
     text-align: center;
@@ -1969,7 +1030,7 @@ body {
     align-items: center;
     background-color: rgba(13, 226, 255, 0.6);
     border-radius: 10px;
-    height: 50px;
+    height: 38.5px;
     width: 70px;
     right: 4%;
     bottom: 10%;
@@ -1979,14 +1040,13 @@ body {
   .delete-list-button,
   .servant-info-button,
   .delete-servant-button {
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
     width: 60px;
   }
 
-  .homepage-button {
-    width: 200px;
-    height: 50px;
+  /* changed here  */
+  .homepage-button,
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -1995,38 +1055,25 @@ body {
     background-color: rgba(13, 226, 255, 0.6);
   }
 
+  /* changed here  */
+  .homepage-button {
+    width: 200px;
+    height: 50px;
+  }
+
   .hide {
     display: none;
   }
 }
 
-
-/* Iphone SE portrait */
-@media screen and (max-width: 320px) and (orientation: portrait) {
+/* Iphone X portrait third */
+@media screen and (max-width: 375px) and (orientation: portrait) {
   header {
     font-size: 25px;
   }
 
-  .modal-form {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-    font-size: 20px;
-    height: 125px;
-  }
-
-  .submit-roster-button-container {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .roster-button {
-    width: 100px;
-    height: 30px;
-    border-style: none;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    font-size: 20px;
+  main {
+    width: 100vw;
   }
 
   .roster-list-row,
@@ -2036,34 +1083,224 @@ body {
     font-size: 16px;
   }
 
-  .column-half {
-    width: 50%;
-    text-align: center;
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 0;
   }
 
-  .column-half-servant-name {
-    margin-left: 5px;
+
+  /* changed here */
+  .background-config {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 812px;
+    width: 375px;
+    position: fixed;
   }
 
-  .screen-phone {
+  .menu-bar {
+    position: fixed;
+    bottom: 5.5%;
+    left: 50%;
+    width: 300px;
+    height: 40px;
+    margin-left: -150px;
+    background-image: url('../images/menubar.png');
+    background-repeat: no-repeat;
+    background-size: 300px 40px;
+    display: flex;
+  }
+
+  .menu-button-icon {
+    width: 100px;
+    margin-top: 2px;
+    margin-left: 25px;
+  }
+
+  .back-button-icon {
+    width: 70px;
+    margin-top: 1px;
+    margin-left: 10px;
+  }
+
+  /* changed here */
+  .list-display-container {
+    height: 575px;
+    overflow-y: auto;
+  }
+
+  /* changed here  */
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    width: 150px;
+    height: 35px;
+    bottom: 11%;
+    right: 30%;
+    margin-left: 0;
+  }
+
+  /* changed here */
+  .servant-roster-button {
+    bottom: 25%;
+  }
+
+  /* keep maybe ????? */
+  .player-choices > form {
+    height: 150px;
+    overflow-y: auto;
+  }
+
+  /* changed here  */
+  .list-content-view-config {
+    height: 635px;
+    overflow-y: auto;
+  }
+
+  .servant-information-column-half {
+    width: 48%;
     display: flex;
     height: 50px;
-  }
-
-  .color-white {
-    color: white;
-  }
-
-  .display-flex {
-    display: flex;
-  }
-
-  .flex-jc-center {
+    align-items: center;
     justify-content: center;
   }
 
-  .flex-ai-center {
+  .servant-profile-image-container {
+    margin-top: 5px;
+    width: 100px;
+  }
+
+  /* changed here */
+  .servant-profile-name {
+    color: yellow;
+    font-size: 20px;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+
+  /* changed here  */
+  .servant-information-stat-display-container {
+    width: 85px;
+    height: 45px;
+  }
+
+  /* changed here  */
+  .servant-information-stat-display-container.blue,
+  .servant-information-stat-display-container.green {
+    background-size: 85px 45px;
+  }
+
+  /* changed her e  */
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 18px;
+  }
+
+  /* changed here  */
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 16px;
+  }
+
+  /* changed here  */
+  .data-grid-container {
+    overflow-y: auto;
+    height: 575px;
+  }
+
+  /* changed here  */
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
+    color: yellow;
+    white-space: pre-wrap;
+    width: 270px;
+    height: 80px;
+    overflow-y: auto;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* changed here  */
+  .skill-text-container {
+    margin: 0 auto;
+    width: 300px;
+    height: 100px;
+    background-size: 300px 100px;
+  }
+
+  /* changed here */
+  .np-dmg-button {
+    bottom: 15%;
+  }
+
+  /* changed here  */
+  .material-table-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
     align-items: center;
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    height: 38.5px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .view-list-content-button,
+  .delete-list-button,
+  .servant-info-button,
+  .delete-servant-button {
+    width: 60px;
+  }
+
+  /* changed here  */
+  .homepage-button,
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  /* changed here  */
+  .homepage-button {
+    width: 200px;
+    height: 50px;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Iphone SE portrait  first */
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  header {
+    font-size: 25px;
+  }
+
+  main {
+    width: 100vw;
+  }
+
+  .roster-list-row,
+  .list-content-row {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
   }
 
   .hp-position-config {
@@ -2073,26 +1310,6 @@ body {
     bottom: 0;
   }
 
-  .position-relative {
-    position: relative;
-  }
-
-  .position-fixed {
-    position: fixed;
-  }
-
-  .pad-left {
-    padding-left: 15px;
-  }
-
-  .servant-name-width {
-    text-align: center;
-    width: 150px;
-  }
-
-  .see-through {
-    background-color: rgba(13, 226, 255, 0.15);
-  }
 
   /* changed here */
   .background-config {
@@ -2105,34 +1322,29 @@ body {
     position: fixed;
   }
 
-  /* remove??????  */
-
-  /* div[data-view='servant-lists']
-    height: 667px;
-  } */
-
   .menu-bar {
     position: fixed;
-    bottom: 5%;
-  }
-
-  .menu-bar-asset {
-    width: 75%;
-    left: 12.5%;
-    margin-left: 0;
+    bottom: 2%;
+    left: 50%;
+    width: 300px;
+    height: 50px;
+    margin-left: -150px;
+    background-image: url('../images/menubar.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
   }
 
   .menu-button-icon {
-    left: 37.5%;
-    bottom: 5%;
-    width: 50%;
-    margin-left: 0;
+    width: 80px;
+    margin-top: 2px;
+    margin-left: 50px;
   }
 
   .back-button-icon {
-    left: 15%;
-    bottom: 5%;
-    width: 40%;
+    width: 50px;
+    margin-top: 1px;
+    margin-left: 10px;
   }
 
   /* changed here */
@@ -2144,28 +1356,11 @@ body {
   /* changed here  */
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
-    bottom: 10%;
-    left: 50%;
-    margin-left: -75px;
     width: 150px;
-    height: 38.5px;
-  }
-
-  .servant-form-modal,
-  .player-choices,
-  .edit-servant-form-container-modal {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-  }
-
-  .input-margin {
-    margin-left: 10px;
-  }
-
-  .search-for-servant-button,
-  .insert-servant-button-container {
-    text-align: center;
+    height: 35px;
+    bottom: 11%;
+    left: 26%;
+    margin-left: 0;
   }
 
   /* changed here */
@@ -2173,22 +1368,10 @@ body {
     bottom: 25%;
   }
 
+  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
-  }
-
-  .insert-servant-button-container {
-    margin-top: 20px;
-  }
-
-  .servant-image {
-    width: 50px;
-  }
-
-  .image-margin {
-    margin-right: 5px;
-    margin-bottom: 5px;
   }
 
   /* changed here  */
@@ -2197,12 +1380,8 @@ body {
     overflow-y: auto;
   }
 
-  .servant-information-row {
-    text-align: center;
-  }
-
   .servant-information-column-half {
-    width: 50%;
+    width: 48%;
     display: flex;
     height: 50px;
     align-items: center;
@@ -2229,8 +1408,9 @@ body {
   }
 
   /* changed here  */
-  .servant-information-stat-display-container.blue {
-    width: 60px;
+  .servant-information-stat-display-container.blue,
+  .servant-information-stat-display-container.green {
+    background-size: 75px 35px;
   }
 
   /* changed her e  */
@@ -2249,45 +1429,6 @@ body {
     font-size: 14px;
   }
 
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-name-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-name-display,
-  .fou-hp-stat-value-display {
-    width: 80px;
-    text-align: center;
-    margin: auto;
-    color: yellow;
-    position: absolute;
-  }
-
-  /* changed here  */
-  .atk-stat-name-display,
-  .fou-atk-stat-name-display {
-    left: -1.5%;
-  }
-
-  /* changed here  */
-  .atk-stat-value-display,
-  .fou-atk-stat-value-display {
-    left: 22%;
-  }
-
-  /* changed here  */
-  .hp-stat-name-display,
-  .fou-hp-stat-name-display {
-    right: 26.5%;
-  }
-
-  /* changed here  */
-  .hp-stat-value-display,
-  .fou-hp-stat-value-display {
-    right: 3%;
-  }
-
   /* changed here  */
   .data-grid-container {
     overflow-y: auto;
@@ -2300,27 +1441,11 @@ body {
   .skill-3-description {
     color: yellow;
     white-space: pre-wrap;
-    position: absolute;
-    width: 290px;
-    height: 70px;
-    left: 5.5%;
+    width: 270px;
+    height: 80px;
     overflow-y: auto;
-    font-size: 16px;
-  }
-
-  /* changed here  */
-  .skill-1-description {
-    bottom: 13%;
-  }
-
-  /* changed here  */
-  .skill-2-description {
-    bottom: -11%;
-  }
-
-  /* changed here  */
-  .skill-3-description {
-    bottom: -35%;
+    font-size: 14px;
+    margin: 0;
   }
 
   /* changed here  */
@@ -2328,53 +1453,12 @@ body {
     margin: 0 auto;
     width: 300px;
     height: 100px;
-  }
-
-  .edit-servant-form-container-modal {
-    text-align: center;
-
-    /* width: 195px; */
-    height: 260px;
-  }
-
-  .edit-servant-form-inputs {
-    text-align: right;
-  }
-
-  .edit-input-field-margin {
-    margin-bottom: 10px;
-  }
-
-  .table {
-    text-align: center;
-    color: white;
-    height: 550px;
-    overflow-y: auto;
-  }
-
-  th,
-  td {
-    border-style: solid;
-    border-color: yellow;
-  }
-
-  .material-size {
-    width: 100px;
+    background-size: 300px 100px;
   }
 
   /* changed here */
   .np-dmg-button {
     bottom: 15%;
-  }
-
-  .new-roster-button {
-    margin: 25px auto;
-    position: relative;
-  }
-
-  .view-list-content-button,
-  .servant-info-button {
-    margin-right: 10px;
   }
 
   /* changed here  */
@@ -2395,8 +1479,6 @@ body {
   .delete-list-button,
   .servant-info-button,
   .delete-servant-button {
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
     width: 60px;
   }
 
@@ -2423,69 +1505,21 @@ body {
   }
 }
 
-/* Iphone SE landscape */
+/* Iphone SE landscape second  */
 @media screen and (max-width: 568px) and (orientation: landscape) {
   header {
     font-size: 25px;
   }
 
-  .modal-form {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-    font-size: 20px;
-    height: 125px;
-  }
-
-  .submit-roster-button-container {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .roster-button {
-    width: 100px;
-    height: 30px;
-    border-style: none;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-    font-size: 20px;
+  main {
+    width: 100vw;
   }
 
   .roster-list-row,
   .list-content-row {
     display: flex;
     width: 100%;
-    font-size: 16px;
-  }
-
-  .column-half {
-    width: 50%;
-    text-align: center;
-  }
-
-  .column-half-servant-name {
-    margin-left: 5px;
-  }
-
-  .screen-phone {
-    display: flex;
-    height: 50px;
-  }
-
-  .color-white {
-    color: white;
-  }
-
-  .display-flex {
-    display: flex;
-  }
-
-  .flex-jc-center {
-    justify-content: center;
-  }
-
-  .flex-ai-center {
-    align-items: center;
+    font-size: 14px;
   }
 
   .hp-position-config {
@@ -2495,161 +1529,91 @@ body {
     bottom: 0;
   }
 
-  .position-relative {
-    position: relative;
-  }
 
-  .position-fixed {
-    position: fixed;
-  }
-
-  .pad-left {
-    padding-left: 15px;
-  }
-
-  .servant-name-width {
-    text-align: center;
-    width: 150px;
-  }
-
-  .see-through {
-    background-color: rgba(13, 226, 255, 0.15);
-  }
-
-  /* changed here  */
+  /* changed here */
   .background-config {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 35%;
     background-position-x: center;
+    background-position-y: 35%;
     height: 320px;
     width: 568px;
     position: fixed;
   }
 
-  /* div[data-view='servant-lists'] {
-    height: 667px;
-  } */
-
-  /* changed here  */
   .menu-bar {
     position: fixed;
-    bottom: 5%;
+    bottom: 0;
     left: 50%;
-    margin-left: -175px;
-    width: 450px;
+    width: 300px;
+    height: 30px;
+    margin-left: -150px;
+    background-image: url('../images/menubar.png');
+    background-repeat: no-repeat;
+    background-size: 300px 30px;
+    display: flex;
   }
 
-  .menu-bar-asset {
-    width: 75%;
-    margin-left: 0;
-    left: 0;
-  }
-
-
-  /* changed here  */
   .menu-button-icon {
-    margin-left: -25px;
-    left: 50%;
-    bottom: 7.5%;
-    height: 28px;
-    width: auto;
+    width: 80px;
+    margin-top: 2px;
+    margin-left: 50px;
   }
 
   .back-button-icon {
-    left: 25%;
-    bottom: 7.5%;
-    height: 28px;
-    width: auto;
+    width: 50px;
+    margin-top: 1px;
+    margin-left: 10px;
   }
 
-  /* changed here  */
+  /* changed here */
   .list-display-container {
-    height: 115px;
+    height: 140px;
     overflow-y: auto;
   }
 
   /* changed here  */
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
-    bottom: 7.5%;
-    right: 150px;
-    width: 80px;
-    height: 28px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
+    width: 75px;
+    height: 22px;
+    bottom: 1.5%;
+    right: 25%;
+
+    /* margin-left: 0; */
   }
 
-  .servant-form-modal,
-  .player-choices,
-  .edit-servant-form-container-modal {
-    padding: 1rem;
-    margin: auto;
-    background-color: white;
-  }
-
-  .input-margin {
-    margin-left: 10px;
-  }
-
-  .search-for-servant-button,
-  .insert-servant-button-container {
-    text-align: center;
-  }
-
+  /* changed here */
   .servant-roster-button {
-    bottom: 40%;
+    bottom: 35%;
   }
 
+  /* keep maybe ????? */
   .player-choices > form {
     height: 150px;
     overflow-y: auto;
   }
 
-  .insert-servant-button-container {
-    margin-top: 20px;
-  }
-
-  .servant-image {
-    width: 50px;
-  }
-
-  .image-margin {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-
   /* changed here  */
   .list-content-view-config {
-    height: 215px;
+    height: 240px;
     overflow-y: auto;
-    text-align: center;
-  }
-
-  .servant-information-row {
-    text-align: center;
   }
 
   .servant-information-column-half {
-    width: 50%;
+    width: 48%;
     display: flex;
-    height: 50px;
+    height: 45px;
     align-items: center;
     justify-content: center;
   }
 
   .part-left {
     justify-content: flex-end;
-    margin-right: 10px;
   }
 
   .part-right {
     justify-content: flex-start;
-    margin-left: 10px;
   }
 
   .servant-profile-image-container {
@@ -2657,78 +1621,46 @@ body {
     width: 100px;
   }
 
+  /* changed here */
   .servant-profile-name {
     color: yellow;
-    font-size: 25px;
+    font-size: 20px;
     white-space: pre-wrap;
     margin: 0;
   }
 
+  /* changed here  */
   .servant-information-stat-display-container {
     width: 100px;
-    height: 40px;
+    height: 45px;
   }
 
-  .servant-information-stat-display-container.blue {
-    width: 70px;
+  /* changed here  */
+  .servant-information-stat-display-container.blue,
+  .servant-information-stat-display-container.green {
+    background-size: 100px 45px;
   }
 
+  /* changed her e  */
   .atk-stat-name-display,
   .atk-stat-value-display,
   .hp-stat-name-display,
   .hp-stat-value-display,
   .fou-atk-stat-value-display,
   .fou-hp-stat-value-display {
-    font-size: 20px;
+    font-size: 18px;
   }
 
+  /* changed here  */
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
-    font-size: 15px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-name-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-name-display,
-  .fou-hp-stat-value-display {
-    width: 80px;
-    text-align: center;
-    margin: auto;
-    color: yellow;
-    position: absolute;
+    font-size: 16px;
   }
 
   /* changed here  */
-  .atk-stat-name-display,
-  .fou-atk-stat-name-display {
-    left: 17.5%;
-  }
-
-  /* changed here  */
-  .atk-stat-value-display,
-  .fou-atk-stat-value-display {
-    left: 32.5%;
-  }
-
-  /* changed here  */
-  .hp-stat-name-display,
-  .fou-hp-stat-name-display {
-    right: 35%;
-  }
-
-  /* changed here  */
-  .hp-stat-value-display,
-  .fou-hp-stat-value-display {
-    right: 20%;
-  }
-
   .data-grid-container {
     overflow-y: auto;
-    height: 215px;
+    height: 240px;
   }
 
   /* changed here  */
@@ -2737,74 +1669,24 @@ body {
   .skill-3-description {
     color: yellow;
     white-space: pre-wrap;
-    position: absolute;
-    width: 340px;
-    height: 70px;
-    left: 20%;
+    width: 270px;
+    height: 80px;
     overflow-y: auto;
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0;
   }
 
-  .skill-1-description {
-    bottom: -75%;
-  }
-
-  .skill-2-description {
-    bottom: -121%;
-  }
-
-  .skill-3-description {
-    bottom: -168.5%;
-  }
-
+  /* changed here  */
   .skill-text-container {
     margin: 0 auto;
-    width: 360px;
+    width: 300px;
     height: 100px;
+    background-size: 300px 100px;
   }
 
-  .edit-servant-form-container-modal {
-    text-align: center;
-    height: 260px;
-  }
-
-  .edit-servant-form-inputs {
-    text-align: right;
-  }
-
-  .edit-input-field-margin {
-    margin-bottom: 10px;
-  }
-
-  .table {
-    text-align: center;
-    color: white;
-    height: 550px;
-    overflow-y: auto;
-  }
-
-  th,
-  td {
-    border-style: solid;
-    border-color: yellow;
-  }
-
-  .material-size {
-    width: 100px;
-  }
-
+  /* changed here */
   .np-dmg-button {
-    bottom: 20%;
-  }
-
-  .new-roster-button {
-    margin: 25px auto;
-    position: relative;
-  }
-
-  .view-list-content-button,
-  .servant-info-button {
-    margin-right: 10px;
+    bottom: 15%;
   }
 
   /* changed here  */
@@ -2815,30 +1697,35 @@ body {
     align-items: center;
     background-color: rgba(13, 226, 255, 0.6);
     border-radius: 10px;
-    height: 28px;
-    width: 100px;
-    right: 3%;
-    bottom: 7.5%;
+    height: 38.5px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
   }
 
   .view-list-content-button,
   .delete-list-button,
   .servant-info-button,
   .delete-servant-button {
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
     width: 60px;
   }
 
-  .homepage-button {
-    width: 200px;
-    height: 50px;
+  /* changed here  */
+  .homepage-button,
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 15px;
     background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  /* changed here  */
+  .homepage-button {
+    width: 200px;
+    height: 50px;
   }
 
   .hide {
