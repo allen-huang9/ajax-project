@@ -1,10 +1,10 @@
 
 /* Desktop view  */
 
-main {
+/* main {
   width: 1000px;
   margin: auto;
-}
+} */
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -29,10 +29,6 @@ body {
 
 .list-bg {
   background: url(../images/list-bg.png);
-}
-
-.hide {
-  display: none;
 }
 
 header {
@@ -176,8 +172,8 @@ header {
   justify-content: center;
   border-radius: 15px;
   background-color: rgba(13, 226, 255, 0.6);
-  bottom: 0;
-  right: 18%;
+  bottom: 85%;
+  right: 15%;
 }
 
 .servant-form-modal,
@@ -380,6 +376,10 @@ header {
   justify-content: center;
   border-radius: 15px;
   background-color: rgba(13, 226, 255, 0.6);
+}
+
+.hide {
+  display: none;
 }
 
 /* -------------------------------------------------------------------------- */
