@@ -3,7 +3,6 @@ var $background = document.querySelector('.background-config');
 var $dataView = document.querySelectorAll('div[data-view]');
 
 var $homePageServantRoster = document.querySelector('.servant-roster-button');
-var $homePageDmgCalculator = document.querySelector('.np-dmg-button');
 
 var $openNewRosterModalButton = document.querySelector('.new-roster-button');
 var $newRosterModalForm = document.querySelector('.new-roster-modal');
@@ -18,7 +17,6 @@ var $returnedServantListModal = document.querySelector('.servant-list-modal');
 
 var $listContentDisplayContainer = document.querySelector('.list-content-display-container');
 var $returnedServantOptions = document.querySelector('.player-choices > form');
-var $toMaterialTableButton = document.querySelector('.material-table-button');
 
 var $menuButton = document.querySelectorAll('.menu-button-icon');
 var $rosterListsBackButton = document.querySelector('.roster-lists-back-button');
@@ -38,16 +36,8 @@ $homePageServantRoster.addEventListener('click', function (e) {
   $background.className = 'list-bg background-config';
 });
 
-$homePageDmgCalculator.addEventListener('click', function (e) {
-  viewSwap('calculator');
-});
-
 $openNewRosterModalButton.addEventListener('click', function (e) {
   $newRosterModalForm.className = 'new-roster-modal';
-});
-
-$toMaterialTableButton.addEventListener('click', function (e) {
-  viewSwap('materials-table');
 });
 
 var existingRosterList = localStorage.getItem('fgo-rosters');
@@ -58,7 +48,6 @@ if (existingRosterList) {
 window.addEventListener('beforeunload', function (e) {
   var dataJson = JSON.stringify(data);
   localStorage.setItem('fgo-rosters', dataJson);
-  // localStorage.clear();
 });
 
 $createNewRosterForm.addEventListener('submit', function (e) {
@@ -216,7 +205,6 @@ function appendServantListContent() {
       displayServantInfo(currentServantInfo);
       viewSwap('servant-information');
 
-      // currentRoster.list[e.target.parentNode.getAttribute('id')];
     });
 
     $allDeleteServantButtons[i].addEventListener('click', function (e) {
@@ -249,7 +237,7 @@ function buildRosterListView(array) {
     $rCol1P.textContent = array[i].name;
 
     var $rowColumn2 = document.createElement('div');
-    $rowColumn2.setAttribute('class', 'column-half display-flex flex-jf-center flex-ai-center');
+    $rowColumn2.setAttribute('class', 'column-half display-flex flex-jc-center flex-ai-center');
     $rowColumn2.setAttribute('id', '' + i);
 
     var $rowCol2ViewButton = document.createElement('div');
@@ -344,7 +332,7 @@ function buildListContentView(rosterObject) {
     $servantName.setAttribute('class', 'column-half');
 
     var $imageContainer = document.createElement('div');
-    $imageContainer.setAttribute('class', 'color-white display-flex flex-ai-center pad-left');
+    $imageContainer.setAttribute('class', 'color-white display-flex flex-jc-center flex-ai-center pad-left');
 
     var $servantImage = document.createElement('img');
     $servantImage.setAttribute('src', rosterObject.list[i].extraAssets.faces.ascension['4']);
@@ -355,7 +343,7 @@ function buildListContentView(rosterObject) {
     var $servantNameText = document.createTextNode(rosterObject.list[i].name);
 
     var $servantViewDeleteButtons = document.createElement('div');
-    $servantViewDeleteButtons.setAttribute('class', 'column-half display-flex flex-ai-center');
+    $servantViewDeleteButtons.setAttribute('class', 'column-half display-flex flex-jc-center flex-ai-center');
     $servantViewDeleteButtons.setAttribute('id', i);
 
     var $servantViewButton = document.createElement('div');

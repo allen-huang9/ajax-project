@@ -10,17 +10,14 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="homepage-bg background-config"></div>
+  <div class="homepage-bg background-config">
   <header class="screen-phone see-through flex-jc-center flex-ai-center position-relative">
     <p>FGOverseer</p>
   </header>
-  <main>
+  <main >
     <div class="show" data-view="homepage">
       <div class="servant-roster-button homepage-button hp-position-config">
         <p>Servant Roster</p>
-      </div>
-      <div class="np-dmg-button homepage-button hp-position-config">
-        <p>Damage Calculator</p>
       </div>
     </div>
 
@@ -30,13 +27,12 @@
       </div>
       <div class="list-display-container position-relative"></div>
       <div class="menu-bar">
-        <img src="images/menubar.png" class="menu-bar-asset position-relative">
-      </div>
-      <div class="back-button-icon position-fixed">
-        <img src="images/back-button.png" class="back-button-icon roster-lists-back-button">
-      </div>
-      <div class="menu-button-icon position-fixed">
-        <img src="images/menu-button.png" class="menu-button-icon">
+        <div class="back-button-icon">
+          <img src="images/back-button.png" class="back-button-icon roster-lists-back-button">
+        </div>
+        <div class="menu-button-icon-container">
+          <img src="images/menu-button.png" class="menu-button-icon">
+        </div>
       </div>
     </div>
     <div class="new-roster-modal hide">
@@ -52,23 +48,17 @@
     </div>
 
     <div class="hide" data-view="servant-list-content">
-
       <div class="list-content-display-container position-relative"></div>
-
-      <div class="material-table-button position-fixed">
-        <p>Mat Table</p>
-      </div>
-      <div class="open-servant-insert-modal-button homepage-button position-fixed">
-        <p>Add</p>
-      </div>
       <div class="menu-bar">
-        <img src="images/menubar.png" class="menu-bar-asset position-relative">
+        <div class="back-button-icon">
+          <img src="images/back-button.png" class="back-button-icon servant-list-back-button">
+        </div>
+        <div class="menu-button-icon-container">
+          <img src="images/menu-button.png" class="menu-button-icon">
+        </div>
       </div>
-      <div class="back-button-icon position-fixed">
-        <img src="images/back-button.png" class="back-button-icon servant-list-back-button">
-      </div>
-      <div class="menu-button-icon position-fixed">
-        <img src="images/menu-button.png" class="menu-button-icon">
+      <div class="open-servant-insert-modal-button position-fixed">
+        <p>Add</p>
       </div>
     </div>
 
@@ -104,59 +94,71 @@
           <p class="servant-profile-name">Name of Servant Placeholder</p>
         </div>
         <div class="servant-information-row display-flex">
-          <div class="servant-information-column-half">
-            <img src="images/stat-name-container.png" class="servant-information-stat-display-container blue">
-            <p class="atk-stat-name-display">ATK</p>
-            <img src="images/stat-values-container.png" class="servant-information-stat-display-container green">
-            <p class="atk-stat-value-display">atk value</p>
+          <div class="servant-information-column-half part-left">
+             <div class="servant-information-stat-display-container blue"> <!--img src="images/stat-name-container.png" -->
+              <p class="atk-stat-name-display">ATK</p>
+            </div>
+            <div class="servant-information-stat-display-container green"> <!-- img src="images/stat-values-container.png"-->
+              <p class="atk-stat-value-display">atk value</p>
+            </div>
           </div>
-          <div class="servant-information-column-half">
-            <img src="images/stat-name-container.png" class="servant-information-stat-display-container blue">
-            <p class="hp-stat-name-display">HP</p>
-            <img src="images/stat-values-container.png" class="servant-information-stat-display-container green">
-            <p class="hp-stat-value-display">HP value</p>
+          <div class="servant-information-column-half part-right">
+            <div class="servant-information-stat-display-container blue"> <!-- -->
+              <p class="hp-stat-name-display">HP</p>
+            </div>
+            <div class="servant-information-stat-display-container green"> <!-- -->
+              <p class="hp-stat-value-display">HP value</p>
+            </div>
           </div>
         </div>
         <div class="servant-information-row display-flex">
-          <div class="servant-information-column-half">
-            <img src="images/stat-name-container.png" class="servant-information-stat-display-container blue">
-            <p class="fou-atk-stat-name-display">ATK Fou</p>
-            <img src="images/stat-values-container.png" class="servant-information-stat-display-container green">
-            <p class="fou-atk-stat-value-display">atk value</p>
+          <div class="servant-information-column-half part-left">
+            <div class="servant-information-stat-display-container blue"> <!-- -->
+              <p class="fou-atk-stat-name-display">ATK Fou</p>
+            </div>
+            <div class="servant-information-stat-display-container green"> <!-- -->
+              <p class="fou-atk-stat-value-display">atk value</p>
+            </div>
           </div>
-          <div class="servant-information-column-half">
-            <img src="images/stat-name-container.png" class="servant-information-stat-display-container blue">
-            <p class="fou-hp-stat-name-display">HP Fou</p>
-            <img src="images/stat-values-container.png" class="servant-information-stat-display-container green">
-            <p class="fou-hp-stat-value-display">HP value</p>
+          <div class="servant-information-column-half part-right">
+            <div class="servant-information-stat-display-container blue"> <!-- -->
+              <p class="fou-hp-stat-name-display">HP Fou</p>
+            </div>
+            <div class="servant-information-stat-display-container green"> <!-- -->
+              <p class="fou-hp-stat-value-display">HP value</p>
+            </div>
           </div>
         </div>
         <div class="skill-container display-flex">
-          <img src="images/skill-text-box.png" class="skill-text-container">
-          <p class="skill-1-description"></p>
+          <div class="skill-text-container"> <!-- -->
+            <p class="skill-1-description"></p>
+          </div>
         </div>
         <div class="skill-container display-flex">
-          <img src="images/skill-text-box.png" class="skill-text-container">
-          <p class="skill-2-description"></p>
+          <div class="skill-text-container"> <!-- -->
+            <p class="skill-2-description"></p>
+          </div>
         </div>
         <div class="skill-container display-flex">
-          <img src="images/skill-text-box.png" class="skill-text-container">
-          <p class="skill-3-description"></p>
+          <div class="skill-text-container"> <!-- -->
+            <p class="skill-3-description"></p>
+          </div>
         </div>
-      </div>
-      <div class="open-servant-edit-info-modal-button homepage-button position-fixed">
-        <p>Edit</p>
       </div>
       <div class="menu-bar">
-        <img src="images/menubar.png" class="menu-bar-asset position-relative">
+        <div class="back-button-icon">
+          <img src="images/back-button.png" class="back-button-icon servant-information-back-button">
+        </div>
+        <div class="menu-button-icon-container">
+          <img src="images/menu-button.png" class="menu-button-icon">
+        </div>
       </div>
-      <div class="back-button-icon position-fixed">
-        <img src="images/back-button.png" class="back-button-icon servant-information-back-button">
-      </div>
-      <div class="menu-button-icon position-fixed">
-        <img src="images/menu-button.png" class="menu-button-icon">
+
+      <div class="open-servant-edit-info-modal-button position-fixed">
+        <p>Edit</p>
       </div>
     </div>
+
     <div class="edit-servant-information-modal hide">
       <div class="edit-servant-form-container-modal">
         <form>
@@ -186,13 +188,8 @@
       </div>
     </div>
 
-    <div class="hide" data-view="materials-table">
-      <h1>TBD</h1>
-    </div>
-
-    <div class="hide" data-view="calculator"></div>
-
   </main>
+  </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
