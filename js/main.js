@@ -27,6 +27,8 @@ var $openEditServantInfoModalButton = document.querySelector('.open-servant-edit
 var $openEditServantInfoModal = document.querySelector('.edit-servant-information-modal');
 var $editServantInfoForm = document.querySelector('.edit-servant-form-container-modal > form');
 
+var $loadMessage = document.querySelector('.message-container');
+
 var currentRoster = null;
 var currentServantInfo = null;
 
@@ -118,30 +120,66 @@ $openServantInsertModalButton.addEventListener('click', function (e) {
   $servantInsertModal.className = 'insert-servant-modal';
 });
 
+var $failConnectMessage = document.querySelector('.failed-message-container');
+var $failConnectMessageButton = document.querySelector('.close-failed-message-button');
+$failConnectMessageButton.addEventListener('click', function (e) {
+  $failConnectMessage.className = 'failed-message-container hide';
+
+  $returnedServantListModal.className = 'servant-list-modal hide';
+  $servantInsertModal.className = 'insert-servant-modal';
+});
+
+var $noDataMessage = document.querySelector('.no-data-message-container');
+var $noDataMessageButton = document.querySelector('.close-no-data-message-button');
+$noDataMessageButton.addEventListener('click', function (e) {
+  $noDataMessage.className = 'no-data-message-container hide';
+  $returnedServantListModal.className = 'servant-list-modal hide';
+  $servantInsertModal.className = 'insert-servant-modal';
+});
 var tempServantsArray = null;
+
+var xhr = new XMLHttpRequest();
+xhr.addEventListener('load', function () {
+  tempServantsArray = xhr.response;
+
+  if (tempServantsArray.length !== 0) {
+    buildServantChoice(xhr.response);
+  } else {
+    $noDataMessage.className = 'no-data-message-container';
+  }
+});
+
+xhr.addEventListener('error', function (e) {
+  $failConnectMessage.className = 'failed-message-container';
+  $insertServantForm.reset();
+});
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    $loadMessage.className = 'message-container hide';
+    var status = xhr.status;
+    if (status === 0 || (status >= 200 && status < 400)) {
+      $returnedServantListModal.className = 'servant-list-modal';
+    }
+  } else {
+    $loadMessage.className = 'message-container';
+  }
+};
+
 $insertServantForm.addEventListener('submit', function (e) {
 
   e.preventDefault();
-  var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://api.atlasacademy.io/nice/' + $insertServantForm.elements.region.value + '/servant/search/?name=' + $insertServantForm.elements['servant-name'].value + '&lang=en');
   xhr.responseType = 'json';
-  xhr.addEventListener('load', function () {
 
-    tempServantsArray = xhr.response;
+  $returnedServantOptions = document.querySelector('.player-choices > form');
+  if ($returnedServantOptions.hasChildNodes()) {
+    var $formChildNode = document.querySelector('.returned-servants');
+    $returnedServantOptions.removeChild($formChildNode);
+  }
 
-    $returnedServantOptions = document.querySelector('.player-choices > form');
-    if ($returnedServantOptions.hasChildNodes()) {
-      var $formChildNode = document.querySelector('.returned-servants');
-      $returnedServantOptions.removeChild($formChildNode);
-    }
-    buildServantChoice(xhr.response);
-
-  });
   xhr.send();
 
   $insertServantForm.reset();
-
-  $returnedServantListModal.className = 'servant-list-modal';
   $servantInsertModal.className = 'insert-servant-modal hide';
 });
 
