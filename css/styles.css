@@ -23,7 +23,7 @@ body {
 }
 
 .list-bg {
-  background: url(../images/list-bg.png);
+  background: url(../images/list-bg3.png);
 }
 
 header {
@@ -371,7 +371,8 @@ header {
 }
 
 /* Ipad portrait fifth */
-@media screen and (max-width: 1024px) and (orientation: landscape) {
+
+/* @media screen and (max-width: 1024px) and (orientation: landscape) {
   header {
     font-size: 25px;
   }
@@ -572,10 +573,11 @@ header {
   .hide {
     display: none;
   }
-}
+} */
 
 /* Ipad portrait fifth */
-@media screen and (max-width: 768px) and (orientation: portrait) {
+
+/* @media screen and (max-width: 768px) and (orientation: portrait) {
   header {
     font-size: 25px;
   }
@@ -775,10 +777,11 @@ header {
   .hide {
     display: none;
   }
-}
+} */
 
 /* Iphone X landscape fourth */
-@media screen and (max-width: 812px) and (orientation: landscape) {
+
+/* @media screen and (max-width: 812px) and (orientation: landscape) {
   header {
     font-size: 25px;
   }
@@ -979,10 +982,11 @@ header {
   .hide {
     display: none;
   }
-}
+} */
 
 /* Iphone X portrait third */
-@media screen and (max-width: 375px) and (orientation: portrait) {
+
+/* @media screen and (max-width: 375px) and (orientation: portrait) {
   header {
     font-size: 25px;
   }
@@ -1174,10 +1178,11 @@ header {
   .hide {
     display: none;
   }
-}
+} */
 
 /* Iphone SE portrait  first */
-@media screen and (max-width: 320px) and (orientation: portrait) {
+
+/* @media screen and (max-width: 320px) and (orientation: portrait) {
   header {
     font-size: 25px;
   }
@@ -1370,10 +1375,11 @@ header {
   .hide {
     display: none;
   }
-}
+} */
 
 /* Iphone SE landscape second  */
-@media screen and (max-width: 568px) and (orientation: landscape) {
+
+/* @media screen and (max-width: 568px) and (orientation: landscape) {
   header {
     font-size: 25px;
   }
@@ -1573,4 +1579,435 @@ header {
   .hide {
     display: none;
   }
+} */
+
+/* portrait experiment for universal devices */
+@media screen and (max-width: 1050px) and (orientation: portrait) {
+  header {
+    font-size: 25px;
+  }
+
+  main {
+    width: 100vw;
+  }
+
+  /* p {
+    margin: 0;
+  } */
+  .roster-list-row,
+  .list-content-row {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 0;
+  }
+
+  .background-config {
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background-position-x: center;
+    background-position-y: 40%;
+
+    /* height: 568px;
+    width: 320px;
+    position: fixed; */
+  }
+
+  .menu-bar {
+    position: fixed;
+
+    /* bottom: 2%; */
+
+    /* left: 50%; */
+    width: 100%;
+    height: 60px;
+    margin-left: -50%;
+    background-image: url('../images/menubar.png');
+    background-repeat: no-repeat;
+    background-size: 100% 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin: 0 25%; */
+  }
+
+  .menu-button-icon {
+    width: 6rem;
+    height: 2rem;
+
+    /* margin-top: 8px; */
+    margin: 0 20px;
+  }
+
+  .back-button-icon {
+    width: 50px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .new-roster-button {
+    font-size: 14px;
+    color: whitesmoke;
+    width: 70px;
+    height: 2rem;
+
+    /* margin: 25px auto; */
+
+    /* position: relative; */
+  }
+
+  .list-display-container {
+    height: 82vh; /* 360px; */
+    overflow-y: auto;
+  }
+
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    font-size: 20px;
+    width: 150px;
+    height: 35px;
+    bottom: 11%;
+    left: 26%;
+    margin-left: 0;
+  }
+
+  .servant-roster-button {
+    bottom: 25%;
+  }
+
+  .player-choices > form {
+    height: 150px;
+    overflow-y: auto;
+  }
+
+  .list-content-view-config {
+    height: 420px;
+    overflow-y: auto;
+  }
+
+  .servant-information-column-half {
+    width: 48%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .servant-profile-image-container {
+    margin-top: 5px;
+    width: 100px;
+  }
+
+  .servant-profile-name {
+    color: yellow;
+    font-size: 20px;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+
+  .servant-information-stat-display-container {
+    width: 90px;
+    height: 40px;
+  }
+
+  .servant-information-stat-display-container.blue,
+  .servant-information-stat-display-container.green {
+    background-size: 75px 35px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 16px;
+  }
+
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 14px;
+  }
+
+  .data-grid-container {
+    overflow-y: auto;
+    height: 420px;
+  }
+
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
+    color: yellow;
+    white-space: pre-wrap;
+    width: 270px;
+    height: 80px;
+    overflow-y: auto;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .skill-text-container {
+    margin: 0 auto;
+    width: 300px;
+    height: 100px;
+    background-size: 300px 100px;
+  }
+
+  .material-table-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    height: 38.5px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .view-list-content-button,
+  .delete-list-button,
+  .servant-info-button,
+  .delete-servant-button {
+    width: 60px;
+  }
+
+  .new-roster-button,
+  .homepage-button,
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    /* font-size: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  .homepage-button {
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+  }
+
+  .hide {
+    display: none;
+  }
 }
+
+/* universal landscape second  */
+
+/* @media screen and (max-width: 568px) and (orientation: landscape) {
+  header {
+    font-size: 25px;
+  }
+
+  main {
+    width: 100vw;
+  }
+
+  .roster-list-row,
+  .list-content-row {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .hp-position-config {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 0;
+  }
+
+  .background-config {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 35%;
+    height: 320px;
+    width: 568px;
+    position: fixed;
+  }
+
+  .menu-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 300px;
+    height: 30px;
+    margin-left: -150px;
+    background-image: url('../images/menubar.png');
+    background-repeat: no-repeat;
+    background-size: 300px 30px;
+    display: flex;
+  }
+
+  .menu-button-icon {
+    width: 80px;
+    margin-top: 2px;
+    margin-left: 50px;
+  }
+
+  .back-button-icon {
+    width: 50px;
+    margin-top: 1px;
+    margin-left: 10px;
+  }
+
+  .list-display-container {
+    height: 140px;
+    overflow-y: auto;
+  }
+
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    width: 75px;
+    height: 22px;
+    bottom: 1.5%;
+    right: 25%;
+  }
+
+  .servant-roster-button {
+    bottom: 35%;
+  }
+
+  .player-choices > form {
+    height: 150px;
+    overflow-y: auto;
+  }
+
+  .list-content-view-config {
+    height: 240px;
+    overflow-y: auto;
+  }
+
+  .servant-information-column-half {
+    width: 48%;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .part-left {
+    justify-content: flex-end;
+  }
+
+  .part-right {
+    justify-content: flex-start;
+  }
+
+  .servant-profile-image-container {
+    margin-top: 5px;
+    width: 100px;
+  }
+
+  .servant-profile-name {
+    color: yellow;
+    font-size: 20px;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+
+  .servant-information-stat-display-container {
+    width: 100px;
+    height: 45px;
+  }
+
+  .servant-information-stat-display-container.blue,
+  .servant-information-stat-display-container.green {
+    background-size: 100px 45px;
+  }
+
+  .atk-stat-name-display,
+  .atk-stat-value-display,
+  .hp-stat-name-display,
+  .hp-stat-value-display,
+  .fou-atk-stat-value-display,
+  .fou-hp-stat-value-display {
+    font-size: 18px;
+  }
+
+  .fou-atk-stat-name-display,
+  .fou-hp-stat-name-display {
+    font-size: 16px;
+  }
+
+  .data-grid-container {
+    overflow-y: auto;
+    height: 240px;
+  }
+
+  .skill-1-description,
+  .skill-2-description,
+  .skill-3-description {
+    color: yellow;
+    white-space: pre-wrap;
+    width: 270px;
+    height: 80px;
+    overflow-y: auto;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .skill-text-container {
+    margin: 0 auto;
+    width: 300px;
+    height: 100px;
+    background-size: 300px 100px;
+  }
+
+  .material-table-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 226, 255, 0.6);
+    border-radius: 10px;
+    height: 38.5px;
+    width: 70px;
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .view-list-content-button,
+  .delete-list-button,
+  .servant-info-button,
+  .delete-servant-button {
+    width: 60px;
+  }
+
+  .homepage-button,
+  .open-servant-insert-modal-button,
+  .open-servant-edit-info-modal-button {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(13, 226, 255, 0.6);
+  }
+
+  .homepage-button {
+    width: 200px;
+    height: 50px;
+  }
+
+  .hide {
+    display: none;
+  }
+} */
