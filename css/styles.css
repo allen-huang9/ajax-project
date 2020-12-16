@@ -8,7 +8,10 @@ body {
 .new-roster-modal,
 .insert-servant-modal,
 .servant-list-modal,
-.edit-servant-information-modal {
+.edit-servant-information-modal,
+.message-container,
+.failed-message-container,
+.no-data-message-container {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -182,10 +185,29 @@ header {
 
 .servant-form-modal,
 .player-choices,
-.edit-servant-form-container-modal {
+.edit-servant-form-container-modal,
+.load-message,
+.load-fail-message,
+.load-no-data-message {
   padding: 1rem;
   margin: auto;
   background-color: white;
+}
+
+.close-failed-message-button,
+.close-no-data-message-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 60px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: rgba(13, 226, 255, 0.6);
+}
+
+.close-failed-message-button > p {
+  margin: 0;
 }
 
 .input-margin {
