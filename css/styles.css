@@ -26,7 +26,7 @@ body {
 }
 
 .list-bg {
-  background: url(../images/list-bg.png);
+  background: url(../images/list-bg3.png);
 }
 
 header {
@@ -73,7 +73,7 @@ header {
 
 .screen-phone {
   display: flex;
-  height: 50px;
+  height: 5vh;
 }
 
 .color-white {
@@ -130,46 +130,57 @@ header {
 }
 
 .list-display-container {
-  height: 580px;
+  height: 87vh;
   overflow-y: auto;
 }
 
-/* changed here  */
 .menu-bar {
   position: fixed;
-  bottom: 0%;
-  left: 50%;
   width: 50%;
-  height: 50px;
-  margin-left: -263.75px;
+  height: 8vh;
+  bottom: 0%;
+  margin-left: 25%;
   background-image: url('../images/menubar.png');
   background-repeat: no-repeat;
+  background-size: 100% 8vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-button-icon {
-  width: 150px;
-  margin-left: 65px;
+  width: 7vw;
+  height: 5vh;
+  margin: 0 6vw;
 }
 
 .back-button-icon {
-  width: 90px;
-  margin-top: 1.5px;
-  margin-left: 20px;
+  width: 7vw;
+  height: 5vh;
 }
 
+.new-roster-button {
+  font-size: 1.5vh;
+  color: whitesmoke;
+  width: 7vw;
+  height: 5vh;
+}
+
+.new-roster-button,
+.homepage-button,
 .open-servant-insert-modal-button,
 .open-servant-edit-info-modal-button {
-  width: 150px;
-  height: 50px;
-  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 15px;
   background-color: rgba(13, 226, 255, 0.6);
-  bottom: 85%;
-  right: 15%;
 }
 
 .servant-form-modal,
@@ -208,6 +219,13 @@ header {
   text-align: center;
 }
 
+.open-servant-insert-modal-button,
+.open-servant-edit-info-modal-button {
+  font-size: 2.2vh;
+  width: 7vw;
+  height: 5vh;
+}
+
 .servant-roster-button {
   bottom: 30%;
 }
@@ -231,7 +249,7 @@ header {
 }
 
 .list-content-view-config {
-  height: 700px;
+  height: 87vh;
   overflow-y: auto;
 }
 
@@ -306,7 +324,7 @@ header {
 
 .data-grid-container {
   overflow-y: auto;
-  height: 850px;
+  height: 87vh;
 }
 
 .skill-1-description,
@@ -343,11 +361,6 @@ header {
 
 .edit-input-field-margin {
   margin-bottom: 10px;
-}
-
-.new-roster-button {
-  margin: 25px auto;
-  position: relative;
 }
 
 .view-list-content-button,
@@ -388,818 +401,25 @@ header {
   background-color: rgba(13, 226, 255, 0.6);
 }
 
+.open-servant-insert-modal-button:hover,
+.open-servant-edit-info-modal-button:hover,
+.menu-button-icon:hover,
+.new-roster-button:hover,
+.back-button-icon:hover,
+.homepage-button:hover,
+.view-list-content-button:hover,
+.delete-list-button:hover,
+.servant-info-button:hover,
+.delete-servant-button:hover {
+  cursor: pointer;
+}
+
 .hide {
   display: none;
 }
 
-/* Ipad portrait fifth */
-@media screen and (max-width: 1024px) and (orientation: landscape) {
-  header {
-    font-size: 25px;
-  }
-
-  main {
-    width: 100vw;
-  }
-
-  .roster-list-row,
-  .list-content-row {
-    display: flex;
-    width: 100%;
-    font-size: 18px;
-  }
-
-  .hp-position-config {
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    bottom: 0;
-  }
-
-  .background-config {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 35%;
-    height: 768px;
-    width: 1024px;
-    position: fixed;
-  }
-
-  .menu-bar {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    width: 500px;
-    height: 60px;
-    margin-left: -250px;
-    background-image: url('../images/menubar.png');
-    background-repeat: no-repeat;
-    background-size: 500px 60px;
-    display: flex;
-  }
-
-  .menu-button-icon {
-    width: 175px;
-    margin-top: 2px;
-    margin-left: 50px;
-  }
-
-  .back-button-icon {
-    width: 105px;
-    margin-top: 1px;
-    margin-left: 10px;
-  }
-
-  .list-display-container {
-    height: 555px;
-    overflow-y: auto;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    width: 85px;
-    height: 48px;
-    bottom: 1%;
-    right: 28.5%;
-    margin-left: 0;
-  }
-
-  .servant-roster-button {
-    bottom: 25%;
-  }
-
-  .player-choices > form {
-    height: 150px;
-    overflow-y: auto;
-  }
-
-  .list-content-view-config {
-    height: 655px;
-    overflow-y: auto;
-  }
-
-  .servant-information-column-half {
-    width: 48%;
-    display: flex;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .part-left {
-    justify-content: flex-end;
-  }
-
-  .part-right {
-    justify-content: flex-start;
-  }
-
-  .servant-profile-image-container {
-    margin-top: 10px;
-    width: 200px;
-  }
-
-  .servant-profile-name {
-    color: yellow;
-    font-size: 25px;
-    white-space: pre-wrap;
-    margin: 0;
-  }
-
-  .servant-information-stat-display-container {
-    width: 150px;
-    height: 70px;
-  }
-
-  .servant-information-stat-display-container.blue,
-  .servant-information-stat-display-container.green {
-    background-size: 150px 70px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-value-display {
-    font-size: 24px;
-  }
-
-  .fou-atk-stat-name-display,
-  .fou-hp-stat-name-display {
-    font-size: 22px;
-  }
-
-  .data-grid-container {
-    overflow-y: auto;
-    height: 655px;
-  }
-
-  .skill-1-description,
-  .skill-2-description,
-  .skill-3-description {
-    color: yellow;
-    white-space: pre-wrap;
-    width: 550px;
-    height: 200px;
-    overflow-y: auto;
-    font-size: 25px;
-    margin: 0;
-  }
-
-  .skill-text-container {
-    margin: 0 auto;
-    width: 600px;
-    height: 260px;
-    background-size: 600px 260px;
-  }
-
-  .material-table-button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    height: 38.5px;
-    width: 70px;
-    right: 4%;
-    bottom: 10%;
-  }
-
-  .view-list-content-button,
-  .delete-list-button,
-  .servant-info-button,
-  .delete-servant-button {
-    width: 70px;
-  }
-
-  .homepage-button,
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-  }
-
-  .homepage-button {
-    width: 200px;
-    height: 50px;
-  }
-
-  .hide {
-    display: none;
-  }
-}
-
-/* Ipad portrait fifth */
-@media screen and (max-width: 768px) and (orientation: portrait) {
-  header {
-    font-size: 25px;
-  }
-
-  main {
-    width: 100vw;
-  }
-
-  .roster-list-row,
-  .list-content-row {
-    display: flex;
-    width: 100%;
-    font-size: 18px;
-  }
-
-  .hp-position-config {
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    bottom: 0;
-  }
-
-  .background-config {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 1024px;
-    width: 768px;
-    position: fixed;
-  }
-
-  .menu-bar {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    width: 500px;
-    height: 60px;
-    margin-left: -250px;
-    background-image: url('../images/menubar.png');
-    background-repeat: no-repeat;
-    background-size: 500px 60px;
-    display: flex;
-  }
-
-  .menu-button-icon {
-    width: 175px;
-    margin-top: 2px;
-    margin-left: 50px;
-  }
-
-  .back-button-icon {
-    width: 105px;
-    margin-top: 1px;
-    margin-left: 10px;
-  }
-
-  .list-display-container {
-    height: 815px;
-    overflow-y: auto;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    width: 85px;
-    height: 48px;
-    bottom: 0.7%;
-    right: 21.5%;
-    margin-left: 0;
-  }
-
-  .servant-roster-button {
-    bottom: 25%;
-  }
-
-  .player-choices > form {
-    height: 150px;
-    overflow-y: auto;
-  }
-
-  .list-content-view-config {
-    height: 915px;
-    overflow-y: auto;
-  }
-
-  .servant-information-column-half {
-    width: 48%;
-    display: flex;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .part-left {
-    justify-content: flex-end;
-  }
-
-  .part-right {
-    justify-content: flex-start;
-  }
-
-  .servant-profile-image-container {
-    margin-top: 10px;
-    width: 200px;
-  }
-
-  .servant-profile-name {
-    color: yellow;
-    font-size: 25px;
-    white-space: pre-wrap;
-    margin: 0;
-  }
-
-  .servant-information-stat-display-container {
-    width: 150px;
-    height: 70px;
-  }
-
-  .servant-information-stat-display-container.blue,
-  .servant-information-stat-display-container.green {
-    background-size: 150px 70px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-value-display {
-    font-size: 24px;
-  }
-
-  .fou-atk-stat-name-display,
-  .fou-hp-stat-name-display {
-    font-size: 22px;
-  }
-
-  .data-grid-container {
-    overflow-y: auto;
-    height: 900px;
-  }
-
-  .skill-1-description,
-  .skill-2-description,
-  .skill-3-description {
-    color: yellow;
-    white-space: pre-wrap;
-    width: 550px;
-    height: 200px;
-    overflow-y: auto;
-    font-size: 25px;
-    margin: 0;
-  }
-
-  .skill-text-container {
-    margin: 0 auto;
-    width: 600px;
-    height: 260px;
-    background-size: 600px 260px;
-  }
-
-  .material-table-button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    height: 38.5px;
-    width: 70px;
-    right: 4%;
-    bottom: 10%;
-  }
-
-  .view-list-content-button,
-  .delete-list-button,
-  .servant-info-button,
-  .delete-servant-button {
-    width: 70px;
-  }
-
-  .homepage-button,
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-  }
-
-  .homepage-button {
-    width: 200px;
-    height: 50px;
-  }
-
-  .hide {
-    display: none;
-  }
-}
-
-/* Iphone X landscape fourth */
-@media screen and (max-width: 812px) and (orientation: landscape) {
-  header {
-    font-size: 25px;
-  }
-
-  main {
-    width: 100vw;
-  }
-
-  .roster-list-row,
-  .list-content-row {
-    display: flex;
-    width: 100%;
-    font-size: 18px;
-  }
-
-  .hp-position-config {
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    bottom: 0;
-  }
-
-  .background-config {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 35%;
-    height: 375px;
-    width: 812px;
-    position: fixed;
-  }
-
-  .menu-bar {
-    position: fixed;
-    bottom: 5.5%;
-    left: 50%;
-    width: 380px;
-    height: 40px;
-    margin-left: -190px;
-    background-image: url('../images/menubar.png');
-    background-repeat: no-repeat;
-    background-size: 380px 40px;
-    display: flex;
-  }
-
-  .menu-button-icon {
-    width: 100px;
-    margin-top: 2px;
-    margin-left: 55px;
-  }
-
-  .back-button-icon {
-    width: 70px;
-    margin-top: 1px;
-    margin-left: 10px;
-  }
-
-  .list-display-container {
-    height: 165px;
-    overflow-y: auto;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    width: 75px;
-    height: 28px;
-    bottom: 7.5%;
-    right: 30%;
-    margin-left: 0;
-  }
-
-  .servant-roster-button {
-    bottom: 30%;
-  }
-
-  .player-choices > form {
-    height: 150px;
-    overflow-y: auto;
-  }
-
-  .list-content-view-config {
-    height: 260px;
-    overflow-y: auto;
-  }
-
-  .servant-information-column-half {
-    width: 48%;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .part-left {
-    justify-content: flex-end;
-  }
-
-  .part-right {
-    justify-content: flex-start;
-  }
-
-  .servant-profile-image-container {
-    margin-top: 5px;
-    width: 100px;
-  }
-
-  .servant-profile-name {
-    color: yellow;
-    font-size: 20px;
-    white-space: pre-wrap;
-    margin: 0;
-  }
-
-  .servant-information-stat-display-container {
-    width: 85px;
-    height: 45px;
-  }
-
-  .servant-information-stat-display-container.blue,
-  .servant-information-stat-display-container.green {
-    background-size: 85px 45px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-value-display {
-    font-size: 18px;
-  }
-
-  .fou-atk-stat-name-display,
-  .fou-hp-stat-name-display {
-    font-size: 16px;
-  }
-
-  .data-grid-container {
-    overflow-y: auto;
-    height: 260px;
-  }
-
-  .skill-1-description,
-  .skill-2-description,
-  .skill-3-description {
-    color: yellow;
-    white-space: pre-wrap;
-    width: 270px;
-    height: 80px;
-    overflow-y: auto;
-    font-size: 14px;
-    margin: 0;
-  }
-
-  .skill-text-container {
-    margin: 0 auto;
-    width: 300px;
-    height: 100px;
-    background-size: 300px 100px;
-  }
-
-  .material-table-button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    height: 38.5px;
-    width: 70px;
-    right: 4%;
-    bottom: 10%;
-  }
-
-  .view-list-content-button,
-  .delete-list-button,
-  .servant-info-button,
-  .delete-servant-button {
-    width: 60px;
-  }
-
-  .homepage-button,
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-  }
-
-  .homepage-button {
-    width: 200px;
-    height: 50px;
-  }
-
-  .hide {
-    display: none;
-  }
-}
-
-/* Iphone X portrait third */
-@media screen and (max-width: 375px) and (orientation: portrait) {
-  header {
-    font-size: 25px;
-  }
-
-  main {
-    width: 100vw;
-  }
-
-  .roster-list-row,
-  .list-content-row {
-    display: flex;
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .hp-position-config {
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    bottom: 0;
-  }
-
-  .background-config {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 812px;
-    width: 375px;
-    position: fixed;
-  }
-
-  .menu-bar {
-    position: fixed;
-    bottom: 5.5%;
-    left: 50%;
-    width: 300px;
-    height: 40px;
-    margin-left: -150px;
-    background-image: url('../images/menubar.png');
-    background-repeat: no-repeat;
-    background-size: 300px 40px;
-    display: flex;
-  }
-
-  .menu-button-icon {
-    width: 100px;
-    margin-top: 2px;
-    margin-left: 25px;
-  }
-
-  .back-button-icon {
-    width: 70px;
-    margin-top: 1px;
-    margin-left: 10px;
-  }
-
-  .list-display-container {
-    height: 575px;
-    overflow-y: auto;
-  }
-
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    width: 150px;
-    height: 35px;
-    bottom: 11%;
-    right: 30%;
-    margin-left: 0;
-  }
-
-  .servant-roster-button {
-    bottom: 25%;
-  }
-
-  .player-choices > form {
-    height: 150px;
-    overflow-y: auto;
-  }
-
-  .list-content-view-config {
-    height: 635px;
-    overflow-y: auto;
-  }
-
-  .servant-information-column-half {
-    width: 48%;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .servant-profile-image-container {
-    margin-top: 5px;
-    width: 100px;
-  }
-
-  .servant-profile-name {
-    color: yellow;
-    font-size: 20px;
-    white-space: pre-wrap;
-    margin: 0;
-  }
-
-  .servant-information-stat-display-container {
-    width: 85px;
-    height: 45px;
-  }
-
-  .servant-information-stat-display-container.blue,
-  .servant-information-stat-display-container.green {
-    background-size: 85px 45px;
-  }
-
-  .atk-stat-name-display,
-  .atk-stat-value-display,
-  .hp-stat-name-display,
-  .hp-stat-value-display,
-  .fou-atk-stat-value-display,
-  .fou-hp-stat-value-display {
-    font-size: 18px;
-  }
-
-  .fou-atk-stat-name-display,
-  .fou-hp-stat-name-display {
-    font-size: 16px;
-  }
-
-  .data-grid-container {
-    overflow-y: auto;
-    height: 575px;
-  }
-
-  .skill-1-description,
-  .skill-2-description,
-  .skill-3-description {
-    color: yellow;
-    white-space: pre-wrap;
-    width: 270px;
-    height: 80px;
-    overflow-y: auto;
-    font-size: 14px;
-    margin: 0;
-  }
-
-  .skill-text-container {
-    margin: 0 auto;
-    width: 300px;
-    height: 100px;
-    background-size: 300px 100px;
-  }
-
-  .material-table-button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(13, 226, 255, 0.6);
-    border-radius: 10px;
-    height: 38.5px;
-    width: 70px;
-    right: 4%;
-    bottom: 10%;
-  }
-
-  .view-list-content-button,
-  .delete-list-button,
-  .servant-info-button,
-  .delete-servant-button {
-    width: 60px;
-  }
-
-  .homepage-button,
-  .open-servant-insert-modal-button,
-  .open-servant-edit-info-modal-button {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: rgba(13, 226, 255, 0.6);
-  }
-
-  .homepage-button {
-    width: 200px;
-    height: 50px;
-  }
-
-  .hide {
-    display: none;
-  }
-}
-
-/* Iphone SE portrait  first */
-@media screen and (max-width: 320px) and (orientation: portrait) {
+/* portrait experiment for universal devices FINISHED */
+@media screen and (max-width: 1050px) and (orientation: portrait) {
   header {
     font-size: 25px;
   }
@@ -1223,52 +443,63 @@ header {
   }
 
   .background-config {
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position-x: center;
     background-position-y: 40%;
-    height: 568px;
-    width: 320px;
-    position: fixed;
   }
 
   .menu-bar {
     position: fixed;
-    bottom: 2%;
-    left: 50%;
-    width: 300px;
-    height: 50px;
-    margin-left: -150px;
+    width: 100%;
+    height: 8vh;
+    margin-left: 0;
     background-image: url('../images/menubar.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 8vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button-icon-container {
+    height: 4.5vh;
   }
 
   .menu-button-icon {
-    width: 80px;
-    margin-top: 2px;
-    margin-left: 50px;
+    width: 20vw;
+    height: 4.5vh;
+    margin: 0 20px;
   }
 
   .back-button-icon {
-    width: 50px;
-    margin-top: 1px;
-    margin-left: 10px;
+    width: 20vw;
+    height: 4.5vh;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .new-roster-button {
+    font-size: 1.8vh;
+    color: whitesmoke;
+    width: 20vw;
+    height: 4.5vh;
   }
 
   .list-display-container {
-    height: 360px;
+    height: 87vh;
     overflow-y: auto;
   }
 
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
-    width: 150px;
-    height: 35px;
-    bottom: 11%;
-    left: 26%;
-    margin-left: 0;
+    font-size: 2.2vh;
+    width: 20vw;
+    height: 4.5vh;
   }
 
   .servant-roster-button {
@@ -1281,7 +512,7 @@ header {
   }
 
   .list-content-view-config {
-    height: 420px;
+    height: 87vh;
     overflow-y: auto;
   }
 
@@ -1295,24 +526,24 @@ header {
 
   .servant-profile-image-container {
     margin-top: 5px;
-    width: 100px;
+    width: 25vw;
   }
 
   .servant-profile-name {
     color: yellow;
-    font-size: 20px;
+    font-size: 2vh;
     white-space: pre-wrap;
     margin: 0;
   }
 
   .servant-information-stat-display-container {
-    width: 90px;
-    height: 40px;
+    width: 23vw;
+    height: 5vh;
   }
 
   .servant-information-stat-display-container.blue,
   .servant-information-stat-display-container.green {
-    background-size: 75px 35px;
+    background-size: 23vw 5vh;
   }
 
   .atk-stat-name-display,
@@ -1321,17 +552,17 @@ header {
   .hp-stat-value-display,
   .fou-atk-stat-value-display,
   .fou-hp-stat-value-display {
-    font-size: 16px;
+    font-size: 2vh;
   }
 
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
-    font-size: 14px;
+    font-size: 2vh;
   }
 
   .data-grid-container {
     overflow-y: auto;
-    height: 420px;
+    height: 87vh;
   }
 
   .skill-1-description,
@@ -1339,18 +570,18 @@ header {
   .skill-3-description {
     color: yellow;
     white-space: pre-wrap;
-    width: 270px;
-    height: 80px;
+    width: 72vw;
+    height: 11vh;
     overflow-y: auto;
-    font-size: 14px;
+    font-size: 2vh;
     margin: 0;
   }
 
   .skill-text-container {
     margin: 0 auto;
-    width: 300px;
-    height: 100px;
-    background-size: 300px 100px;
+    width: 80vw;
+    height: 15vh;
+    background-size: 80vw 15vh;
   }
 
   .material-table-button {
@@ -1370,13 +601,13 @@ header {
   .delete-list-button,
   .servant-info-button,
   .delete-servant-button {
-    width: 60px;
+    width: 15vw;
   }
 
+  .new-roster-button,
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
-    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1385,6 +616,7 @@ header {
   }
 
   .homepage-button {
+    font-size: 20px;
     width: 200px;
     height: 50px;
   }
@@ -1394,10 +626,10 @@ header {
   }
 }
 
-/* Iphone SE landscape second  */
-@media screen and (max-width: 568px) and (orientation: landscape) {
+/* universal landscape second  */
+@media screen and (max-width: 1050px) and (orientation: landscape) {
   header {
-    font-size: 25px;
+    font-size: 5vh;
   }
 
   main {
@@ -1419,55 +651,67 @@ header {
   }
 
   .background-config {
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position-x: center;
-    background-position-y: 35%;
-    height: 320px;
-    width: 568px;
-    position: fixed;
+    background-position-y: 40%;
   }
 
   .menu-bar {
     position: fixed;
-    bottom: 0;
-    left: 50%;
-    width: 300px;
-    height: 30px;
-    margin-left: -150px;
+    width: 100%;
+    height: 8vh;
+    margin-left: 0;
     background-image: url('../images/menubar.png');
     background-repeat: no-repeat;
-    background-size: 300px 30px;
+    background-size: 100% 8vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button-icon-container {
+    height: 4.5vh;
   }
 
   .menu-button-icon {
-    width: 80px;
-    margin-top: 2px;
-    margin-left: 50px;
+    width: 10vw;
+    height: 4.5vh;
+    margin: 0 20px;
   }
 
   .back-button-icon {
-    width: 50px;
-    margin-top: 1px;
-    margin-left: 10px;
+    width: 10vw;
+    height: 4.5vh;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .new-roster-button {
+    font-size: 1.8vh;
+    color: whitesmoke;
+    width: 10vw;
+    height: 4.5vh;
   }
 
   .list-display-container {
-    height: 140px;
+    height: 87vh;
     overflow-y: auto;
   }
 
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
-    width: 75px;
-    height: 22px;
-    bottom: 1.5%;
-    right: 25%;
+    font-size: 2.2vh;
+    width: 10vw;
+    height: 4.5vh;
   }
 
   .servant-roster-button {
-    bottom: 35%;
+    bottom: 25%;
   }
 
   .player-choices > form {
@@ -1476,46 +720,38 @@ header {
   }
 
   .list-content-view-config {
-    height: 240px;
+    height: 87vh;
     overflow-y: auto;
   }
 
   .servant-information-column-half {
     width: 48%;
     display: flex;
-    height: 45px;
+    height: 50px;
     align-items: center;
     justify-content: center;
   }
 
-  .part-left {
-    justify-content: flex-end;
-  }
-
-  .part-right {
-    justify-content: flex-start;
-  }
-
   .servant-profile-image-container {
     margin-top: 5px;
-    width: 100px;
+    width: 25vw;
   }
 
   .servant-profile-name {
     color: yellow;
-    font-size: 20px;
+    font-size: 4vh;
     white-space: pre-wrap;
     margin: 0;
   }
 
   .servant-information-stat-display-container {
-    width: 100px;
-    height: 45px;
+    width: 18vw;
+    height: 7vh;
   }
 
   .servant-information-stat-display-container.blue,
   .servant-information-stat-display-container.green {
-    background-size: 100px 45px;
+    background-size: 18vw 7vh;
   }
 
   .atk-stat-name-display,
@@ -1524,17 +760,17 @@ header {
   .hp-stat-value-display,
   .fou-atk-stat-value-display,
   .fou-hp-stat-value-display {
-    font-size: 18px;
+    font-size: 3vh;
   }
 
   .fou-atk-stat-name-display,
   .fou-hp-stat-name-display {
-    font-size: 16px;
+    font-size: 3vh;
   }
 
   .data-grid-container {
     overflow-y: auto;
-    height: 240px;
+    height: 87vh;
   }
 
   .skill-1-description,
@@ -1542,18 +778,18 @@ header {
   .skill-3-description {
     color: yellow;
     white-space: pre-wrap;
-    width: 270px;
-    height: 80px;
+    width: 72vw;
+    height: 11vh;
     overflow-y: auto;
-    font-size: 14px;
+    font-size: 3vh;
     margin: 0;
   }
 
   .skill-text-container {
     margin: 0 auto;
-    width: 300px;
-    height: 100px;
-    background-size: 300px 100px;
+    width: 80vw;
+    height: 15vh;
+    background-size: 80vw 15vh;
   }
 
   .material-table-button {
@@ -1573,13 +809,13 @@ header {
   .delete-list-button,
   .servant-info-button,
   .delete-servant-button {
-    width: 60px;
+    width: 15vw;
   }
 
+  .new-roster-button,
   .homepage-button,
   .open-servant-insert-modal-button,
   .open-servant-edit-info-modal-button {
-    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1588,6 +824,7 @@ header {
   }
 
   .homepage-button {
+    font-size: 20px;
     width: 200px;
     height: 50px;
   }
