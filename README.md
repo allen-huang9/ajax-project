@@ -1,4 +1,4 @@
-# ajax-project-template
+# FGOverseer
 
 ## About the App
 FGOverseer is an application for to help Fate/Grand Order players manage their account and plan for the future. The user can create lists of characters and allow them to edit each character information.
