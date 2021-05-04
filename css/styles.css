@@ -34,11 +34,15 @@ header {
 }
 
 .modal-form {
-  padding: 1rem;
+  padding-top: 0.45rem;
   margin: auto;
   background-color: white;
   font-size: 20px;
   height: 125px;
+}
+
+.modal-form > form {
+  padding: 0 1rem 1rem;
 }
 
 .submit-roster-button-container {
@@ -399,6 +403,22 @@ header {
   justify-content: center;
   border-radius: 15px;
   background-color: rgba(13, 226, 255, 0.6);
+}
+
+.close-new-roster-modal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 15px;
+  font-size: 14px;
+}
+
+.fa-times {
+  padding: 0.5rem;
+}
+
+.fa-times:hover {
+  background-color: red;
 }
 
 .open-servant-insert-modal-button:hover,

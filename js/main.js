@@ -42,6 +42,12 @@ $openNewRosterModalButton.addEventListener('click', function (e) {
   $newRosterModalForm.className = 'new-roster-modal';
 });
 
+var $closeRosterModal = document.querySelector('.close-new-roster-modal > .fa-times');
+$closeRosterModal.addEventListener('click', function (e) {
+  $newRosterModalForm.className = 'new-roster-modal hide';
+  $createNewRosterForm.reset();
+});
+
 var existingRosterList = localStorage.getItem('fgo-rosters');
 if (existingRosterList) {
   data = JSON.parse(existingRosterList);

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FGOverseer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -40,13 +41,16 @@
 
       <div class="new-roster-modal hide">
         <div class="modal-form">
-            <form>
-              <label for="roster-name">Roster Name<br></label>
-              <input required type="text" name="roster-name" class="roster-name">
-              <div class="submit-roster-button-container">
-                <input type="submit" class="roster-button" value="Create">
-              </div>
-            </form>
+          <div class="close-new-roster-modal">
+            <i class="fas fa-times"></i>
+          </div>
+          <form>
+            <label for="roster-name">Roster Name<br></label>
+            <input required type="text" name="roster-name" class="roster-name">
+            <div class="submit-roster-button-container">
+              <input type="submit" class="roster-button" value="Create">
+            </div>
+          </form>
         </div>
       </div>
 
