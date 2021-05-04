@@ -37,7 +37,6 @@ header {
   padding-top: 0.45rem;
   margin: auto;
   background-color: white;
-  font-size: 20px;
   height: 125px;
 }
 
@@ -187,6 +186,7 @@ header {
   background-color: rgba(13, 226, 255, 0.6);
 }
 
+.player-choices,
 .servant-form-modal {
   padding-top: 0.45rem;
   margin: auto;
@@ -197,7 +197,6 @@ header {
   padding: 0 1rem 1rem 1rem;
 }
 
-.player-choices,
 .edit-servant-form-container-modal,
 .load-message,
 .load-fail-message,
@@ -244,6 +243,7 @@ header {
 }
 
 .player-choices > form {
+  padding: 0 1rem 1rem 1rem;
   height: 150px;
   overflow-y: auto;
 }
@@ -414,6 +414,11 @@ header {
   background-color: rgba(13, 226, 255, 0.6);
 }
 
+.close-servant-list-modal {
+  margin-bottom: 0.5rem;
+}
+
+.close-servant-list-modal,
 .close-servant-form-modal,
 .close-new-roster-modal {
   display: flex;
