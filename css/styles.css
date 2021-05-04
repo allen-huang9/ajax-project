@@ -692,9 +692,9 @@ header {
   }
 
   .new-roster-button {
-    font-size: 1.8vh;
+    font-size: 90%;
     color: whitesmoke;
-    width: 10vw;
+    width: 15vw;
     height: 4.5vh;
   }
 
