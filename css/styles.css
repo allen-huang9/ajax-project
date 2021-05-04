@@ -187,7 +187,16 @@ header {
   background-color: rgba(13, 226, 255, 0.6);
 }
 
-.servant-form-modal,
+.servant-form-modal {
+  padding-top: 0.45rem;
+  margin: auto;
+  background-color: white;
+}
+
+.servant-form-modal > form {
+  padding: 0 1rem 1rem 1rem;
+}
+
 .player-choices,
 .edit-servant-form-container-modal,
 .load-message,
@@ -405,6 +414,7 @@ header {
   background-color: rgba(13, 226, 255, 0.6);
 }
 
+.close-servant-form-modal,
 .close-new-roster-modal {
   display: flex;
   justify-content: flex-end;

@@ -48,6 +48,12 @@ $closeRosterModal.addEventListener('click', function (e) {
   $createNewRosterForm.reset();
 });
 
+var $closeSearchServantModal = document.querySelector('.close-servant-form-modal > .fa-times');
+$closeSearchServantModal.addEventListener('click', function (e) {
+  $servantInsertModal.className = 'insert-servant-modal hide';
+  $insertServantForm.reset();
+});
+
 var existingRosterList = localStorage.getItem('fgo-rosters');
 if (existingRosterList) {
   data = JSON.parse(existingRosterList);
