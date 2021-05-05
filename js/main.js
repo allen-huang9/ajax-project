@@ -59,6 +59,12 @@ $closeServantListModal.addEventListener('click', function (e) {
   $returnedServantListModal.className = 'servant-list-modal hide';
 });
 
+var $closeEditServantInfoModal = document.querySelector('.close-edit-servant-info-modal > .fa-times');
+$closeEditServantInfoModal.addEventListener('click', function (e) {
+  $openEditServantInfoModal.className = 'edit-servant-information-modal hide';
+  $editServantInfoForm.reset();
+});
+
 var existingRosterList = localStorage.getItem('fgo-rosters');
 if (existingRosterList) {
   data = JSON.parse(existingRosterList);

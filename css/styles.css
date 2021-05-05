@@ -186,18 +186,23 @@ header {
   background-color: rgba(13, 226, 255, 0.6);
 }
 
+.edit-servant-form-container-modal,
 .player-choices,
 .servant-form-modal {
-  padding-top: 0.45rem;
+  padding-top: 0.47rem;
   margin: auto;
   background-color: white;
 }
 
+.edit-servant-form-container-modal > form,
 .servant-form-modal > form {
   padding: 0 1rem 1rem 1rem;
 }
 
-.edit-servant-form-container-modal,
+.edit-servant-form-container-modal > form {
+  margin-top: 0.7rem;
+}
+
 .load-message,
 .load-fail-message,
 .load-no-data-message {
@@ -418,6 +423,7 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.close-edit-servant-info-modal,
 .close-servant-list-modal,
 .close-servant-form-modal,
 .close-new-roster-modal {
