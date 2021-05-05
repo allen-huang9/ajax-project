@@ -30,7 +30,7 @@ body {
 }
 
 header {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .modal-form {
@@ -119,7 +119,8 @@ header {
 }
 
 .see-through {
-  background-color: rgba(13, 226, 255, 0.15);
+  /* background-color: rgba(13, 226, 255, 0.15); */
+  background-image: linear-gradient(rgba(255, 227, 13, 0.2) 60%, rgba(0, 0, 0, 0));
 }
 
 .background-config {
