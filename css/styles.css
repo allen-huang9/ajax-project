@@ -33,6 +33,30 @@ header {
   font-size: 40px;
 }
 
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.web-app-introduction {
+  margin: auto;
+  padding-top: 0.45rem;
+  background-color: whitesmoke;
+  max-width: 40%;
+}
+
+.web-app-introduction > p {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  margin: 0;
+}
+
 .modal-form {
   padding-top: 0.45rem;
   margin: auto;
@@ -119,7 +143,6 @@ header {
 }
 
 .see-through {
-  /* background-color: rgba(13, 226, 255, 0.15); */
   background-image: linear-gradient(rgba(255, 227, 13, 0.2) 60%, rgba(0, 0, 0, 0));
 }
 
@@ -246,6 +269,10 @@ header {
 
 .servant-roster-button {
   bottom: 30%;
+}
+
+.about-button {
+  bottom: 20%;
 }
 
 .player-choices > form {
@@ -424,6 +451,7 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.close-info-container,
 .close-edit-servant-info-modal,
 .close-servant-list-modal,
 .close-servant-form-modal,
@@ -546,6 +574,10 @@ header {
 
   .servant-roster-button {
     bottom: 25%;
+  }
+
+  .about-button {
+    bottom: 10%;
   }
 
   .player-choices > form {
@@ -754,6 +786,10 @@ header {
 
   .servant-roster-button {
     bottom: 25%;
+  }
+
+  .about-button {
+    bottom: 5%;
   }
 
   .player-choices > form {

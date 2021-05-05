@@ -65,6 +65,17 @@ $closeEditServantInfoModal.addEventListener('click', function (e) {
   $editServantInfoForm.reset();
 });
 
+var $openAbout = document.querySelector('.about-button');
+var $introContainer = document.querySelector('.intro-container');
+$openAbout.addEventListener('click', function (e) {
+  $introContainer.className = 'intro-container';
+});
+
+var $closeAbout = document.querySelector('.close-info-container > .fa-times');
+$closeAbout.addEventListener('click', function (e) {
+  $introContainer.className = 'intro-container hide';
+});
+
 var existingRosterList = localStorage.getItem('fgo-rosters');
 if (existingRosterList) {
   data = JSON.parse(existingRosterList);
